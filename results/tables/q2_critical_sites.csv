@@ -1,0 +1,18 @@
+network,miles,id,name,city,operator,degree,ports,sites_cut_off,degree_percentile,ports_percentile
+all,30,707,Warren Ford,Warrensburg,FORD_CHARGE,16,2,25,0.1816976127320955,0.27055702917771884
+all,30,712,"Chestertown, NY - Tesla Supercharger",Chestertown,Tesla,3,6,24,0.005305039787798408,0.7015915119363395
+all,30,724,Egglefield Bros,Elizabethtown,FORD_CHARGE,8,2,21,0.058355437665782495,0.27055702917771884
+all,30,725,EVolve NY Lewis,Lewis,Electrify America,7,4,12,0.050397877984084884,0.44562334217506633
+all,30,735,"Peru, NY - Tesla Supercharger",Peru,Tesla,11,8,11,0.10212201591511937,0.7745358090185677
+all,30,279,"Roscoe, NY - Tesla Supercharger",Roscoe,Tesla,4,8,1,0.014588859416445624,0.7745358090185677
+ccs,30,636,EVolve NY Lewis,Lewis,Electrify America,6,4,10,0.039334341906202726,0.4977307110438729
+ccs,30,645,"Peru, NY - Tesla Supercharger",Peru,Tesla,10,8,9,0.11800302571860817,0.8577912254160364
+ccs,30,290,Simmons Rockwell Ford Hornell NY,Hornell,RED_E,8,4,7,0.07413010590015129,0.4977307110438729
+ccs,30,138,EVolve NY Bridgehampton,Bridgehampton,Electrify America,19,4,2,0.2254160363086233,0.4977307110438729
+ccs,30,277,EVolve NY Afton,Afton,Electrify America,8,4,2,0.07413010590015129,0.4977307110438729
+ccs,30,635,Egglefield Bros,Elizabethtown,FORD_CHARGE,7,2,2,0.05597579425113464,0.3010590015128593
+all,35,712,"Chestertown, NY - Tesla Supercharger",Chestertown,Tesla,14,6,25,0.09814323607427056,0.7015915119363395
+all,35,735,"Peru, NY - Tesla Supercharger",Peru,Tesla,12,8,11,0.08222811671087533,0.7745358090185677
+ccs,35,645,"Peru, NY - Tesla Supercharger",Peru,Tesla,11,8,9,0.08472012102874432,0.8577912254160364
+ccs,35,272,Thorpe's GMC,TANNERSVILLE,EV Connect,26,1,1,0.2708018154311649,0.0
+ccs,45,620,Warren Ford,Warrensburg,FORD_CHARGE,23,2,22,0.11951588502269289,0.3010590015128593

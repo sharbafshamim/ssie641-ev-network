@@ -1,0 +1,755 @@
+Latitude,Longitude,name,city,network,n_stations,ports,ccs,tesla_only
+40.527577,-74.231333,"Staten Island, NY - Veterans Road West - Tesla Supercharger",New York City,Tesla,1,12,False,True
+40.536124,-74.236517,PUBLIC FAST STATEN ISLAND,Staten Island,ChargePoint Network,1,1,True,False
+40.572636,-74.08616,NYC FLEET DPRMBLOT8_2_L3,Midland Beach,ChargePoint Network,1,1,True,False
+40.572636,-74.08614,NYC FLEET DPRMBLOT8_1_L3,Midland Beach,ChargePoint Network,1,1,True,False
+40.58113,-73.8374,EVolve NY Rockaway Park Municipal,Rockaway Park,Electrify America,1,6,True,False
+40.581409,-73.984972,"Brooklyn, NY - Cropsey Avenue - Tesla Supercharger",Brooklyn,Tesla,1,12,True,False
+40.5819835,-73.9845913,Raymour & Flanigan RF#1091,Brooklyn,eVgo Network,1,4,True,False
+40.582925,-74.075502,NYC FLEET DPROCBRZAC_2_L3,South Beach,ChargePoint Network,1,1,True,False
+40.58762240688,-74.19375053538,Dana Ford,Staten Island,RED_E,1,2,True,False
+40.594645,-74.000004,"Brooklyn, NY - Bay Parkway - Tesla Supercharger",Brooklyn,Tesla,1,20,True,False
+40.594713,-73.998709,"Brooklyn, NY - 8923 Bay Parkway - Tesla Supercharger",Brooklyn,Tesla,1,20,True,False
+40.597510679991466,-74.0836837458115,Honda of Staten Island,Staten Island,Blink Network,1,1,True,False
+40.608064,-74.002928,BHU - Bensonhurst#1 Municipal Parking Field,Brooklyn,EV Connect,1,4,True,False
+40.6116,-74.1564,1441 Richmond Ave,Staten Island,eVgo Network,1,2,True,False
+40.612254,-74.156505,"Staten Island, NY - Tesla Supercharger",Staten Island,Tesla,1,12,True,False
+40.61351,-73.64411,Ace Island Park,Island Park,VIALYNK,1,4,True,False
+40.618308,-73.945072,PUBLIC FAST BROOKLYN 1,Brooklyn,ChargePoint Network,1,1,True,False
+40.618347,-73.94508,PUBLIC FAST BROOKLYN 2,Brooklyn,ChargePoint Network,1,1,True,False
+40.623165,-73.742628,"Inwood, NY - Tesla Supercharger",Inwood,Tesla,1,20,False,True
+40.645262,-73.704301,"Hewlett, NY - Tesla Supercharger",Hewlett,Tesla,1,12,False,True
+40.64618,-73.90273,EVolve NY Brooklyn Canarsie Municipal,Brooklyn,Electrify America,1,8,True,False
+40.65608,-73.80809,EVolve NY Queens JFK Airport,Queens,Electrify America,1,10,True,False
+40.656136,-73.8089,JFK Airport - Cell Phone Lot,Queens,REVEL,1,12,True,False
+40.661759,-73.7217362,"Valley Stream, NY",Valley Stream,RIVIAN_ADVENTURE,1,6,True,False
+40.661907,-73.792838,"New York JFK, NY - Tesla Supercharger",Queens,Tesla,1,12,False,True
+40.662,-73.72316,"Green Acres Mall (Valley Stream, NY)",Valley Stream,Electrify America,1,4,True,False
+40.663266,-73.71502,ADVANTAGE TOYOTA 1,Valley Stream,ChargePoint Network,1,1,True,False
+40.66386,-73.725094,"Valley Stream, NY - Tesla Supercharger",Valley Stream,Tesla,1,24,False,True
+40.66624,-73.73593,EVolve NY Rosedale Municipal,Rosedale,Electrify America,1,6,True,False
+40.669946,-73.962858,"Brooklyn, NY - Brooklyn Museum - Tesla Supercharger",Brooklyn,Tesla,1,10,False,True
+40.6722,-73.51169,Sunrise Diner,Wantagh,AUTEL,1,4,True,False
+40.680024,-73.754216,"Queens, NY - Springfield Boulevard - Tesla Supercharger",Queens,Tesla,1,20,True,False
+40.683751,-73.97434,"Brooklyn, NY - Atlantic Avenue - Tesla Supercharger",Brooklyn,Tesla,1,12,False,True
+40.6870902,-73.4148646,South Shore Nissan,Amityville,Non-Networked,1,1,False,False
+40.68853,-73.40535,EVolve NY Copiague,Copiague,Electrify America,1,4,True,False
+40.688726,-73.406164,"Copiague, NY - Tesla Supercharger",Copiague,Tesla,1,8,False,True
+40.69933379,-73.9496648,Revel - Long Island City,Queens,REVEL,1,14,True,False
+40.69962,-73.94991,Revel - Bedford-Stuyvesant,Brooklyn,REVEL,1,25,True,False
+40.70189,-73.432826,"Massapequa, NY - Tesla Supercharger",Massapequa,Tesla,1,8,False,True
+40.701938,-73.432671,Carman's Plaza,Massapequa,eVgo Network,1,2,True,False
+40.70601,-73.63095,"Site Centers The Hub (Hempstead, NY)",Hempstead,Electrify America,1,4,True,False
+40.707988,-73.866918,"Glendale, NY - Cooper Avenue - Tesla Supercharger",Glendale,Tesla,1,10,False,True
+40.70983,-73.95767,South Williamsburg,Brooklyn,REVEL,1,15,True,False
+40.71029398,-73.98476797,Revel - Lower Manhattan,New York,REVEL,1,10,True,False
+40.711266,-73.89218,NYC FLEET DCASCSTHSE_2_L3,Middle Village,ChargePoint Network,1,1,True,False
+40.711268,-73.892295,NYC FLEET DCASCSTHSE_1_L3,Queens,ChargePoint Network,1,1,True,False
+40.711273,-73.89222,NYC FLEET DCASCSTHSE_3_L3,Middle Village,ChargePoint Network,1,1,True,False
+40.713775,-73.933098,Supercharge NYC,Brooklyn,CHARGELAB,1,4,True,False
+40.7143,-74.015557,"Manhattan, NY - Vesey Street - Tesla Supercharger",New York City,Tesla,1,4,False,True
+40.714539,-73.826163,QBO - Queens Borough Hall Municipal Parking Garage,Kew Gardens,EV Connect,1,3,True,False
+40.715016,-73.630567,MILLENNIUM HYUNDAI 2,Hempstead,ChargePoint Network,1,1,True,False
+40.715251,-73.630328,MILLENNIUM  HYUNDAI 1,Hempstead,ChargePoint Network,1,1,True,False
+40.71692,-73.630173,Nissan - Garden City,Hempstead,Non-Networked,1,1,False,False
+40.717122,-73.991991,"New York, NY - 59 Allen Street - Tesla Supercharger",New York,Tesla,1,4,False,True
+40.717622,-73.996778,"New York, NY - Mott Street - Tesla Supercharger",New York,Tesla,1,2,False,True
+40.719319,-73.988197,DES - Delancey and Essex Municipal Parking Garage,New York,EV Connect,1,4,True,False
+40.721239,-73.912563,Supercharge Queens,Queens,CHARGELAB,1,2,True,False
+40.722361,-73.956486,"Brooklyn, NY - N. 12th Street - Tesla Supercharger",Brooklyn,Tesla,1,4,False,True
+40.727757,-73.276918,"Bay Shore, NY - Tesla Supercharger",Bay Shore,Tesla,1,12,False,True
+40.730315,-73.609716,"Garden City, NY - Stewart Avenue - Tesla Supercharger",Garden City,Tesla,1,16,False,True
+40.73471302412043,-73.25721538991274,Atlantic Honda,Bay Shore,Blink Network,1,4,True,False
+40.73487,-73.87038,"Queens Center Mall (Elmhurst, NY)",Elmhurst,Electrify America,1,3,True,False
+40.735078,-73.870671,"Queens, NY - Queens Center - Tesla Supercharger",Queens,Tesla,1,10,False,True
+40.735678703,-73.250991937,Nissan - Bay Shore,Bay Shore,IN_CHARGE,1,1,True,False
+40.736364,-73.936444,General Motors Gas,Long Island City,FLIPTURN,1,2,True,False
+40.73652,-73.3695,OK Petroleum West Babylon,West Babylon,RED_E,1,2,True,False
+40.73685,-73.24514,"Westfield Southshore (Bayshore, NY)",Bayshore,Electrify America,1,6,True,False
+40.73818,-73.23087,Acura of Bay Shore,Bay Shore,VIALYNK,1,4,True,False
+40.739538,-73.3197,"North Babylon, NY - Tesla Supercharger",North Babylon,Tesla,1,12,False,True
+40.741108,-73.662181,"bp Jericho Turnpike, New Hyde Park, NY",New Hyde Park,BP_PULSE,1,2,True,False
+40.741644,-73.612882,"Garden City, NY - Tesla Supercharger",Garden City,Tesla,1,20,False,True
+40.7417401,-73.6631126,Garden City Park,Garden City Park,eVgo Network,1,6,True,False
+40.74179,-73.59773,Target Westbury #T1139,Westbury,eVgo Network,1,4,True,False
+40.74345,-73.921,EVolve NY Sunnyside Municipal,Sunnyside,Electrify America,1,6,True,False
+40.744757,-73.616058,"Carle Place, NY - Tesla Supercharger",Carle Place,Tesla,1,12,False,True
+40.74501,-73.59052,Valley East 900 Merchants Concourse L3,Westbury,VIALYNK,1,8,True,False
+40.745282,-73.942691,CSQ - Court Square Municipal Parking Garage,Queens,EV Connect,1,5,True,False
+40.745482,-73.929346,UMGI EV2,Queens,ChargePoint Network,1,1,True,False
+40.7455,-73.92934,UMGI EV1,LIC,ChargePoint Network,1,1,True,False
+40.747285,-74.000179,COMMERCIAL 1 COM1-4,New York,ChargePoint Network,1,1,True,False
+40.747434,-74.000085,COM1-1 COM1-2,New York,ChargePoint Network,1,1,True,False
+40.747486,-74.000069,COM1-1 COM1-1,New York,ChargePoint Network,1,1,True,False
+40.74809,-73.61688,"Brixmor Parkway Plaza (Carle Place, NY)",Carle Place,Electrify America,1,4,True,False
+40.748425,-73.616759,"Carle Place, NY - Glen Cove Road - Tesla Supercharger",Carle Place,Tesla,1,12,False,True
+40.750824,-73.674573,"North New Hyde Park, NY - Tesla Supercharger",North New Hyde Park,Tesla,1,20,False,True
+40.75266414079571,-73.4998265891377,Burns Motor Company - Honda City,Bethpage,Blink Network,1,2,True,False
+40.753227,-73.971582,"New York, NY - E 47th Street - Tesla Supercharger",New York,Tesla,1,4,False,True
+40.75358803705392,-73.90361343245411,Paragon Honda,Queens,Blink Network,1,2,True,False
+40.753601,-73.917441,Empire Cadillac of Long Island City,Long Island City,RED_E,1,4,True,False
+40.754038,-73.919413,KOEPPEL HYUNDAI CPE250 1,Queens,ChargePoint Network,1,1,True,False
+40.754044,-73.919245,KOEPPEL HYUNDAI CPE250 2,Queens,ChargePoint Network,1,1,True,False
+40.755072,-73.892094,Koeppel Nissan,Jackson Heights,Non-Networked,1,1,True,False
+40.75587,-73.92848,33rd Street,Long Island,eVgo Network,1,12,True,False
+40.75619,-73.8363,"Shopcore Skyview Mall (Flushing, NY)",Flushing,Electrify America,1,3,True,False
+40.75878,-73.99293,Gravity Charging Center,New York,GRAVITY_CHARGING_CENTER,1,24,True,False
+40.76008,-73.83191,EVolve NY Flushing,Flushing,Electrify America,1,8,True,False
+40.76033,-73.855286,NYC FLEET DPRWFMARNA_2_L3,Queens,ChargePoint Network,1,1,True,False
+40.760345,-73.85546,NYC FLEET DPRWFMARNA_4_L3,Queens,ChargePoint Network,1,1,True,False
+40.760345,-73.85537,NYC FLEET DPRWFMARNA_3_L3,Queens,ChargePoint Network,1,1,True,False
+40.76038,-73.85531,NYC FLEET DPRWFMARNA_5_L3,Queens,ChargePoint Network,1,1,True,False
+40.760559,-73.829965,"Flushing, NY - Tesla Supercharger",Flushing,Tesla,1,4,False,True
+40.760611,-73.85697,NYC FLEET DPRWFMARNA_1_L3,Queens,ChargePoint Network,1,1,True,False
+40.76369,-73.7695,EVolve NY Bayside Municipal,Bayside,Electrify America,1,8,True,False
+40.770015,-73.50268,ADVCHARGER FAST CHARGER,Hicksville,ChargePoint Network,1,1,True,False
+40.77057,-73.87995,EVolve NY Queens LaGuardia Airport,Queens,Electrify America,1,12,True,False
+40.779538,-73.651051,"Roslyn Heights, NY - Willis Avenue - Tesla Supercharger",Roslyn Heights,Tesla,1,8,False,True
+40.780088,-73.45009,"Plainview, NY - Tesla Supercharger",Plainview,Tesla,1,8,False,True
+40.780954,-73.980467,"New York, NY - W 75th Street - Tesla Supercharger",New York,Tesla,1,4,False,True
+40.783346,-73.714477,Biener Ford - Great Neck,Great Neck,CHARGESMART_EV,1,4,True,False
+40.784574,-73.420918,"Melville, NY - Walt Whitman Road - Tesla Supercharger",Melville,Tesla,1,12,False,True
+40.789639,-73.536139,"Jericho, NY - Tesla Supercharger",Jericho,Tesla,1,12,False,True
+40.792401,-73.924727,NYC FLEET DPR_ICAHN_1_L3,New York,ChargePoint Network,1,1,True,False
+40.792504,-73.92475,NYC FLEET DPR_ICAHN_2_L3,New York,ChargePoint Network,1,1,True,False
+40.792546,-73.924701,NYC FLEET DPR_ICAHN_3_L3,New York,ChargePoint Network,1,1,True,False
+40.798603,-73.412336,"Melville, NY - Tesla Supercharger",Melville,Tesla,1,10,False,True
+40.79979,-72.87068,800 Montauk Hwy,Shirley,eVgo Network,1,6,True,False
+40.802658,-73.316725,Long Island Welcome Center,Dix Hills,Non-Networked,1,2,False,False
+40.804851,-73.180136,"Islandia, NY - Tesla Supercharger",Islandia,Tesla,1,10,False,True
+40.805962,-72.859801,"Shirley, NY - Tesla Supercharger",Shirley,Tesla,1,12,True,False
+40.805976,-73.292526,"Commack, NY - Tesla Supercharger",Commack,Tesla,1,24,False,True
+40.80694,-73.23815,"Quadrangle 694 Motor Pkwy (Hauppauge, NY)",Hauppauge,Electrify America,1,4,True,False
+40.806942,-73.238159,"Hauppauge, NY - Motor Parkway - Tesla Supercharger",Hauppauge,Tesla,1,8,False,True
+40.80751,-73.29381,EVolve NY Commack,Commack,Electrify America,1,4,True,False
+40.811196,-73.506473,"Syosset, NY - Jericho Turnpike - Tesla Supercharger",Syosset,Tesla,1,8,False,True
+40.811766,-73.002128,112 H FST CGR FRONT,Medford,ChargePoint Network,1,1,True,False
+40.81818,-73.20291,Signature Properties - Hauppauge,Hauppauge,VIALYNK,1,6,True,False
+40.81887,-73.20212,Signature Properties - Hauppauge 2,Hauppauge,VIALYNK,1,6,True,False
+40.822725,-72.610733,Otis Ford - DCFC,Quogue,Blink Network,1,4,True,False
+40.82474,-72.80709,"Royal Development Manorville Square (Manorville, NY)",Manorville,Electrify America,1,4,True,False
+40.82619,-72.99036,"Sam's Club 6428 (Medford, NY)",Medford,Electrify America,1,4,True,False
+40.832252,-73.194969,"Smithtown, NY - Tesla Supercharger",Smithtown,Tesla,1,8,True,False
+40.83343,-73.361944,HYUNDAI 1221 NORTH,Huntington,ChargePoint Network,1,1,True,False
+40.833473,-73.361932,HYUNDAI 1221 SOUTH,Huntington,ChargePoint Network,1,1,True,False
+40.8343232,-73.3799114,Nissan - Huntington,Huntington Station,Non-Networked,1,1,False,False
+40.834707,-73.366467,MB HUNTINGTON MBH 2,Huntington,ChargePoint Network,1,1,True,False
+40.841453975213,-73.42805,Huntington Ford,Huntington Station,RED_E,1,4,True,False
+40.85206,-73.160752,KING O'ROURKE KOR FAST CHARGE,Smithtown,ChargePoint Network,1,1,True,False
+40.853224,-73.868094,WPL - White Plains Road Municipal Parking Field,Bronx,EV Connect,1,4,True,False
+40.85372,-73.79046,Vistamar Restaurant & Lounge,The Bronx,VIALYNK,1,3,True,False
+40.853731,-73.79087,Vistamar Restaurant & Lounge - Nayax Energy,Bronx,NAYAX_ENERGY,1,3,True,False
+40.855329,-73.19272,ChargeSmart EV - Smithtown,Smithtown,CHARGESMART_EV,1,4,True,False
+40.857471321004,-73.164170844181,Ford of Smithtown,St James,RED_E,1,6,True,False
+40.859452,-73.074472,"Centereach, NY - Tesla Supercharger",Centereach,Tesla,1,12,False,True
+40.86019,-73.16156,Nissan of Smithtown,St. James,Non-Networked,1,1,False,False
+40.860635,-73.16069,Advantage Honda,Saint James,Blink Network,1,4,True,False
+40.860964,-73.158209,COMPETITION BMW DCWB 2,Saint James,ChargePoint Network,1,1,True,False
+40.860968,-73.158119,COMPETITION BMW DCWB 1,Saint James,ChargePoint Network,1,1,True,False
+40.861075,-73.158235,COMPETITION BMW DCWB 4,Saint James,ChargePoint Network,1,1,True,False
+40.861092,-73.158139,COMPETITION BMW DCWB 3,Saint James,ChargePoint Network,1,1,True,False
+40.861127,-73.140725,STJ NISSAN SHOWROOM GARAGE,Saint James,ChargePoint Network,1,1,True,False
+40.862285,-73.128947,"Lake Grove, NY - Tesla Supercharger",Lake Grove,Tesla,1,8,False,True
+40.86245,-73.12875,"Simon Smith Haven Mall (Lake Grove, NY)",Lake Grove,Electrify America,1,3,True,False
+40.863671,-73.833848,"Bronx, NY - East Gun Hill Road - Tesla Supercharger",Bronx,Tesla,1,24,True,False
+40.863728,-73.829171,"Bronx, NY - Bay Plaza - Tesla Supercharger",Bronx,Tesla,1,12,False,True
+40.865165,-73.049424,College Plaza,Selden,eVgo Network,1,1,True,False
+40.8715839,-73.6260665,41 Forest,Glen Cove,RED_E,1,4,True,False
+40.871652,-72.799003,"Manorville, NY - Tesla Supercharger",Manorville,Tesla,1,12,False,True
+40.87393,-73.853391,City World Ford Showroom,Bronx,CHARGESMART_EV,1,4,True,False
+40.8739995,-73.6200503,Glen Cove Shopping Center,Glen Cove,RED_E,1,8,True,False
+40.874229,-73.853125,C W HYUNDAI CWHUB1,The Bronx,ChargePoint Network,1,1,True,False
+40.874273,-73.853069,C W HYUNDAI CWHUB2,The Bronx,ChargePoint Network,1,1,True,False
+40.877996,-72.52101,"Hampton Bays, NY - Tesla Supercharger",Hampton Bays,Tesla,1,12,True,False
+40.8857911,-73.0994379,Target South Setauket #T1191,South Setauket,eVgo Network,1,6,True,False
+40.891929,-72.42699,"Southampton, NY - Tesla Supercharger",Southampton,Tesla,1,8,False,True
+40.89328,-73.34093,Northport Meat Farms,Northport,VIALYNK,1,6,True,False
+40.896664,-72.41814,MB OF SH RP DC FAST,Southampton,ChargePoint Network,1,1,True,False
+40.8986727,-72.3723695,"Southampton, NY",Southampton,RIVIAN_ADVENTURE,1,6,True,False
+40.899248,-72.371297,BMW Southampton,Southampton,CHARGESMART_EV,1,4,True,False
+40.899306,-72.374477,ChargeSmart EV - Southampton Hub,Southampton,CHARGESMART_EV,1,8,True,False
+40.911944,-72.353104,"Water Mill, NY - Tesla Supercharger",Water Mill,Tesla,1,8,False,True
+40.912342,-73.780793,"New Rochelle, NY - Tesla Supercharger",New Rochelle,Tesla,1,8,False,True
+40.91236,-73.77951,New Roc Parking Deck,New Rochelle,eVgo Network,1,6,True,False
+40.91888,-72.66044,EVolve NY Riverhead,Riverhead,Electrify America,1,4,True,False
+40.919104,-73.776645,Nissan of New Rochelle,New Rochelle,Non-Networked,1,1,True,False
+40.9192119,-73.7769964,Sal Mineo Nissan - New Rochelle,New Rochelle,NAYAX_ENERGY,1,2,True,False
+40.923431,-72.703576,"Riverhead, NY - Old Country Road - Tesla Supercharger",Riverhead,Tesla,1,8,False,True
+40.92394,-72.70909,"UBP Riverhead Plaza (Riverhead, NY)",Riverhead,Electrify America,1,4,True,False
+40.92414,-73.0428,"Lerner NYC Station Plaza (Port Jefferson Station, NY)",Port Jefferson Station,Electrify America,1,4,True,False
+40.92423,-72.70479,Riverhead Auto Mall,Riverhead,Non-Networked,1,2,True,False
+40.92458,-72.704161,NISSAN FAST CHR RIVERHEAD NISSA,Riverhead,ChargePoint Network,1,1,True,False
+40.92462845498428,-72.70455193322309,Riverhead Auto Mall,Riverhead,Blink Network,1,2,True,False
+40.925903,-72.68885,RIVERHEADMOTORS STATION 1,Riverhead,ChargePoint Network,1,1,True,False
+40.926043,-72.688319,1419 Old Country Rd,Riverhead,EV Connect,1,4,True,False
+40.927889,-72.706158,The Shops at Riverhead,Riverhead,eVgo Network,1,2,True,False
+40.93105025384,-72.649572078423,OK Petroleum Riverhead,Riverhead,RED_E,1,4,True,False
+40.93502,-72.30366,EVolve NY Bridgehampton,Bridgehampton,Electrify America,1,4,True,False
+40.94924,-73.79149,"Brixmor North Ridge Shopping Center (New Rochelle,",New Rochelle,Electrify America,1,4,True,False
+40.95745,-73.812991,440 White Plains Road LLC - DC,Eastchester,FLO,1,2,True,False
+40.96108,-73.84168,Highridge Plaza,Yonkers,eVgo Network,1,4,True,False
+40.963245,-73.85505,"Yonkers, NY - Tesla Supercharger",Yonkers,Tesla,1,18,False,True
+40.965598,-72.189515,"East Hampton, NY - Tesla Supercharger",East Hampton,Tesla,1,12,False,True
+40.965801,-73.838967,"Yonkers, NY - Central Park Avenue - Tesla Supercharger",Yonkers,Tesla,1,11,True,False
+40.98499,-73.85296,Ardsley Service Area,Hastings on Hudson,APPLEGREEN,1,4,True,False
+40.989586,-73.671855,Courtyard Marriott - Rye,Rye,eVgo Network,1,4,True,False
+40.9931698,-73.7324547,Chestnut Market Hutchinson Riv Pkwy,White Plains,NOODOE,1,4,True,False
+41.003883,-73.856563,"Dobbs Ferry, NY - Tesla Supercharger",Dobbs Ferry,Tesla,1,12,False,True
+41.02134,-73.718494,"Harrison, NY - Tesla Supercharger",Harrison,Tesla,1,12,True,False
+41.0274,-73.76555,EVolve NY White Plains,White Plains,Electrify America,1,6,True,False
+41.028926623155726,-73.77496356082358,White Plains Honda,White Plains,Blink Network,1,2,True,False
+41.0322,-73.78709,"Dalewood Shopping Center (Hartsdale, NY)",Hartsdale,Electrify America,1,3,True,False
+41.03591,-71.94349,"Town of East Hampton (Montauk, NY)",Montauk,Electrify America,1,4,True,False
+41.03599,-71.943622,"Montauk, NY - Tesla Supercharger",Montauk,Tesla,1,8,False,True
+41.044986,-73.954036,"Orangeburg, NY - Tesla Supercharger",Orangeburg,Tesla,1,12,True,False
+41.04588,-73.95284,"Orangetown Shopping Center (Orangeburg, NY)",Orangeburg,Electrify America,1,4,True,False
+41.061484,-73.836407,"Tarrytown, NY - Tesla Supercharger",Tarrytown,Tesla,1,12,False,True
+41.06601,-72.42762,EVolve NY Southold,Southold,Electrify America,1,6,True,False
+41.070513,-72.437017,Lucas Ford,Southold,CHARGESMART_EV,1,6,True,False
+41.072806,-71.943056,WHE Montauk,Montauk,RED_E,1,4,True,False
+41.09142,-73.949911,ROCKLAND HYU STATION 1,West Nyack,ChargePoint Network,1,1,True,False
+41.091432,-73.949836,ROCKLAND HYU STATION 2,West Nyack,ChargePoint Network,1,1,True,False
+41.0941543,-74.0129301,The Shops at Nanuet,Nanuet,eVgo Network,1,6,True,False
+41.094685,-73.955367,"West Nyack, NY - Tesla Supercharger",West Nyack,Tesla,1,20,False,True
+41.098648,-73.998455,Bomnin Chevrolet Buick GMC Cadillac,Nanuet,EV Connect,1,2,True,False
+41.10044106853072,-73.9968509585259,Schultz Ford Lincoln,Nanuet,Blink Network,1,4,True,False
+41.1143256,-73.7711415,Rose Hill Shopping Center,Thornwood,eVgo Network,1,4,True,False
+41.143368,-73.862697,Arcadian Shopping Center,Ossining,eVgo Network,1,1,True,False
+41.14393,-73.861307,"Ossining, NY - Tesla Supercharger",Ossining,Tesla,1,12,False,True
+41.1559894,-74.07104410000001,"HondoGo - Monsey, NY",Monsey,EVGATEWAY,1,4,True,False
+41.1899426,-73.9579786,Parkside Haverstraw,Haverstraw,EVOKE,1,4,True,False
+41.2008312,-74.0067845,"HondoGO - Garnerville, NY",Garnerville,EVGATEWAY,1,4,True,False
+41.204169,-73.729233,Kisco Police Station,Mt. Kisco,JULE,1,2,True,False
+41.22035,-73.72386,Hotel MTK,Mt. Kisco,VIALYNK,1,10,True,False
+41.229603,-73.71001,BEDFORDCDJR CPE250 #4,Bedford Hills,ChargePoint Network,1,1,True,False
+41.229656,-73.71007,BEDFORDCDJR CPE250 #3,Bedford Hills,ChargePoint Network,1,1,True,False
+41.229664,-73.710045,BEDFORDCDJR CPE250 #1,Bedford Hills,ChargePoint Network,1,1,True,False
+41.229683,-73.710075,BEDFORDCDJR CPE250 #2,Bedford Hills,ChargePoint Network,1,1,True,False
+41.23062,-73.99935,EVolve NY Stony Point,Stony Point,Electrify America,1,4,True,False
+41.237718,-74.380593,Fette Ford - Warwick,Warwick,CHARGESMART_EV,1,4,True,False
+41.25582,-73.68329,EVolve NY Katonah,Katonah,Electrify America,1,6,True,False
+41.290536,-73.832495,"Yorktown Heights, NY - Tesla Supercharger",Yorktown Heights,Tesla,1,12,False,True
+41.29130446615224,-73.8515735322829,Curry Honda Yorktown,Yorktown heights,Blink Network,1,4,True,False
+41.29401,-73.6748,EVolve NY Goldens Bridge,Goldens Bridge,Electrify America,1,6,True,False
+41.313151,-74.125073,"Central Valley, NY - Tesla Supercharger",Central Valley,Tesla,1,12,False,True
+41.313287,-74.125236,Woodbury Common Premium Outlets,Central Valley,eVgo Network,1,2,True,False
+41.31402,-74.12405,"Simon Woodbury Commons Premium Outlet (Central Valley, NY)",Central Valley,Electrify America,1,4,True,False
+41.315753,-74.141871,MBOC WAY DC250 1,Woodbury,ChargePoint Network,1,1,True,False
+41.353746,-73.748237,Park Ford of Mahopac,Mahopac,CHARGESMART_EV,1,4,True,False
+41.391699,-73.595074,"Brewster, NY - Tesla Supercharger",Brewster,Tesla,1,8,True,False
+41.393047,-74.33635,SURESKY HYUNDAI CDJR FRONT RIGH,Goshen,ChargePoint Network,1,1,True,False
+41.393125,-74.336503,SURESKY HYUNDAI SHOWROOM,Goshen,ChargePoint Network,1,1,True,False
+41.39598252415641,-73.60568401719691,Lia Honda Brewster,Brewster,QUICKCHARGE,1,2,True,False
+41.398466,-74.357996,Healey Ford - Goshen,Goshen,CHARGESMART_EV,1,6,True,False
+41.419266,-74.428084,L771 STATION 1,Middletown,ChargePoint Network,1,1,True,False
+41.419999,-74.426599,WS Healey Chevrolet,New Hampton,CHARGESMART_EV,1,2,True,False
+41.420031413829975,-74.43098068305245,Friendly Acura of Middletown,Middletown,Blink Network,1,4,True,False
+41.42005,-74.429638,ChargeSmart EV - Middletown,Middletown,CHARGESMART_EV,1,6,True,False
+41.44245,-74.376587,"Middletown, NY - Tesla Supercharger",Middletown,Tesla,1,8,False,True
+41.47696,-74.38093,Silverlake Deli,Middletown,VIALYNK,1,4,True,False
+41.49792,-74.07305,"Walmart 2104 (Newburgh, NY)",Newburgh,Electrify America,1,4,True,False
+41.499595,-74.071382,"Newburgh, NY - Tesla Supercharger",Newburgh,Tesla,1,6,False,True
+41.50103,-74.07229,"Newburgh, NY",Newburgh,RIVIAN_ADVENTURE,1,6,True,False
+41.517902,-74.069817,"Newburgh, NY - NY-300 - Tesla Supercharger",Newburgh,Tesla,1,16,True,False
+41.52578,-73.89459,Hilton Garden Inn Fishkill,Fishkill,VIALYNK,1,4,True,False
+41.526015,-73.891911,Courtyard by Marriott - Fishkill,Fishkill,CHARGESMART_EV,1,8,True,False
+41.52614,-74.15231,Coldenham Citgo,Montgomery,RED_E,1,4,True,False
+41.526738,-73.894512,"Fishkill, NY - Tesla Supercharger",Fishkill,Tesla,1,12,False,True
+41.52855,-73.91298,Valero Fishkill,Fishkill,RED_E,1,4,True,False
+41.5747,-73.90991,Acura at Wappingers Falls,Wappingers Falls,VIALYNK,1,4,True,False
+41.575023,-73.907039,MB OF WF SERVICE REAR,Wappingers Falls,ChargePoint Network,1,1,True,False
+41.57764564395,-74.08538635339066,Plattekill Service Area,Plattekill,APPLEGREEN,1,6,True,False
+41.58966580000001,-73.9055664,"HondoGO - Wappinger Falls, NY",Wappingers Falls,EVGATEWAY,1,8,True,False
+41.623819,-73.916647,Healey Chevrolet Inc.,Crown Heights,CHARGESMART_EV,1,6,True,False
+41.628082,-73.917271,GM - HUDSON CADILLAC  - Poughkeepsie,Poughkeepsie,EV Connect,1,3,True,False
+41.630563,-73.914486,BMWHV HV FAST CHARGER,Poughkeepsie,ChargePoint Network,1,1,True,False
+41.630574,-73.914552,BMW Hudson Valley,Poughkeepsie,CHARGESMART_EV,1,4,True,False
+41.643828,-73.920826,Healey Ford - Poughkeepsie,Poughkeepsie,CHARGESMART_EV,1,6,True,False
+41.65364,-73.96215,Town of Marlborough Cluett Schantz Memorial Park Entrance,Milton,VIALYNK,1,6,True,False
+41.666678,-74.671775,"Monticello, NY - Tesla Supercharger",Monticello,Tesla,1,12,True,False
+41.668449,-73.794112,"Lagrangeville, NY - Tesla Supercharger",Lagrangeville,Tesla,1,12,True,False
+41.696361,-73.89775,825 Main St,Arlington,RED_E,1,4,True,False
+41.7135782,-73.9641901,"HondoGO - Highland, NY",Highland,EVGATEWAY,1,4,True,False
+41.71808,-74.39668,Trudy Resnick Farber Center,Ellenville,VIALYNK,1,4,True,False
+41.7218104,-74.3925824,"HondoGo - Ellenville, NY",Ellenville,EVGATEWAY,1,4,True,False
+41.72781,-73.96203,Community Car Wash,Highland,QUICKCHARGE,1,4,True,False
+41.743783,-74.070086,"New Paltz, NY - Tesla Supercharger",New Paltz,Tesla,1,8,False,True
+41.74576,-73.82506,Milestone Square Equities,Pleasant Valley,QUICKCHARGE,1,2,True,False
+41.7757278,-73.9313184,HondoGO - Hyde Park,Hyde Park,EVGATEWAY,1,4,True,False
+41.825386,-73.770375,"Clinton Corners, NY - Tesla Supercharger",Clinton Corners,Tesla,1,8,False,True
+41.85227,-74.1286,SUNY Ulster - Hasbrouck Hall,Stone Ridge,VIALYNK,1,6,True,False
+41.930474,-74.90882,"Roscoe, NY - Tesla Supercharger",Roscoe,Tesla,1,8,False,True
+41.93691,-74.02619,EVolve NY Kingston,Kingston,Electrify America,1,4,True,False
+41.941953,-74.027372,"Kingston, NY - Tesla Supercharger",Kingston,Tesla,1,8,False,True
+41.94642,-73.99546,Ulster County DSS Front Lot,Kingston,VIALYNK,1,4,True,False
+41.947007,-74.031227,Romeo Ford,Kingston,FORD_CHARGE,1,4,True,False
+41.955813,-75.294458,"Hancock, NY - Tesla Supercharger",Hancock,Tesla,1,8,True,False
+41.95615,-75.29439,EVolve NY Hancock,Hancock,Electrify America,1,8,True,False
+41.95622,-73.99184,Lia Honda Kingston,Kingston,QUICKCHARGE,1,2,True,False
+41.95695421179352,-73.89360003207543,Ruge's CDJ Annex,Rhinebeck,Blink Network,1,2,True,False
+41.9575,-73.990371,PRESHYUN PKG 2,Kingston,ChargePoint Network,1,1,True,False
+41.957566,-73.9904,PRESHYUN PKG 1,Kingston,ChargePoint Network,1,1,True,False
+41.95916,-73.89637,Ruge’s Ford,Rhinebeck,Blink Network,1,4,True,False
+41.966594,-73.9900474,"HondoGO - Kingston, NY",Kingston,EVGATEWAY,1,4,True,False
+41.979559,-73.88213,"Red Hook, NY - Tesla Supercharger",Red Hook,Tesla,1,8,True,False
+41.980335,-73.990256,Romeo Chevrolet,Lake Katrine,Non-Networked,1,3,True,False
+41.9807195,-73.9887095,DCFC,Lake Katrine,EVOKE,1,1,True,False
+41.987328,-73.880128,TOWN OF RED HK FAST 2,Red Hook,ChargePoint Network,1,1,True,False
+41.98738,-73.880117,TOWN OF RED HK FAST 1,Red Hook,ChargePoint Network,1,1,True,False
+41.99116,-73.98683,Van Kleecks Tire,Lake Katrine,VIALYNK,1,4,True,False
+42.0057,-74.10514,Trident Chargers - 295 NY-375,West Hurley,VIALYNK,1,4,True,False
+42.014499,-73.999453,Ulster Service Plaza,Ruby,APPLEGREEN,1,4,True,False
+42.07654,-78.45919,EVolve NY Olean,Olean,Electrify America,1,4,True,False
+42.080322,-73.959925,"Saugerties, NY - Tesla Supercharger",Saugerties,Tesla,1,16,True,False
+42.08412,-73.96876,EVolve NY Saugerties,Saugerties,Electrify America,1,4,True,False
+42.085902,-78.445939,ChargeSmart EV - Olean,Olean,CHARGESMART_EV,1,8,True,False
+42.09037,-75.91355,EVolve NY Binghamton,Binghamton,Electrify America,1,4,True,False
+42.091802,-76.804195,Elm Chevrolet,Elmira,Non-Networked,1,5,True,False
+42.093359,-75.823448,"Kirkwood, NY - Tesla Supercharger",Kirkwood,Tesla,1,12,True,False
+42.095284,-79.24157,JAMESTOWN BPU 1 W 2ND ST #1,Jamestown,ChargePoint Network,1,1,True,False
+42.095306,-79.24159,JAMESTOWN BPU 1 W 2ND ST #2,Jamestown,ChargePoint Network,1,1,True,False
+42.095566,-75.96537,MILLER MOTORS WEST RDK,Vestal,ChargePoint Network,1,1,True,False
+42.095566,-75.96526,MILLER MOTORS EAST R DK,Vestal,ChargePoint Network,1,1,True,False
+42.0969289,-75.9803776,Courtyard by Marriott Binghamton,Vestal,EVGATEWAY,1,8,True,False
+42.097488,-76.234708,Hampton Inn Owego,Owego,EVGATEWAY,1,8,True,False
+42.097733,-79.23768,JAMESTOWN BPU PREND.4TH #1,Jamestown,ChargePoint Network,1,1,True,False
+42.097733,-79.23767,JAMESTOWN BPU PREND.4TH #2,Jamestown,ChargePoint Network,1,1,True,False
+42.098102,-79.31418,MAINLOT MAIN LOT LEFT 1,Lakewood,ChargePoint Network,1,1,True,False
+42.098134,-79.314199,MAINLOT SHULTS HYUNDAI,Lakewood,ChargePoint Network,1,1,True,False
+42.100084,-76.009195,Burr Truck Level 3 DC Fast Charge,Vestal,EV Connect,1,2,True,False
+42.10126,-75.83634,"Love's 403 (Binghamton, NY)",Binghamton,Electrify America,1,4,True,False
+42.10215,-76.26353,EVolve NY Owego,Owego,Electrify America,1,4,True,False
+42.10231,-75.91714,Botnick Chevrolet,Binghamton,Non-Networked,1,2,True,False
+42.110162,-73.957064,Malden Service Plaza,Malden-on-Hudson,APPLEGREEN,1,4,True,False
+42.1136,-79.24714,Ed Shults Ford,Jamestown,FORD_CHARGE,1,2,True,False
+42.11366,-79.21091,EVolve NY Jamestown,Jamestown,Electrify America,1,6,True,False
+42.12847,-79.7414,EVolve NY Findley Lake,Findley Lake,Electrify America,1,6,True,False
+42.130981,-75.972791,"Johnson City, NY - Tesla Supercharger",Johnson City,Tesla,1,12,False,True
+42.131997,-77.123162,Chilson Wilcox CDJR,Painted Post,CHARGESMART_EV,1,2,True,False
+42.145538,-75.902078,"Binghamton, NY - Front St - Tesla Supercharger",Binghamton,Tesla,1,8,False,True
+42.14998548857,-76.83257207631,Ferrario Ford,Elmira,RED_E,1,6,True,False
+42.152065,-76.885228,S-R CPE2502,Elmira,ChargePoint Network,1,1,True,False
+42.152089,-76.88525,S-R CPE2501,Elmira,ChargePoint Network,1,1,True,False
+42.153338,-78.747909,"Salamanca, NY - Tesla Supercharger",Salamanca,Tesla,1,8,False,True
+42.153648,-76.87858,Elmira MB.HPC,Elmira,MERCEDES_BENZ,1,12,True,False
+42.153952,-77.105102,"Painted Post, NY - Tesla Supercharger",Painted Post,Tesla,1,16,False,True
+42.154714,-77.11002,ChargeSmart EV - Corning,Painted Post,CHARGESMART_EV,1,8,True,False
+42.156951,-74.619976,NYC FLEET DEP_ARKVLE_1_L3,Arkville,ChargePoint Network,1,1,True,False
+42.157794913491,-76.86751995651,Ferrario Chrysler Dodge Jeep Ram,Elmira,RED_E,1,2,True,False
+42.15816,-76.8266,EVolve NY Horseheads,Horseheads,Electrify America,1,4,True,False
+42.158913,-76.863439,"Elmira, NY - Tesla Supercharger",Elmira,Tesla,1,12,False,True
+42.16011,-79.596012,Village of Sherman EV Station,Sherman,EV Connect,1,2,True,False
+42.170817,-77.108097,"Erwin, NY - Tesla Supercharger",Painted Post,Tesla,1,10,False,True
+42.196035,-74.131107,Thorpe's GMC,TANNERSVILLE,EV Connect,1,1,True,False
+42.20258,-78.14575,EVolve NY Friendship,Friendship,Electrify America,1,4,True,False
+42.2160176,-73.8781052,HondoGO - Catskill,Catskill,EVGATEWAY,1,4,True,False
+42.216659,-73.876835,RC Lacy Ford,Catskill,CHARGESMART_EV,1,4,True,False
+42.223077,-73.826888,"Hudson, NY - Tesla Supercharger",Hudson,Tesla,1,8,False,True
+42.22378,-78.03369,Ardent Solutions,Belmont,VIALYNK,1,4,True,False
+42.22742,-75.52592,EVolve NY Afton,Afton,Electrify America,1,4,True,False
+42.23186,-75.91721,EVolve NY Castle Creek,Castle Creek,Electrify America,1,4,True,False
+42.254369,-78.061025,QUICKLEES22 DCFC1,Belmont,ChargePoint Network,1,1,True,False
+42.254436,-78.060856,QUICKLEES22 DCFC2,Belmont,ChargePoint Network,1,1,True,False
+42.259086,-79.743138,LOVE'S 833 - NY #833 DC1,Ripley,ChargePoint Network,1,2,True,False
+42.259127,-79.74317,LOVE'S 833 - NY #833 DC2,Ripley,ChargePoint Network,1,2,True,False
+42.3038,-78.01212,EVolve NY Angelica,Angelica,Electrify America,1,4,True,False
+42.3123249,-75.3952289,Public or Dealer Use Station (DCFC),Sidney,NOODOE,1,2,True,False
+42.32981,-73.616364,Ghent Town Hall,Ghent,SWTCH,1,2,True,False
+42.336871,-75.973536,"Whitney Point, NY - Tesla Supercharger",Whitney Point,Tesla,1,8,True,False
+42.34079,-79.59603,EVolve NY Westfield,Westfield,Electrify America,1,4,True,False
+42.358605105687,-77.2962873965,Simmons Rockwell Ford Bath NY,Bath,RED_E,1,2,True,False
+42.36168510921626,-79.04869920351962,Village of South Dayton,South Dayton,Blink Network,1,2,True,False
+42.36527071266,-77.6748108106,Simmons Rockwell Ford Hornell NY,Hornell,RED_E,1,4,True,False
+42.38546,-76.85774,EVolve NY Watkins Glen,Watkins Glen,Electrify America,1,4,True,False
+42.40765,-77.224102,SSFLX STATION 2,Hammondsport,ChargePoint Network,1,1,True,False
+42.407678,-77.224005,SSFLX STATION 1,Hammondsport,ChargePoint Network,1,1,True,False
+42.4212506,-76.5176113,Holiday Inn Express Ithaca,Ithaca,EVGATEWAY,1,8,True,False
+42.4218,-76.48974,Ithaca College - Athletic Center,Ithaca,VIALYNK,1,4,True,False
+42.427557,-76.510253,Chrysler L3s,Ithaca,FLIPTURN,1,2,True,False
+42.42857149,-73.8055806,New Baltimore SB Travel Plaza,New Baltimore,APPLEGREEN,2,8,True,False
+42.428608,-76.509113,"Ithaca, NY - Tesla Supercharger",Ithaca,Tesla,1,8,False,True
+42.434927,-76.508808,Ford Ithaca L3s,Ithaca,FLIPTURN,1,4,True,False
+42.44734,-75.04848,EVolve NY Oneonta,Oneonta,Electrify America,1,4,True,False
+42.447724,-75.048683,"Oneonta, NY - Tesla Supercharger",Oneonta,Tesla,1,8,False,True
+42.45165,-75.09985,Country Club Imports,Oneonta,Non-Networked,1,2,True,False
+42.45379,-79.31118,"Walmart 1949 (Fredonia, NY)",Fredonia,Electrify America,1,4,True,False
+42.454074,-79.308673,"Fredonia, NY - Tesla Supercharger",Fredonia,Tesla,1,12,True,False
+42.45799,-75.05558,Singh Fuels,Oneonta,QUICKCHARGE,1,2,True,False
+42.47583,-73.819614,Crossroads Ford,Ravena,CHARGESMART_EV,1,2,True,False
+42.480627,-76.47778,Chevrolet Cadillac L3s,Ithaca,FLIPTURN,1,3,True,False
+42.480929,-76.477605,Maguire Chevrolet,Ithaca,Non-Networked,1,1,True,False
+42.497906,-73.674759,Pilot Travel Center 146,Castleton-On-Hudson,eVgo Network,1,4,True,False
+42.507294,-78.667553,Village of Springville,Springville,Blink Network,1,2,True,False
+42.532736,-76.638575,Chevy of Trumansburg L3's,Trumansburg,FLIPTURN,1,2,True,False
+42.5411713,-76.660174,Parking Lot DCFC,Trumansburg,EVOKE,1,2,True,False
+42.54118,-76.66079,Village Hall,Trumansburg,AUTEL,1,2,True,False
+42.5422159,-76.6663553,Parking Lot DCFC,Trumansburg,EVOKE,1,2,True,False
+42.563297,-77.712088,"Dansville, NY - Tesla Supercharger",Dansville,Tesla,1,8,False,True
+42.56368,-77.71098,EVolve NY Dansville,Dansville,Electrify America,1,4,True,False
+42.57548134574407,-78.93965467254989,Towne Chevrolet,North Collins,Blink Network,1,2,True,False
+42.583881,-76.200912,Dovi Ford - L3,Cortland,CHARGESMART_EV,1,4,True,False
+42.593704,-73.705502,Wallys Ford of East Greenbush,East Greenbush,FORD_CHARGE,1,4,True,False
+42.5942,-76.20664,Cortland Dodge Jeep Ram,Cortland,VIALYNK,1,2,True,False
+42.598343,-73.71103,Hannaford Plaza - East Greenbush,East Greenbush,eVgo Network,1,6,True,False
+42.605902,-76.168085,"Cortland, NY - Tesla Supercharger",Cortland,Tesla,1,8,True,False
+42.606554,-76.166043,DENNY'S RIVER 01,Cortland,ChargePoint Network,1,1,True,False
+42.6066,-76.166189,DENNY'S RIVER 03,Cortland,ChargePoint Network,1,1,True,False
+42.606603,-76.166232,DENNY'S RIVER 04,Cortland,ChargePoint Network,1,1,True,False
+42.606604,-76.166134,DENNY'S RIVER 02,Cortland,ChargePoint Network,1,1,True,False
+42.61127,-77.03736,Oak Hill Bulk Foods,Penn Yan,QUICKCHARGE,1,4,True,False
+42.619982,-73.783065,"Glenmont, NY - Tesla Supercharger",Glenmont,Tesla,1,8,True,False
+42.62469,-73.702386,Hampton Inn - East Greenbush,East Greenbush,CHARGESMART_EV,1,8,True,False
+42.63555,-78.987908,Angola Travel Plaza East,Angola,EV Connect,1,1,True,False
+42.635738,-78.990494,Angola Travel Plaza West,Angola,EV Connect,1,1,True,False
+42.636095,-73.791138,ALBANY DOE STATION #1,Albany,ChargePoint Network,1,1,True,False
+42.636111,-73.791138,ALBANY DOE STATION #2,Albany,ChargePoint Network,1,1,True,False
+42.64189,-74.53896,EVolve NY Richmondville,Richmondville,Electrify America,1,4,True,False
+42.64567,-73.70022,EVolve NY Rensselaer,Rensselaer,Electrify America,1,6,True,False
+42.649353,-73.923215,Hannaford Supermarket,Voorheesville,eVgo Network,1,1,True,False
+42.65321,-73.74811,EVolve NY Quackenbush Albany,Albany,Electrify America,1,4,True,False
+42.65973,-73.76847,EVolve NY Albany Lot 3,Albany,Electrify America,1,4,True,False
+42.676339,-73.748731,"Albany, NY - Northern Boulevard - Tesla Supercharger",Albany,Tesla,1,8,True,False
+42.67914,-73.78762,DePaula Chevrolet,Albany,VIALYNK,1,1,True,False
+42.679774,-73.789387,DePaula Ford,Albany,CHARGESMART_EV,1,4,True,False
+42.680658,-73.790978,Hannaford Supermarket,Albany,eVgo Network,1,1,True,False
+42.681414,-73.70453,REGENERON EV-GV-44-07 L3,Troy,ChargePoint Network,1,1,True,False
+42.6823,-73.79182,Trident 911 Central Ave,Albany,VIALYNK,1,6,True,False
+42.682376,-73.794037,ARMORY EV CJDRFEXPP-PL,Albany,ChargePoint Network,1,1,True,False
+42.688728,-73.853289,"Guilderland, NY - Tesla Supercharger",Guilderland,Tesla,1,20,False,True
+42.69454,-73.84832,"Walmart 2152 (Albany, NY)",Albany,Electrify America,1,6,True,False
+42.6975,-73.81073,Lia Honda Albany,Albany,QUICKCHARGE,1,2,True,False
+42.6975,-73.648487,Hannaford Markets - Wynantskill,Wynantskill,eVgo Network,1,1,True,False
+42.69802,-73.89341,20 Mall Lia Realty,Guilderland,QUICKCHARGE,1,4,True,False
+42.699131,-73.8101,"Albany, NY - Central Avenue - Tesla Supercharger",Albany,Tesla,1,12,True,False
+42.699991,-74.926988,DOUBLEDAY_FIELD CHESTN04,Cooperstown,ChargePoint Network,1,1,True,False
+42.700021,-74.92696,DOUBLEDAY_FIELD CHESTN03,Cooperstown,ChargePoint Network,1,1,True,False
+42.700056,-74.926928,DOUBLEDAY_FIELD CHESTN02,Cooperstown,ChargePoint Network,1,1,True,False
+42.700081,-74.9269,DOUBLEDAY_FIELD CHESTN01,Cooperstown,ChargePoint Network,1,1,True,False
+42.705461,-74.315184,ChargeSmart EV - Schoharie,Schoharie,CHARGESMART_EV,1,8,True,False
+42.710338,-73.819074,"Albany, NY - Tesla Supercharger",Albany,Tesla,1,6,False,True
+42.716216,-73.934492,Hannaford Markets - Guilderland,Altamont,eVgo Network,1,1,True,False
+42.71752,-73.8065,DeNooyer Chevrolet,Albany,QUICKCHARGE,1,2,True,False
+42.717867,-73.806317,DeNooyer Chevrolet,Albany,Non-Networked,1,1,True,False
+42.722398,-73.838117,GOLDSTEIN BUICK CPE-2,Albany,ChargePoint Network,1,1,True,False
+42.727952,-73.844098,Otto Cadillac,Albany,EV Connect,1,1,True,False
+42.73265,-73.85054,M & M Quick Stop Inc. - 370 New Karner Rd,Colonie,QUICKCHARGE,1,2,True,False
+42.7385,-73.72986,Latham Plaza,Watervliet,QUICKCHARGE,1,4,True,False
+42.744213,-73.918534,Guilderland Service Plaza,Schenectady,APPLEGREEN,1,4,True,False
+42.747088,-78.854571,Towne Chrysler Dodge Jeep,Hamburg,Blink Network,1,2,True,False
+42.747887,-73.635525,L751 L751 - 3506,Troy,ChargePoint Network,1,1,True,False
+42.747923,-73.635563,L751 L751 - 8266,Troy,ChargePoint Network,1,1,True,False
+42.74797,-76.13435,EVolve NY Tully Preble,Tully,Electrify America,1,4,True,False
+42.748739,-78.852686,ChargeSmart EV - Hamburg,Hamburg,CHARGESMART_EV,1,4,True,False
+42.74906,-73.8693,Khan Fuels Inc,Albany,QUICKCHARGE,1,2,True,False
+42.75053,-78.854869,WEST HERR AUTO WH FH L3-2 EXPP,Hamburg,ChargePoint Network,1,2,True,False
+42.7509354,-73.7641406,"Latham, NY",Latham,RIVIAN_ADVENTURE,1,8,True,False
+42.75147,-78.854882,WEST HERR AUTO WH FH L3-1 EXPP,Hamburg,ChargePoint Network,1,2,True,False
+42.75461,-73.87711,Lia CJDR Colonie,Schenectady,QUICKCHARGE,1,4,True,False
+42.7556863,-73.7716719,Target Latham #T1915,Latham,eVgo Network,1,6,True,False
+42.756734,-73.779132,L367 EXPP-PUBLIC-1,Latham,ChargePoint Network,1,2,True,False
+42.76303,-73.74881,One Dream,Latham,VIALYNK,1,4,True,False
+42.76406,-73.75626,Northeast Acura,Latham,QUICKCHARGE,1,2,True,False
+42.7663,-73.812609,KEELER STATION 5,Latham,ChargePoint Network,1,1,True,False
+42.766307,-73.755353,"Latham, NY - Tesla Supercharger",Latham,Tesla,1,8,False,True
+42.766317,-73.812767,KEELER STATION 6,Latham,ChargePoint Network,1,1,True,False
+42.766824,-73.813581,KEELER STATION 7,Latham,ChargePoint Network,1,1,True,False
+42.766832,-73.813517,KEELER STATION 8,Latham,ChargePoint Network,1,1,True,False
+42.767611433196485,-73.8142930900211,Keeler Honda,Latham,Blink Network,1,2,True,False
+42.769523,-73.754228,Fuccillo Nissan - Latham,Latham,IN_CHARGE,1,1,True,False
+42.770978,-73.891683,Metro Ford,Schenectady,CHARGESMART_EV,1,2,True,False
+42.78071,-73.90389,Blue Ribbon Restaurant,Schenectady,QUICKCHARGE,1,2,True,False
+42.7814246,-74.0288247,Pilot Travel Center 494,Rotterdam,eVgo Network,1,4,True,False
+42.7834664,-73.9224135,Crosstown Plaza,Schenectady,eVgo Network,1,6,True,False
+42.785255,-78.766662,L762 POWER LINK,Orchard Park,ChargePoint Network,1,2,True,False
+42.7866193,-78.7618825,Towne Ford,Orchard Park,FORD_CHARGE,1,4,True,False
+42.788209,-78.759475,TOWNE HYUNDAI 3A,Orchard Park,ChargePoint Network,1,1,False,False
+42.788215,-78.759409,TOWNE HYUNDAI 3B,Orchard Park,ChargePoint Network,1,1,True,False
+42.788251,-73.672111,Hannaford Supermarket,Troy,eVgo Network,1,1,True,False
+42.788438133694,-76.12176856009,Jack McNerney Chevrolet,Tully,RED_E,1,2,True,False
+42.79033,-78.78267,Quaker Crossing,Orchard Park,VIALYNK,1,4,True,False
+42.79106,-78.81782,Warehouse Restaurant,Buffalo,VIALYNK,1,4,True,False
+42.793242,-74.004896,"Rotterdam, NY - Tesla Supercharger",Rotterdam,Tesla,1,8,False,True
+42.79943119481,-77.78012625793,Aldi Geneseo TUL 95,Geneseo,RED_E,1,8,True,False
+42.800056,-76.121843,"Tully, NY - Tesla Supercharger",Tully,Tesla,1,12,False,True
+42.81581,-73.94273,City of Schenectady - Clinton's Ditch,Schenectady,VIALYNK,1,4,True,False
+42.822553,-78.823543,NEW CITY HALL CITY HALL 2,Buffalo,ChargePoint Network,1,1,True,False
+42.822774,-78.823521,NEW CITY HALL CITY HALL 1,Buffalo,ChargePoint Network,1,1,True,False
+42.82891,-75.54734,EVolve NY Hamilton,Hamilton,Electrify America,1,4,True,False
+42.84626,-73.9433,Mohawk Honda,Schenectady,QUICKCHARGE,1,2,True,False
+42.849995,-77.011217,Geneva Town Hall,Geneva,AUTEL,1,2,True,False
+42.850739,-78.695425,Delacy Ford Inc,Erie County,FORD_CHARGE,1,4,True,False
+42.8528,-73.94255,Capitaland GMC,Glenville,Blink Network,1,2,True,False
+42.85665,-77.01811,Tradition Chevrolet,Geneva,VIALYNK,1,4,True,False
+42.85820831727488,-77.02621993318664,Friendly CDJR of Geneva,Geneva,Blink Network,1,2,True,False
+42.860454,-73.778597,"Clifton Park, NY - Tesla Supercharger",Clifton Park,Tesla,1,24,True,False
+42.86344,-73.78174,Friendly's Clifton Park,Clifton Park,QUICKCHARGE,1,4,True,False
+42.8646883,-73.7684857,"HondoGo - Halfmoon, NY",Clifton Park,EVGATEWAY,1,4,True,False
+42.866216,-77.712512,QUICKLEES 1 DCFC2,Avon,ChargePoint Network,1,1,True,False
+42.866239,-77.712523,QUICKLEES 1 DCFC1,Avon,ChargePoint Network,1,1,True,False
+42.866715,-78.787404,"West Seneca, NY - Tesla Supercharger",West Seneca,Tesla,1,8,True,False
+42.866727,-77.714271,Bob Johnson Chevrolet Avon,Avon,CHARGESMART_EV,1,2,True,False
+42.8703,-73.81817,"American Star Petro - 1019 Route 146, Clifton Park",Clifton Park,QUICKCHARGE,1,2,True,False
+42.876852,-74.034825,Cable Care Construction,Schenectady,AUTEL,1,2,True,False
+42.877575,-77.263567,STARBUCKS MUAR 02,Canandaigua,ChargePoint Network,1,1,True,False
+42.877596,-77.263563,STARBUCKS MUAR 04,Canandaigua,ChargePoint Network,1,1,True,False
+42.877611,-77.263547,STARBUCKS MUAR 01,Canandaigua,ChargePoint Network,1,1,True,False
+42.877615,-77.263567,STARBUCKS MUAR 03,Canandaigua,ChargePoint Network,1,1,True,False
+42.8848,-73.686007,Marchese Ford of Mechanicville,Mechanicville,FORD_CHARGE,1,4,True,False
+42.89348514676,-78.8378236616,Aldi Broadway TUL 84,Buffalo,RED_E,1,4,True,False
+42.896397,-74.096744,Pattersonville Service Plaza,Pattersonville,APPLEGREEN,1,4,True,False
+42.900434,-78.67191,1 PAC Way,Lancaster,SYNERGEV,1,2,True,False
+42.907251,-78.762213,"Cheektowaga, NY - Tesla Supercharger",Cheektowaga,Tesla,1,8,False,True
+42.9075878,-78.7779271,Basil Ford,Cheektowaga,FORD_CHARGE,1,4,True,False
+42.908206,-77.698171,Bob Johnson Ford Avon,Avon,CHARGESMART_EV,1,6,True,False
+42.90943,-78.74468,"Walmart 2586 (Cheektowaga, NY)",Cheektowaga,Electrify America,1,4,True,False
+42.91474212,-74.16300195,Mohawk Travel Plaza,Amsterdam,APPLEGREEN,1,4,True,False
+42.91546,-78.68931,3344 Walden Ave,Depew,VIALYNK,1,6,True,False
+42.919138,-77.306865,Randall Buick GMC Cadillac,CANANDAIGUA,EV Connect,1,2,True,False
+42.919752,-73.886085,Morris Ford,Ballston,FORD_CHARGE,1,6,True,False
+42.92915,-74.19523,Dutch Mart,Amsterdam,QUICKCHARGE,1,2,True,False
+42.931774,-78.697685,NAC SUB TRANSIT EXTERIORLEVEL 3,Depew,ChargePoint Network,1,1,True,False
+42.935159,-76.568019,Holiday Inn - Auburn,Auburn,CHARGESMART_EV,1,8,True,False
+42.94734,-74.357331,ONVO FULTONVILLE DC2,Fultonville,ChargePoint Network,1,2,True,False
+42.94785,-76.428,EVolve NY Skaneateles,Skaneatles,Electrify America,1,4,True,False
+42.948159,-74.357912,ONVO FULTONVILLE DC1,Fultonville,ChargePoint Network,1,2,True,False
+42.94963,-76.97769,EVolve NY Phelps,Phelps,Electrify America,1,6,True,False
+42.949734,-77.600752,Jessica Chevrolet,Honeoye Falls,CHARGESMART_EV,1,2,True,False
+42.95290836170657,-78.60317052917482,Clarence Travel Plaza,Clarence,APPLEGREEN,1,6,True,False
+42.953176,-78.696379,OPTIMUS ENERGY WILLIAMSVLL DC4,Buffalo,ChargePoint Network,1,1,True,False
+42.953176,-78.696369,OPTIMUS ENERGY WILLIAMSVLL DC1,Buffalo,ChargePoint Network,1,1,True,False
+42.953442,-78.695981,OPTIMUS ENERGY WILLIAMSVLL DC3,Buffalo,ChargePoint Network,1,1,True,False
+42.953468,-78.695979,OPTIMUS ENERGY WILLIAMSVLL DC2,Buffalo,ChargePoint Network,1,1,True,False
+42.9545434,-78.8794344,Aldi TUL 80 Elmwood,Buffalo,RED_E,1,4,True,False
+42.95593,-76.92097,"Finger Lakes Premium Outlets (Waterloo, NY)",Waterloo,Electrify America,1,4,True,False
+42.95675,-78.696464,Dave Smith Ford,Williamsville,FORD_CHARGE,1,4,True,False
+42.956903,-78.717044,2100 Wehrle Dr,Williamsville,EV Connect,1,2,True,False
+42.957383,-76.541194,GM - Auburn Chevrolet GMC,Auburn,EV Connect,1,1,True,False
+42.9587887,-76.9174498,Junius Ponds Travel Plaza,Phelps,APPLEGREEN,1,4,True,False
+42.963589,-76.847547,LOVE'S 820 - NY #820 DC2,Waterloo,ChargePoint Network,1,2,True,False
+42.963947,-76.847492,LOVE'S 820 - NY #820 DC1,Waterloo,ChargePoint Network,1,2,True,False
+42.964533,-78.689716,MB OF BUFFALO DC MERC BUFF 2,Williamsville,ChargePoint Network,1,1,True,False
+42.964536,-78.689677,MB OF BUFFALO DC MERC BUFF 1,Williamsville,ChargePoint Network,1,1,True,False
+42.968676,-78.69553,"Buffalo, NY - Tesla Supercharger",Buffalo,Tesla,1,8,False,True
+42.96921,-76.846239,"Waterloo, NY - Tesla Supercharger",Waterloo,Tesla,1,8,False,True
+42.972267,-77.352965,"Farmington, NY - Tesla Supercharger",Farmington,Tesla,1,12,True,False
+42.9727621221244,-77.1734478183351,Applegreen Electric - Clifton Springs Travel Plaza,Clifton Springs,APPLEGREEN,1,6,True,False
+42.974664,-77.36221,Electric Car Corner,Farmington,CHARGESMART_EV,1,6,True,False
+42.97492,-73.86157,United Quick Mart Inc - 1324 Saratoga Rd,Ballston Spa,QUICKCHARGE,1,2,True,False
+42.977968,-78.731296,AAA WESTCENTRAL DC FAST CHARGER,Amherst,ChargePoint Network,1,1,True,False
+42.980203,-78.90793,Manor Lanes,Tonawanda,SWTCH,1,2,True,False
+42.98067,-78.69581,Lia Honda Williamsville,Buffalo,QUICKCHARGE,1,2,True,False
+42.9823611,-76.1426111,Aldi South Salina TUL4,Syracuse,RED_E,1,4,True,False
+42.989146,-78.794554,Buffalo Marriott Niagara,Amherst,CHARGESMART_EV,1,8,True,False
+42.99916475,-77.41338063,Seneca Travel Plaza,Victor,APPLEGREEN,1,6,True,False
+43.000805,-78.40692,Flying J 693,Pembroke,eVgo Network,1,4,True,False
+43.0086,-78.950832,Grand Island - Tesla Supercharger (Pure Energy),Grand Island,Tesla,1,4,True,False
+43.011225,-73.848818,Aldi Ballston Spa TUL 117,Ballston Spa,RED_E,1,8,True,False
+43.011375,-78.968437,1910ALVINRD CPE-250#1,Grand Island,ChargePoint Network,1,1,True,False
+43.011395,-78.968107,1910ALVINRD CPE250 #2,Grand Island,ChargePoint Network,1,1,True,False
+43.01188535,-78.3303756,Pembroke Travel Plaza - Eastbound,Corfu,APPLEGREEN,1,8,True,False
+43.012092,-74.361243,Brown's Ford of Johnstown,Johnstown,FORD_CHARGE,1,6,True,False
+43.014723,-78.204287,"Batavia, NY - Tesla Supercharger",Batavia,Tesla,1,12,True,False
+43.015034,-78.1916,QUICKLEES27 DC FAST 1,Batavia,ChargePoint Network,1,1,True,False
+43.01504,-78.191616,QUICKLEES27 QUICKLEE'S/DCFC,Batavia,ChargePoint Network,1,1,True,False
+43.0161722721355,-74.8041182044396,Indian Castle Service Area,Little Falls,APPLEGREEN,1,4,True,False
+43.016636,-78.768572,WEST HERR AUTO WH FA SVL3-2 PL,Getzville,ChargePoint Network,1,2,True,False
+43.01672,-76.13654,EVolve NY Syracuse South,Syracuse,Electrify America,1,4,True,False
+43.016755,-74.802282,Iroquois Travel Plaza,Little Falls,APPLEGREEN,1,4,True,False
+43.016823,-78.974056,Chevrolet of Grand Island L3's,Grand Island,FLIPTURN,1,4,True,False
+43.01792,-73.79219,Lia Nissan of Saratoga,Ballston Spa,QUICKCHARGE,1,4,True,False
+43.01806285057,-74.3611153854,Aldi Johnstown TUL 110,Johnstown,RED_E,1,8,True,False
+43.018118,-78.76682,WEST HERR AUTO WH FA L3-2 PL,Getzville,ChargePoint Network,1,2,True,False
+43.01855,-77.43829,EVolve NY Victor,Victor,Electrify America,1,4,True,False
+43.01885,-74.99188,"Denny's Red Roof Inn (Herkimer, NY)",Herkimer,Electrify America,1,4,True,False
+43.019147,-78.193273,ChargeSmart EV - Batavia,Batavia,CHARGESMART_EV,1,8,True,False
+43.02392,-73.83996,"M & S Petro Inc - 202 Northline Rd, Ballston Spa",Ballston Spa,QUICKCHARGE,1,2,True,False
+43.02598,-73.791296,"Malta, NY - Tesla Supercharger",Ballston Spa,Tesla,1,8,True,False
+43.028613,-77.440227,"Victor, NY - Tesla Supercharger",Victor,Tesla,1,8,False,True
+43.028627,-78.18805,22047 - Batavia,Batavia,CHARGELAB,1,4,True,False
+43.031128,-77.9084723,Ontario Service Plaza,Leroy,APPLEGREEN,1,4,True,False
+43.03409,-76.36475,EVolve NY Camillus,Camillus,Electrify America,1,4,True,False
+43.037335,-76.017719,Romano Ford,Fayetteville,FORD_CHARGE,1,6,True,False
+43.03808,-76.01811,Romano Ford Volkswagen,Fayetteville,RED_E,1,2,True,False
+43.03817,-76.01811,Romano Mercedes Benz of Syracuse,Fayetteville,RED_E,1,2,True,False
+43.041162,-77.715836,Scottsville Service Plaza,Scottsville,APPLEGREEN,1,4,True,False
+43.042527,-76.135344,"Syracuse, NY - University Avenue - Tesla Supercharger",Syracuse,Tesla,1,12,True,False
+43.04606,-76.06693,"Brixmor Erie Canal Centre (Syracuse, NY)",Syracuse,Electrify America,1,4,True,False
+43.046076,-74.985338,Steet Ponte Chevrolet Herkimer,Herkimer,EV Connect,1,1,True,False
+43.04828,-77.6581,EVolve NY Henrietta,Henrietta,Electrify America,1,4,True,False
+43.048887,-76.15699,Courtyard Syracuse Downtown At Armory Square,Syracuse,eVgo Network,1,2,True,False
+43.04925,-78.992839,ChargeSmart EV - Grand Island,Grand Island,CHARGESMART_EV,1,8,True,False
+43.052138,-76.263269,Aldi Camillus TUL 5,Camillus,RED_E,1,3,True,False
+43.053281,-76.163904,Crest Cadillac,Syracuse,CHARGELAB,1,2,True,False
+43.054138,-76.100978,MATTHEWS CHARGE STATION 2,Syracuse,ChargePoint Network,1,1,True,False
+43.054263,-76.100978,MATTHEWS CHARGE HYUND SYRA,Syracuse,ChargePoint Network,1,1,True,False
+43.05500153094,-78.82760802301,Aldi Tonawanda TUL90,North Tonawanda,RED_E,1,8,True,False
+43.05758,-73.78674,Saratoga Honda,Saratoga Springs,QUICKCHARGE,1,2,True,False
+43.059095,-77.6446,KENNETH DR Q KENNETH DR 4,Rochester,ChargePoint Network,1,1,True,False
+43.059126,-77.644601,KENNETH DR Q KENNETH DR 3,Rochester,ChargePoint Network,1,1,True,False
+43.059151,-77.644603,KENNETH DR Q KENNETH DR 2,Rochester,ChargePoint Network,1,1,True,False
+43.059175,-77.644603,KENNETH DR Q KENNETH DR 1,Rochester,ChargePoint Network,1,1,True,False
+43.059198,-76.16928,INNER HARBOR SYRACUSEVAN 01,Syracuse,ChargePoint Network,1,1,True,False
+43.059222,-76.1693,INNER HARBOR SYRACUSEVAN 02,Syracuse,ChargePoint Network,1,1,True,False
+43.059244,-76.169325,INNER HARBOR SYRACUSEVAN 03,Syracuse,ChargePoint Network,1,1,True,False
+43.05947,-76.169173,INNER HARBOR SYRACUSEVAN 04,Syracuse,ChargePoint Network,1,1,True,False
+43.0628,-76.05679,Fayetteville Dodge Ram,East Syracuse,VIALYNK,1,2,True,False
+43.0652405,-77.3114216,Front Of Lot,Macedon,EVOKE,1,2,True,False
+43.067365,-76.175257,"Syracuse, NY - Destiny USA Drive - Tesla Supercharger",Syracuse,Tesla,1,12,False,True
+43.075991,-75.102922,Schulyer Service Plaza,Frankfort,APPLEGREEN,1,4,True,False
+43.076242,-75.684445,NYE Ford,Oneida,CHARGESMART_EV,1,6,True,False
+43.076552,-75.681803,NYE GMC,Oneida,CHARGESMART_EV,1,4,True,False
+43.077401,-75.686696,NYE CDJR,Oneida,CHARGESMART_EV,1,4,True,False
+43.078085,-77.643174,BOB JOHNSON BOB JOHNSONKIA2,Rochester,ChargePoint Network,1,1,True,False
+43.078087,-77.643125,BOB JOHNSON BOB JOHNSON VW,Rochester,ChargePoint Network,1,1,True,False
+43.078091,-77.643054,BOB JOHNSON BOB JOHNSON KIA,Rochester,ChargePoint Network,1,1,True,False
+43.079157,-77.641557,Bob Johnson Mazda - DCFC,Rochester,CHARGESMART_EV,1,4,True,False
+43.080919,-76.159064,Chrysler Dodge Jeep Ram of Syracuse L3s,Syracuse,FLIPTURN,1,12,True,False
+43.082766,-79.059184,CAMBRIA HOTEL RAINBOW 01,Niagara Falls,ChargePoint Network,1,1,True,False
+43.0828,-79.059243,CAMBRIA HOTEL RAINBOW 02,Niagara Falls,ChargePoint Network,1,1,True,False
+43.083156,-79.059059,CAMBRIA HOTEL RAINBOW 03,Niagara Falls,ChargePoint Network,1,1,True,False
+43.08323,-79.059198,CAMBRIA HOTEL RAINBOW 04,Niagara Falls,ChargePoint Network,1,1,True,False
+43.08827,-78.98118,EVolve NY Niagara Falls,Niagara Falls,Electrify America,1,4,True,False
+43.089447,-78.984502,Basil Ford of Niagara Falls,Niagara Falls,FORD_CHARGE,1,2,True,False
+43.0909885,-76.104043,DeWitt Service Plaza,Syracuse,APPLEGREEN,1,4,True,False
+43.09225,-76.16967,EVolve NY Syracuse North,Syracuse,Electrify America,1,3,True,False
+43.09242,-76.084147,Embassy Suites by Hilton Syracuse,East Syracuse,CHARGESMART_EV,1,8,True,False
+43.09432,-75.27563,Friendly's New Hartford,New Hartford,QUICKCHARGE,1,4,True,False
+43.09527,-75.654118,NYE Chevrolet,Oneida,CHARGESMART_EV,1,4,True,False
+43.0957678778873,-75.8411057714981,Chittenango Travel Plaza,Chittenango,APPLEGREEN,1,4,True,False
+43.09751,-78.9824,"Macerich Fashion Outlets of Niagara Falls (Niagara Falls, NY)",Niagara Falls,Electrify America,1,4,True,False
+43.09823,-73.7505,"Carrols Burger King #2086 (Saratoga Springs, NY)",Saratoga Springs,Electrify America,1,6,True,False
+43.099376,-77.48358,Van Bortel Ford,East Rochester,FORD_CHARGE,1,4,True,False
+43.101498,-77.895819,Barnard Chevy,Churchville,CHARGESMART_EV,1,2,True,False
+43.101754,-77.480917,Hoselton GM Chevrolet,East Rochester,EV Connect,1,2,True,False
+43.102066,-77.628702,Cortese Ford & Lincoln,Rochester,CHARGESMART_EV,1,4,True,False
+43.102358,-76.187483,"Syracuse, NY - Tesla Supercharger",Liverpool,Tesla,1,8,False,True
+43.103183,-77.628084,Cortese CDJR,Rochester,CHARGESMART_EV,1,4,True,False
+43.10348,-77.88358,EVolve NY Churchville,Churchville,Electrify America,1,4,True,False
+43.1059786,-75.2973939,LeadCar Honda Yorkville,Yorkville,Blink Network,1,2,True,False
+43.1067,-75.29677,L747 PL1,Yorkville,ChargePoint Network,1,1,True,False
+43.107326,-78.99453,QUICKLEES#32 Q PORTER RD 3,Niagara Falls,ChargePoint Network,1,1,True,False
+43.107397,-78.994348,QUICKLEES#32 PORTER RD 4,Niagara Falls,ChargePoint Network,1,1,True,False
+43.107428,-78.994187,QUICKLEES#32 Q PORTER RD 2,Niagara Falls,ChargePoint Network,1,1,True,False
+43.107436,-78.994498,QUICKLEES#32 Q PORTER RD 1,Niagara Falls,ChargePoint Network,1,1,True,False
+43.108265,-75.29461,HOMEBASE1 DC WALLBOX,Yorkville,ChargePoint Network,1,1,True,False
+43.108335,-75.295884,LeadCar Chevrolet Yorkville,Yorkville,EV Connect,1,2,True,False
+43.108812,-75.29424,COOPER KIA FAST CHARGER,Yorkville,ChargePoint Network,1,1,True,False
+43.11278,-75.27583,Aldi Yorkville TUL36,Yorkville,RED_E,1,8,True,False
+43.11317,-75.591248,"Verona, NY - Tesla Supercharger",Verona,Tesla,1,12,True,False
+43.113898,-77.548807,ChargeSmart EV - Whole Foods Rochester,Rochester,CHARGESMART_EV,1,4,True,False
+43.1139,-75.206827,"Utica, NY - Tesla Supercharger",Utica,Tesla,1,8,False,True
+43.114198,-75.285046,IONIQ L3 #1,Yorkville,ChargePoint Network,1,1,True,False
+43.114216,-75.285194,IONIQ L3 #2,Yorkville,ChargePoint Network,1,1,True,False
+43.1208689391127,-77.4862525134923,SWTCH Energy,Rochester,SWTCH,1,1,True,False
+43.12505091,-75.41521025,Oneida Travel Plaza,Westmoreland,APPLEGREEN,1,4,True,False
+43.125632,-77.490481,Vision CDJR,Rochester,CHARGESMART_EV,1,4,True,False
+43.12605,-77.563993,QUICKLEES 23 Q MONROE AVE 1,Rochester,ChargePoint Network,1,1,True,False
+43.126061,-77.563999,QUICKLEES 23 Q MONROE AVE 2,Rochester,ChargePoint Network,1,1,True,False
+43.128,-77.43971,2154 Fairport Nine Mile Point Road,Fairport,VIALYNK,1,8,True,False
+43.128874,-77.49301,Vision Buick GMC,Rochester,CHARGESMART_EV,1,6,True,False
+43.13169,-78.698369,GM - Mike Smith Buick GMC,Lockport,EV Connect,1,1,True,False
+43.136854,-75.217281,LeadCar GMC of Utica,UTICA,EV Connect,1,1,True,False
+43.137747,-75.216654,L742 PL1,Utica,ChargePoint Network,1,2,True,False
+43.14277,-77.5884,340 Rutgers St,Rochester,VIALYNK,1,4,True,False
+43.1458406,-77.5709422,SWTCH Energy Inc.,Rochester,SWTCH,1,16,True,False
+43.147651,-76.327597,Chevrolet of Baldwinsville L3's,Baldwinsville,FLIPTURN,1,2,True,False
+43.1513324,-76.3508676,Aldi Baldwinsville TUL40,Baldwinsville,RED_E,1,8,True,False
+43.159505,-76.120806,SIDNEYFCU CICERO 2,Cicero,ChargePoint Network,1,1,True,False
+43.159529,-76.120709,SIDNEYFCU CICERO 1,Cicero,ChargePoint Network,1,1,True,False
+43.170612,-73.71862,"Gansevoort, NY - Tesla Supercharger",Gansevoort,Tesla,1,8,True,False
+43.174549,-77.517713,ChargeSmart EV - Penfield,Rochester,CHARGESMART_EV,1,8,True,False
+43.180835,-76.25646,Davidson Ford of Clay,Onondaga County,FORD_CHARGE,1,4,True,False
+43.181259,-76.256973,Davidson Ford,Clay,Non-Networked,1,2,True,False
+43.18218,-76.25699,Sharon Chevrolet (Outside),Liverpool,VIALYNK,1,2,True,False
+43.18505,-76.2365,Barnes & Noble Liverpool,Liverpool,eVgo Network,1,6,True,False
+43.185159,-76.246783,PANERA BREAD NY-31 03,Liverpool,ChargePoint Network,1,1,True,False
+43.18517,-76.24675,PANERA BREAD NY-31 02,Liverpool,ChargePoint Network,1,1,True,False
+43.185181,-76.246712,PANERA BREAD NY-31 01,Liverpool,ChargePoint Network,1,1,True,False
+43.18559,-76.24709,PANERA BREAD NY-31 04,Liverpool,ChargePoint Network,1,1,True,False
+43.19102,-77.8022,EVolve NY Spencerport,Spencerport,Electrify America,1,4,True,False
+43.204287,-77.662177,Bob Johnson Chevrolet Greece,Rochester,CHARGESMART_EV,1,4,True,False
+43.205192,-77.476545,WEST HERR AUTO WH FW L3-1 EXPP,Webster,ChargePoint Network,1,2,True,False
+43.20803,-77.463171,Marina CDJR,Webster,CHARGESMART_EV,1,4,True,False
+43.211949,-77.447999,WEBSTER HOLT 01,Webster,ChargePoint Network,1,1,True,False
+43.211969,-77.448013,WEBSTER HOLT 02,Webster,ChargePoint Network,1,1,True,False
+43.211999,-77.447936,WEBSTER HOLT 03,Webster,ChargePoint Network,1,1,True,False
+43.212034,-77.447931,WEBSTER HOLT 04,Webster,ChargePoint Network,1,1,True,False
+43.2142867,-77.7336871,Outdoor Lot,Rochester,EVOKE,1,4,True,False
+43.214585,-77.736156,LOC 1 WEST,Rochester,ChargePoint Network,1,1,True,False
+43.215547,-77.744715,KIA OF GREECE MKOG FST CHG,Rochester,ChargePoint Network,1,1,True,False
+43.215847,-77.750511,WEST HERR AUTO WH FR L3-2 EXPP,Rochester,ChargePoint Network,1,2,True,False
+43.216803,-77.751107,WEST HERR AUTO WH FR L3-3 EXPP,Rochester,ChargePoint Network,1,2,True,False
+43.217916,-77.794715,Bob Johnson Chevrolet West,Spencerport,CHARGESMART_EV,1,2,True,False
+43.222025,-76.810157,12105 Oswego St,Wolcott,EV Connect,1,2,True,False
+43.232492,-76.133441,Days Inn - Syracuse,Brewerton,CHARGESMART_EV,1,8,True,False
+43.23261,-77.203419,3740 Route 104 Williamson NY 14589,Williamson,EV Connect,1,2,True,False
+43.232936,-75.496866,Davidson Chevrolet Cadillac Buick GMC of Rome,Rome,EV Connect,1,3,True,False
+43.2382576043757,-78.91075623232692,KIPO Chevrolet,Ransomville,Blink Network,1,2,True,False
+43.252129,-73.669606,GMG DCFC FORT EDWARD #3,Fort Edward,ChargePoint Network,1,1,True,False
+43.25214,-73.669685,GMG DCFC FORT EDWARD #1,Fort Edward,ChargePoint Network,1,1,True,False
+43.252179,-73.66963,GMG DCFC FORT EDWARD #2,Fort Edward,ChargePoint Network,1,1,True,False
+43.25219,-73.669646,GMG DCFC FORT EDWARD #4,Fort Edward,ChargePoint Network,1,1,True,False
+43.25408,-77.665955,ChargeSmart EV - Greece,Rochester,CHARGESMART_EV,1,8,True,False
+43.29168,-76.14815,Reymore Chevrolet 2,Central Square,VIALYNK,1,4,True,False
+43.31334,-76.403685,Aldi Fulton TUL 18,Fulton,RED_E,1,4,True,False
+43.315774961,-73.608357479,Lia Nissan,Queensbury,Non-Networked,1,1,True,False
+43.317271,-73.619615,GARVEY SIDE 1,Queensbury,ChargePoint Network,1,1,True,False
+43.317285,-73.61958,GARVEY SIDE 2,Queensbury,ChargePoint Network,1,1,True,False
+43.31733,-73.619144,GARVEY FRONT 1,Queensbury,ChargePoint Network,1,1,True,False
+43.317335,-73.619185,GARVEY FRONT 2,Queensbury,ChargePoint Network,1,1,True,False
+43.328413,-73.679994,"Queensbury, NY - Tesla Supercharger",Queensbury,Tesla,1,8,False,True
+43.3288237,-73.6820764,"Queensbury, NY",Queensbury,RIVIAN_ADVENTURE,1,10,True,False
+43.32945,-73.63052,"Garvey VW Dealership (Queensbury, NY)",Queensbury,Electrify America,1,2,True,False
+43.329532,-73.68146,ChargeSmart EV - Queensbury,Queensbury,CHARGESMART_EV,1,8,True,False
+43.33309,-73.64521,Della Honda Glens Falls,Queensbury,QUICKCHARGE,1,2,True,False
+43.40452,-76.11936,EVolve NY Parish Mirabito,Parish,Electrify America,1,4,True,False
+43.408609,-76.114205,"Parish, NY - Tesla Supercharger",Parish,Tesla,1,8,True,False
+43.46158,-76.4787,Aldi TUL 21 Oswego,Oswego,RED_E,1,4,True,False
+43.46249,-76.472761,340 New York 104,Oswego,CHARGELAB,1,2,True,False
+43.489968,-73.765278,Warren Ford,Warrensburg,FORD_CHARGE,1,2,True,False
+43.549638,-76.112734,Bob Johnson Ford Pulaski,Pulaski,CHARGESMART_EV,1,8,True,False
+43.550231,-76.112722,Bob Johnson Chevrolet Pulaski,Pulaski,CHARGESMART_EV,1,2,True,False
+43.55942,-76.121525,Aldi Pulaski TUL25,Pulaski,RED_E,1,4,True,False
+43.56641,-76.11468,EVolve NY Pulaski,Pulaski,Electrify America,1,6,True,False
+43.66542,-73.78499,"Chestertown, NY - Tesla Supercharger",Chestertown,Tesla,1,6,False,True
+43.78227,-74.26396,Indian Lake - Welcome Center,Indian Lake,VIALYNK,1,4,True,False
+43.93156415211936,-75.93711023874306,Fuccillo Hyundai of Watertown,Watertown,Blink Network,1,2,True,False
+43.937333,-75.929133,Davidson Ford,Watertown,FORD_CHARGE,1,4,True,False
+43.95119,-73.73324,EVolve NY North Hudson,North Hudson,Electrify America,1,8,True,False
+43.951243,-73.734172,"North Hudson, NY - Tesla Supercharger",North Hudson,Tesla,1,8,True,False
+43.9692584858,-75.6240920285,Aldi Carthage TUL 27,West Carthage,RED_E,1,8,True,False
+43.974653,-75.952758,ChargeSmart EV - Watertown,Watertown,CHARGESMART_EV,1,8,True,False
+43.9762251,-75.9404944,Aldi TUL 14 Watertown,Watertown,RED_E,1,4,True,False
+43.97961,-75.954125,"Watertown, NY - Tesla Supercharger",Watertown,Tesla,1,8,False,True
+43.99881,-75.91959,Caprara Honda,Watertown,VIALYNK,1,1,True,False
+44.129071,-76.3353899,Village of Cape Vincent,Cape Vincent,Blink Network,1,4,True,False
+44.216452,-73.589515,Egglefield Bros,Elizabethtown,FORD_CHARGE,1,2,True,False
+44.28161,-73.53813,EVolve NY Lewis,Lewis,Electrify America,1,4,True,False
+44.284637,-73.986757,GRANDVIEW HOTEL OLYMPIC 04,Lake Placid,ChargePoint Network,1,1,True,False
+44.284698,-73.986838,GRANDVIEW HOTEL OLYMPIC 03,Lake Placid,ChargePoint Network,1,1,True,False
+44.285153,-73.987488,GRANDVIEW HOTEL OLYMPIC 02,Lake Placid,ChargePoint Network,1,1,True,False
+44.28516,-73.98711,GRANDVIEW HOTEL OLYMPIC 01,Lake Placid,ChargePoint Network,1,1,True,False
+44.294999,-74.010958,"Lake Placid, NY - Tesla Supercharger",Lake Placid,Tesla,1,8,False,True
+44.29861,-75.96478,EVolve NY Alexandria Bay,Alexandria Bay,Electrify America,1,4,True,False
+44.310279,-74.11584,ChargeSmart EV - Saranac Lake,Saranac Lake,CHARGESMART_EV,1,8,True,False
+44.312655,-74.115573,Aldi TUL 46 Saranac Lake,Saranac Lake,RED_E,1,8,True,False
+44.33983,-74.1429,Upstate Auto,Saranac Lake,VIALYNK,1,2,True,False
+44.581051,-73.528116,"Peru, NY - Tesla Supercharger",Peru,Tesla,1,8,True,False
+44.66645,-74.99042,EVolve NY Potsdam,Potsdam,Electrify America,1,4,True,False
+44.666845,-74.990216,"Potsdam, NY - Tesla Supercharger",Potsdam,Tesla,1,4,False,True
+44.681546,-74.986244,Barstow Motors GM,Potsdam,EV Connect,1,1,True,False
+44.68327,-73.44991,Della Chevrolet Plattsburgh,Plattsburgh,QUICKCHARGE,1,2,True,False
+44.684772,-74.985314,ChargeSmart EV - Potsdam,Potsdam,CHARGESMART_EV,1,8,True,False
+44.69408,-73.48529,EVolve NY Plattsburgh,Plattsburgh,Electrify America,1,4,True,False
+44.695157,-73.498587,ChargeSmart EV - Plattsburgh,Plattsburgh,CHARGESMART_EV,1,8,True,False
+44.69591,-73.51573,Della Honda of Plattsburgh,Plattsburgh,QUICKCHARGE,1,2,True,False
+44.701017,-73.496462,HANNAFORD PLATTSBURGH 03,Plattsburgh,ChargePoint Network,1,1,True,False
+44.701044,-73.496459,HANNAFORD PLATTSBURGH 04,Plattsburgh,ChargePoint Network,1,1,True,False
+44.701137,-73.495914,HANNAFORD PLATTSBURGH 02,Plattsburgh,ChargePoint Network,1,1,True,False
+44.70115,-73.495855,HANNAFORD PLATTSBURGH 01,Plattsburgh,ChargePoint Network,1,1,True,False
+44.704561,-73.491816,"Plattsburgh, NY - Tesla Supercharger",Plattsburgh,Tesla,1,8,False,True
+44.70554,-73.50311,"Garvey Hyundai Dealership (Plattsburgh, NY)",Plattsburgh,Electrify America,1,2,True,False
+44.847239,-74.317497,Aldi TUL 3 Malone,Malone,RED_E,1,4,True,False
+44.849995,-74.284294,ELLIS CHEVY ELLISDCFC,Malone,ChargePoint Network,1,1,True,False
+44.931494,-74.881365,Frenchies Ford,Massena,FORD_CHARGE,1,2,True,False
+44.978934,-73.445411,"Champlain, NY - Tesla Supercharger",Champlain,Tesla,1,16,False,True

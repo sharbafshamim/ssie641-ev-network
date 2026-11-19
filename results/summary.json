@@ -1,0 +1,549 @@
+{
+  "stations": 755,
+  "fast_ports": 3408,
+  "sites": 754,
+  "ccs_sites": 661,
+  "tesla_only_stations": 87,
+  "ccs_stations": 662,
+  "places_all": 1293,
+  "places_5000": 362,
+  "pop_places_5000": 15312729,
+  "share_state_pop_in_places_5000": 0.7580090221154148,
+  "share_place_pop_in_places_5000": 0.9166738702436636,
+  "nyc_share_of_pair_weight": 0.7317286044013794,
+  "candidates": 4756,
+  "distance_source": "straight line x 1.27 (road_miles.npy not found)",
+  "circuity": {
+    "median": 1.27,
+    "note": "from notebook v3"
+  },
+  "detour_factor_new_links": 1.27,
+  "threshold": {
+    "all_calibrated": 45.63020712299764,
+    "all_straight_x1.2": 43.11515633669068,
+    "all_straight_xfactor": 45.63020712299764,
+    "ccs_calibrated": 45.63020712299764
+  },
+  "weakest_link": "Saranac Lake - Malone",
+  "eps_largest_ge_90pct": 27,
+  "largest_share_at": {
+    "20": 0.53315649867374,
+    "24": 0.5371352785145889,
+    "25": 0.5371352785145889,
+    "28": 0.9774535809018567,
+    "30": 0.9774535809018567,
+    "35": 0.9907161803713528,
+    "40": 0.9907161803713528,
+    "44": 0.9907161803713528,
+    "50": 1.0
+  },
+  "critical_all_30": [
+    {
+      "city": "Warrensburg",
+      "operator": "FORD_CHARGE",
+      "degree": 16,
+      "ports": 2,
+      "sites_cut_off": 25
+    },
+    {
+      "city": "Chestertown",
+      "operator": "Tesla",
+      "degree": 3,
+      "ports": 6,
+      "sites_cut_off": 24
+    },
+    {
+      "city": "Elizabethtown",
+      "operator": "FORD_CHARGE",
+      "degree": 8,
+      "ports": 2,
+      "sites_cut_off": 21
+    },
+    {
+      "city": "Lewis",
+      "operator": "Electrify America",
+      "degree": 7,
+      "ports": 4,
+      "sites_cut_off": 12
+    },
+    {
+      "city": "Peru",
+      "operator": "Tesla",
+      "degree": 11,
+      "ports": 8,
+      "sites_cut_off": 11
+    },
+    {
+      "city": "Roscoe",
+      "operator": "Tesla",
+      "degree": 4,
+      "ports": 8,
+      "sites_cut_off": 1
+    }
+  ],
+  "critical_ccs_45": [
+    {
+      "city": "Warrensburg",
+      "operator": "FORD_CHARGE",
+      "degree": 23,
+      "ports": 2,
+      "sites_cut_off": 22
+    }
+  ],
+  "median_ports_all_sites": 4.0,
+  "tesla_share_of_sites": 0.16578249336870027,
+  "attack": [
+    {
+      "miles": 50,
+      "R_random": 0.696311977147521,
+      "R_degree": 0.6774494820852436,
+      "R_betweenness": 0.23137234235658533,
+      "largest_after_15_betweenness": 0.980106100795756,
+      "largest_after_30_betweenness": 0.40450928381962864,
+      "removals_to_drop_below_0.9": 18
+    },
+    {
+      "miles": 30,
+      "R_random": 0.635175474392981,
+      "R_degree": 0.6177794953771205,
+      "R_betweenness": 0.15667140958303322,
+      "largest_after_15_betweenness": 0.40848806366047746,
+      "largest_after_30_betweenness": 0.3978779840848806,
+      "removals_to_drop_below_0.9": 7
+    }
+  ],
+  "city_nearest_site_median": 2.010390019738537,
+  "coverage_at": {
+    "10": {
+      "connectivity": 0.3011,
+      "coverage": 0.3728,
+      "coverage_weighted": 0.5112,
+      "coverage_weighted_excl_NYC": 0.3444,
+      "coverage_access15": 0.3728,
+      "coverage_weighted_access15": 0.5112
+    },
+    "20": {
+      "connectivity": 0.5332,
+      "coverage": 0.5951,
+      "coverage_weighted": 0.6578,
+      "coverage_weighted_excl_NYC": 0.5432,
+      "coverage_access15": 0.5882,
+      "coverage_weighted_access15": 0.6559
+    },
+    "24": {
+      "connectivity": 0.5371,
+      "coverage": 0.613,
+      "coverage_weighted": 0.6627,
+      "coverage_weighted_excl_NYC": 0.5586,
+      "coverage_access15": 0.6065,
+      "coverage_weighted_access15": 0.661
+    },
+    "30": {
+      "connectivity": 0.9775,
+      "coverage": 0.9618,
+      "coverage_weighted": 0.9841,
+      "coverage_weighted_excl_NYC": 0.9749,
+      "coverage_access15": 0.9401,
+      "coverage_weighted_access15": 0.9787
+    },
+    "40": {
+      "connectivity": 0.9907,
+      "coverage": 0.9727,
+      "coverage_weighted": 0.992,
+      "coverage_weighted_excl_NYC": 0.9873,
+      "coverage_access15": 0.9509,
+      "coverage_weighted_access15": 0.9866
+    },
+    "44": {
+      "connectivity": 0.9907,
+      "coverage": 0.9727,
+      "coverage_weighted": 0.992,
+      "coverage_weighted_excl_NYC": 0.9873,
+      "coverage_access15": 0.9509,
+      "coverage_weighted_access15": 0.9866
+    },
+    "50": {
+      "connectivity": 1.0,
+      "coverage": 1.0,
+      "coverage_weighted": 1.0,
+      "coverage_weighted_excl_NYC": 1.0,
+      "coverage_access15": 0.9725,
+      "coverage_weighted_access15": 0.9927
+    }
+  },
+  "eps_full_coverage": 46,
+  "coverage_attack": [
+    {
+      "miles": 50,
+      "R_random": 0.9920061264396369,
+      "R_degree": 0.97659390760099,
+      "R_betweenness": 0.433279943869271,
+      "Rw_random": 0.9968107979950389,
+      "Rw_degree": 0.9310353808935424,
+      "Rw_betweenness": 0.5015982717686235
+    },
+    {
+      "miles": 30,
+      "R_random": 0.8955615451718971,
+      "R_degree": 0.7816488151664052,
+      "R_betweenness": 0.3459333549620968,
+      "Rw_random": 0.9250007116240345,
+      "Rw_degree": 0.6963371802297672,
+      "Rw_betweenness": 0.4281553654093917
+    }
+  ],
+  "q3": [
+    {
+      "objective": "network",
+      "miles": 20,
+      "pieces_before": 32,
+      "lower_bound": 3.0,
+      "new_stations": 16,
+      "feasible": false,
+      "v3_greedy": NaN,
+      "unreachable": "Afton; Alexandria Bay; Cape Vincent; Champlain; Elizabethtown; Hancock; Lake Placid; Lewis; Malone; Massena; North Hudson; Peru; Plattsburgh; Potsdam; Saranac Lake; Sidney; Watertown; West Carthage"
+    },
+    {
+      "objective": "network",
+      "miles": 25,
+      "pieces_before": 15,
+      "lower_bound": 5.0,
+      "new_stations": 11,
+      "feasible": false,
+      "v3_greedy": NaN,
+      "unreachable": "Malone; Massena; Potsdam"
+    },
+    {
+      "objective": "network",
+      "miles": 30,
+      "pieces_before": 5,
+      "lower_bound": 2.0,
+      "new_stations": 3,
+      "feasible": false,
+      "v3_greedy": NaN,
+      "unreachable": "Malone; Massena; Potsdam"
+    },
+    {
+      "objective": "network",
+      "miles": 35,
+      "pieces_before": 3,
+      "lower_bound": 2.0,
+      "new_stations": 3,
+      "feasible": true,
+      "v3_greedy": NaN,
+      "unreachable": ""
+    },
+    {
+      "objective": "network",
+      "miles": 40,
+      "pieces_before": 2,
+      "lower_bound": 1.0,
+      "new_stations": 1,
+      "feasible": true,
+      "v3_greedy": NaN,
+      "unreachable": ""
+    },
+    {
+      "objective": "network",
+      "miles": 45,
+      "pieces_before": 2,
+      "lower_bound": 1.0,
+      "new_stations": 1,
+      "feasible": true,
+      "v3_greedy": NaN,
+      "unreachable": ""
+    },
+    {
+      "objective": "network",
+      "miles": 50,
+      "pieces_before": 1,
+      "lower_bound": 0.0,
+      "new_stations": 0,
+      "feasible": true,
+      "v3_greedy": NaN,
+      "unreachable": ""
+    },
+    {
+      "objective": "coverage",
+      "miles": 20,
+      "pieces_before": 32,
+      "lower_bound": NaN,
+      "new_stations": 11,
+      "feasible": false,
+      "v3_greedy": 8.0,
+      "unreachable": "Canton village; Fort Drum CDP; Malone village; Massena village; Ogdensburg city; Plattsburgh city; Potsdam village; Watertown city"
+    },
+    {
+      "objective": "coverage",
+      "miles": 25,
+      "pieces_before": 15,
+      "lower_bound": NaN,
+      "new_stations": 6,
+      "feasible": false,
+      "v3_greedy": 4.0,
+      "unreachable": "Canton village; Malone village; Massena village; Ogdensburg city; Potsdam village"
+    },
+    {
+      "objective": "coverage",
+      "miles": 30,
+      "pieces_before": 5,
+      "lower_bound": NaN,
+      "new_stations": 2,
+      "feasible": false,
+      "v3_greedy": 3.0,
+      "unreachable": "Canton village; Malone village; Massena village; Ogdensburg city; Potsdam village"
+    },
+    {
+      "objective": "coverage",
+      "miles": 35,
+      "pieces_before": 3,
+      "lower_bound": NaN,
+      "new_stations": 3,
+      "feasible": true,
+      "v3_greedy": 3.0,
+      "unreachable": ""
+    },
+    {
+      "objective": "coverage",
+      "miles": 40,
+      "pieces_before": 2,
+      "lower_bound": NaN,
+      "new_stations": 1,
+      "feasible": true,
+      "v3_greedy": 1.0,
+      "unreachable": ""
+    },
+    {
+      "objective": "coverage",
+      "miles": 45,
+      "pieces_before": 2,
+      "lower_bound": NaN,
+      "new_stations": 1,
+      "feasible": true,
+      "v3_greedy": 0.0,
+      "unreachable": ""
+    },
+    {
+      "objective": "coverage",
+      "miles": 50,
+      "pieces_before": 1,
+      "lower_bound": NaN,
+      "new_stations": 0,
+      "feasible": true,
+      "v3_greedy": 0.0,
+      "unreachable": ""
+    }
+  ],
+  "q3_factor_1.2": [
+    {
+      "objective": "network",
+      "miles": 20,
+      "lower_bound": 3.0,
+      "new_stations": 15,
+      "feasible": false
+    },
+    {
+      "objective": "network",
+      "miles": 25,
+      "lower_bound": 5.0,
+      "new_stations": 10,
+      "feasible": false
+    },
+    {
+      "objective": "network",
+      "miles": 30,
+      "lower_bound": 5.0,
+      "new_stations": 6,
+      "feasible": true
+    },
+    {
+      "objective": "network",
+      "miles": 35,
+      "lower_bound": 2.0,
+      "new_stations": 2,
+      "feasible": true
+    },
+    {
+      "objective": "network",
+      "miles": 40,
+      "lower_bound": 1.0,
+      "new_stations": 1,
+      "feasible": true
+    },
+    {
+      "objective": "network",
+      "miles": 45,
+      "lower_bound": 1.0,
+      "new_stations": 1,
+      "feasible": true
+    },
+    {
+      "objective": "network",
+      "miles": 50,
+      "lower_bound": 0.0,
+      "new_stations": 0,
+      "feasible": true
+    },
+    {
+      "objective": "coverage",
+      "miles": 20,
+      "lower_bound": NaN,
+      "new_stations": 11,
+      "feasible": false
+    },
+    {
+      "objective": "coverage",
+      "miles": 25,
+      "lower_bound": NaN,
+      "new_stations": 6,
+      "feasible": false
+    },
+    {
+      "objective": "coverage",
+      "miles": 30,
+      "lower_bound": NaN,
+      "new_stations": 6,
+      "feasible": true
+    },
+    {
+      "objective": "coverage",
+      "miles": 35,
+      "lower_bound": NaN,
+      "new_stations": 2,
+      "feasible": true
+    },
+    {
+      "objective": "coverage",
+      "miles": 40,
+      "lower_bound": NaN,
+      "new_stations": 1,
+      "feasible": true
+    },
+    {
+      "objective": "coverage",
+      "miles": 45,
+      "lower_bound": NaN,
+      "new_stations": 1,
+      "feasible": true
+    },
+    {
+      "objective": "coverage",
+      "miles": 50,
+      "lower_bound": NaN,
+      "new_stations": 0,
+      "feasible": true
+    }
+  ],
+  "budget": {
+    "allocation_M": 175.0,
+    "site_cost_M": {
+      "low": 0.6,
+      "central": 1.0,
+      "high": 1.92
+    },
+    "sites_affordable": {
+      "low": 291,
+      "central": 175,
+      "high": 91
+    }
+  },
+  "winter_nominal_needed": 77.33933410677565,
+  "winter_q3": [
+    {
+      "nominal_miles": 50,
+      "winter_effective_miles": 29.5,
+      "pieces": 5,
+      "lower_bound": 2,
+      "new_stations": 3,
+      "feasible": false
+    },
+    {
+      "nominal_miles": 60,
+      "winter_effective_miles": 35.4,
+      "pieces": 3,
+      "lower_bound": 2,
+      "new_stations": 2,
+      "feasible": true
+    },
+    {
+      "nominal_miles": 70,
+      "winter_effective_miles": 41.3,
+      "pieces": 2,
+      "lower_bound": 1,
+      "new_stations": 1,
+      "feasible": true
+    }
+  ],
+  "control": {
+    "mst_threshold": {
+      "real": 45.6302,
+      "random_mean": 46.9442,
+      "random_p05": 38.058,
+      "random_p95": 56.1304,
+      "share_random_better": 0.43
+    },
+    "coverage_30": {
+      "real": 0.9618,
+      "random_mean": 0.7326,
+      "random_p05": 0.5964,
+      "random_p95": 0.9458,
+      "share_random_better": 0.0
+    },
+    "coverage_40": {
+      "real": 0.9727,
+      "random_mean": 0.9471,
+      "random_p05": 0.6545,
+      "random_p95": 1.0,
+      "share_random_better": 0.29
+    },
+    "weighted_coverage_30": {
+      "real": 0.9841,
+      "random_mean": 0.7754,
+      "random_p05": 0.6533,
+      "random_p95": 0.9747,
+      "share_random_better": 0.0
+    },
+    "cut_vertices_30": {
+      "real": 6.0,
+      "random_mean": 9.38,
+      "random_p05": 4.95,
+      "random_p95": 14.0,
+      "share_random_better": 0.13
+    },
+    "pieces_30": {
+      "real": 5.0,
+      "random_mean": 9.69,
+      "random_p05": 6.95,
+      "random_p95": 14.0,
+      "share_random_better": 0.0
+    }
+  },
+  "control_pool": 5510,
+  "snapshot": [
+    {
+      "snapshot": "Sep 23, 2026",
+      "sites": 754,
+      "threshold": 45.63020712299764,
+      "weakest_link": "Saranac Lake - Malone",
+      "cut_30": "Roscoe; Warrensburg; Chestertown; Elizabethtown; Lewis; Peru",
+      "cut_35": "Chestertown; Peru",
+      "cut_45": "",
+      "new_stations_30": 3,
+      "new_stations_35": 3,
+      "new_stations_40": 1
+    },
+    {
+      "snapshot": "Oct 13, 2026",
+      "sites": 793,
+      "threshold": 45.63020712299764,
+      "weakest_link": "Saranac Lake - Malone",
+      "cut_30": "Roscoe; Warrensburg; Chestertown; Lewis; Peru",
+      "cut_35": "Peru",
+      "cut_45": "",
+      "new_stations_30": 3,
+      "new_stations_35": 3,
+      "new_stations_40": 1
+    }
+  ],
+  "runtime_s": 165.7
+}

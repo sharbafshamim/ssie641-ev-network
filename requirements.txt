@@ -1,0 +1,9 @@
+numpy>=1.26
+pandas>=2.1
+scipy>=1.11
+matplotlib>=3.8
+igraph>=0.11
+requests>=2.31   # only to rebuild road_miles.npy from OSRM
+nbformat>=5.9    # only to rebuild the notebook
+nbconvert>=7.0
+ipykernel>=6.0

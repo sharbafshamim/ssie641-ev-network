@@ -1,0 +1,15 @@
+objective,miles,lower_bound,new_stations,feasible,where
+network,20,3.0,15,False,Stone Ridge; Neversink; Shandaken; Cherry Valley; Cattaraugus; Cortland; Aurora; Dunkirk; Olean; Hammondsport; Geneseo; Cooperstown; Kirkland; Sterling; North River
+network,25,5.0,10,False,Neversink; Downsville; Cherry Valley; North River; Newcomb; Jay; Lowville; Turin; Boonville; Clayton
+network,30,5.0,6,True,Newcomb; Lowville; Camden; Canton; Gouverneur; Hogansburg
+network,35,2.0,2,True,Paul Smiths; Massena
+network,40,1.0,1,True,Ogdensburg
+network,45,1.0,1,True,Malone
+network,50,0.0,0,True,
+coverage,20,,11,False,Ellenville; Cherry Valley; Silver Creek; Groton; Cooperstown; Cattaraugus; Cortland; Geneseo; Kennedy; Earlville; Waterville
+coverage,25,,6,False,Cherry Valley; Peru; North Hudson; Lowville; Turin; Boonville
+coverage,30,,6,True,Lowville; Camden; Gouverneur; Ogdensburg; Waddington; Hogansburg
+coverage,35,,2,True,Paul Smiths; Massena
+coverage,40,,1,True,Ogdensburg
+coverage,45,,1,True,Ogdensburg
+coverage,50,,0,True,
