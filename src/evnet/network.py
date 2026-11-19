@@ -22,7 +22,7 @@ def largest_share(g, n=None):
 def mst_links(dist, labels):
     """All MST links, longest first. The first row is the connectivity threshold."""
     d = dist.copy().astype(float)
-    d[d == 0] = 1e-9  # scipy treats 0 as "no edge"; duplicate points stay linked
+    d[d == 0] = 1e-3  # scipy drops (near-)zero entries as "no edge"; keep co-located sites linked
     np.fill_diagonal(d, 0)
     mst = minimum_spanning_tree(np.triu(d)).tocoo()
     links = pd.DataFrame({"miles": mst.data, "from_id": mst.row, "to_id": mst.col})

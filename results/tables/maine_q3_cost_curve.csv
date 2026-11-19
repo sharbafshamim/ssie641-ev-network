@@ -1,0 +1,19 @@
+objective,miles,pieces_before,lower_bound,new_stations,feasible,where,unreachable
+network,20,18,5.0,10,False,Wiscasset; Buckfield; Woodstock; Wilton; Unity; Waldoboro; Damariscotta; Islesboro; Blue Hill; Bucksport,Baileyville; CALAIS; Greenville; Jackman; Lincoln; Medway; Millinocket; Rangeley; Van Buren
+network,25,13,2.0,6,False,Damariscotta; Waldoboro; Unity; Bethel; Hampden; Farmington,Baileyville; CALAIS; Greenville; Jackman; Lincoln; Medway; Millinocket; Rangeley; Van Buren
+network,30,7,4.0,8,False,Rangeley; Farmington; Monson; Dover-Foxcroft; Lubec; Machias; Milbridge; Hancock,Jackman; Lincoln; Medway; Millinocket; Van Buren
+network,35,7,2.0,4,False,Carrabassett Valley; Dover-Foxcroft; Machias; Milbridge,Jackman; Lincoln; Medway; Millinocket; Van Buren
+network,40,7,2.0,5,False,Carrabassett Valley; Old Town; Monson; Machias; Milbridge,Jackman; Van Buren
+network,45,5,3.0,7,True,Monson; Jackman; Machias; Milbridge; Presque Isle; Houlton; Weston,
+network,50,4,3.0,6,True,Monson; Lubec; Milbridge; Presque Isle; Houlton; Weston,
+network,60,3,2.0,3,True,Weston; Caribou; Houlton,
+network,70,2,2.0,2,True,Limestone; Houlton,
+coverage,20,18,,5,False,Waldoboro; Damariscotta; Wiscasset; Camden; Bucksport,Caribou city; Presque Isle city
+coverage,25,13,,3,False,Unity; Hampden; Islesboro,Caribou city; Presque Isle city
+coverage,30,7,,0,False,,Caribou city; Presque Isle city
+coverage,35,7,,0,False,,Caribou city; Presque Isle city
+coverage,40,7,,0,False,,Caribou city; Presque Isle city
+coverage,45,5,,3,True,Houlton; Weston; Presque Isle,
+coverage,50,4,,3,True,Houlton; Weston; Presque Isle,
+coverage,60,3,,1,True,Houlton,
+coverage,70,2,,1,True,Houlton,

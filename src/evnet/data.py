@@ -19,6 +19,12 @@ GAZETTEER = RAW / "2020_gaz_place_36.txt"
 CENSUS_P1 = RAW / "DECENNIALPL2020.P1-Data.csv"
 
 NY_POP_2020 = 20_201_249  # New York State resident population, Census 2020
+ME_POP_2020 = 1_362_359   # Maine resident population, Census 2020
+
+MAINE = RAW / "maine"
+ME_AFDC = MAINE / "alt_fuel_stations_ME_Nov_19_2026.csv"
+ME_GAZETTEER = MAINE / "2020_gaz_place_23.txt"
+ME_CENSUS_P1 = MAINE / "DECENNIALPL2020.P1-Data.csv"
 
 
 def _flag_plugs(df):
@@ -61,21 +67,22 @@ def make_sites(stations):
     return sites
 
 
-def load_places(min_pop=5000):
+def load_places(min_pop=5000, gazetteer=GAZETTEER, census_p1=CENSUS_P1, out_name="ny_places.csv"):
     """Census 2020 places with population and internal point."""
-    gaz = pd.read_csv(GAZETTEER, sep="\t")
+    gaz = pd.read_csv(gazetteer, sep="\t")
     gaz.columns = gaz.columns.str.strip()
-    pop = pd.read_csv(CENSUS_P1, usecols=["GEO_ID", "P1_001N"]).iloc[1:]
+    pop = pd.read_csv(census_p1, usecols=["GEO_ID", "P1_001N"]).iloc[1:]
     pop["GEOID"] = pop["GEO_ID"].str[-7:].astype(int)
     pop["pop"] = pop["P1_001N"].astype(int)
     places = gaz.merge(pop[["GEOID", "pop"]], on="GEOID")
     places = places[["GEOID", "NAME", "pop", "INTPTLAT", "INTPTLONG"]]
     places.columns = ["geoid", "name", "pop", "lat", "lon"]
-    places.to_csv(DERIVED / "ny_places.csv", index=False)
+    if out_name:
+        places.to_csv(DERIVED / out_name, index=False)
     return places[places["pop"] >= min_pop].reset_index(drop=True), places
 
 
-def load_candidates(path=AFDC_ALL_OCT):
+def load_candidates(path=AFDC_ALL_OCT, out_name="candidates.csv"):
     """Public, open Level 1 / Level 2 locations with no DC fast port."""
     st = pd.read_csv(path, low_memory=False)
     for c in ["EV Level1 EVSE Num", "EV Level2 EVSE Num", "EV DC Fast Count"]:
@@ -87,7 +94,8 @@ def load_candidates(path=AFDC_ALL_OCT):
         name=("Station Name", "first"), city=("City", "first"),
         l1=("EV Level1 EVSE Num", "sum"), l2=("EV Level2 EVSE Num", "sum"))
     cand.columns = ["lat", "lon", "name", "city", "l1", "l2"]
-    cand.to_csv(DERIVED / "candidates.csv", index=False)
+    if out_name:
+        cand.to_csv(DERIVED / out_name, index=False)
     return cand
 
 
@@ -114,7 +122,8 @@ def unpack_road_miles(packed_path, sites_path=None, max_straight=60.0):
 
     The file holds gzip'd little-endian uint16 values (miles x 20, i.e. 0.05-mile
     resolution) for every site pair i < j whose straight-line distance is at most
-    60 miles, in row-major upper-triangle order. Other pairs get 1e6 (not queried).
+    60 miles (or every pair when max_straight is None), in row-major upper-triangle
+    order. Other pairs get 1e6 (not queried).
     """
     import gzip
 
@@ -125,7 +134,8 @@ def unpack_road_miles(packed_path, sites_path=None, max_straight=60.0):
     n = len(sites)
     vals = np.frombuffer(gzip.decompress(open(packed_path, "rb").read()), dtype="<u2")
     i, j = np.triu_indices(n, 1)
-    mask = haversine(lat, lon, lat, lon)[i, j] <= max_straight
+    mask = (np.ones(len(i), bool) if max_straight is None
+            else haversine(lat, lon, lat, lon)[i, j] <= max_straight)
     if mask.sum() != len(vals):
         raise ValueError(f"{len(vals)} values for {mask.sum()} pairs")
     R = np.full((n, n), 1e6)
