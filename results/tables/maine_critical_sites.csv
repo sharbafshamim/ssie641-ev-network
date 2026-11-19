@@ -1,5 +1,0 @@
-miles,id,name,city,operator,degree,ports,sites_cut_off,degree_percentile,ports_percentile
-30,78,Sundog FastCharge,Searsport,Non-Networked,12,4,4,0.22580645161290322,0.6048387096774194
-30,47,11 Seahawk Ave Parking Lot,Brunswick,Non-Networked,22,4,1,0.5080645161290323,0.6048387096774194
-30,116,"Medway, ME - Tesla Supercharger",Medway,Tesla,2,6,1,0.06451612903225806,0.7580645161290323
-50,113,Thornton Brothers Inc Chrysler Dodge Jeep Ram,Lincoln,Non-Networked,13,2,2,0.11290322580645161,0.5

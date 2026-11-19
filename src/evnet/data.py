@@ -19,12 +19,7 @@ GAZETTEER = RAW / "2020_gaz_place_36.txt"
 CENSUS_P1 = RAW / "DECENNIALPL2020.P1-Data.csv"
 
 NY_POP_2020 = 20_201_249  # New York State resident population, Census 2020
-ME_POP_2020 = 1_362_359   # Maine resident population, Census 2020
 
-MAINE = RAW / "maine"
-ME_AFDC = MAINE / "alt_fuel_stations_ME_Nov_19_2026.csv"
-ME_GAZETTEER = MAINE / "2020_gaz_place_23.txt"
-ME_CENSUS_P1 = MAINE / "DECENNIALPL2020.P1-Data.csv"
 
 
 def _flag_plugs(df):

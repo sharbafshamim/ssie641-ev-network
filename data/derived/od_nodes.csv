@@ -1,0 +1,73 @@
+name,pop,lat,lon,kind
+Albany city,99224,42.665745,-73.798353,city
+Auburn city,26866,42.9338,-76.567181,city
+Baldwin CDP,33919,40.650127,-73.607709,city
+Bay Shore CDP,29244,40.729377,-73.250141,city
+Binghamton city,47969,42.101331,-75.909369,city
+Brentwood CDP,62387,40.783918,-73.252235,city
+Brighton CDP,37137,43.118498,-77.580976,city
+Buffalo city,278349,42.892492,-78.859686,city
+Centereach CDP,30980,40.868058,-73.082081,city
+Central Islip CDP,36714,40.783589,-73.194475,city
+Cheektowaga CDP,76829,42.909004,-78.750763,city
+Commack CDP,36536,40.843449,-73.283336,city
+Coram CDP,40220,40.881236,-73.005882,city
+Deer Park CDP,28837,40.761441,-73.321736,city
+Dix Hills CDP,26180,40.803322,-73.337459,city
+East Meadow CDP,37796,40.720115,-73.558861,city
+Elmira city,26523,42.093388,-76.80961,city
+Elmont CDP,35265,40.699176,-73.706166,city
+Franklin Square CDP,30903,40.700193,-73.677478,city
+Freeport village,44472,40.652407,-73.584993,city
+Glen Cove city,28365,40.884756,-73.644781,city
+Harrison village,28218,41.023538,-73.719283,city
+Hempstead village,59169,40.704374,-73.619445,city
+Hicksville CDP,43869,40.764136,-73.524806,city
+Holbrook CDP,26487,40.794373,-73.070022,city
+Huntington Station CDP,34878,40.844488,-73.404812,city
+Irondequoit CDP,51043,43.209811,-77.572056,city
+Ithaca city,32108,42.443937,-76.503055,city
+Jamestown city,28712,42.097603,-79.236135,city
+Kiryas Joel village,32954,41.340667,-74.167274,city
+Levittown CDP,51758,40.72399,-73.512709,city
+Lindenhurst village,27148,40.685751,-73.371594,city
+Long Beach city,35029,40.585835,-73.665403,city
+Middletown city,30345,41.444922,-74.423573,city
+Monsey CDP,26954,41.109477,-74.076972,city
+Mount Vernon city,73893,40.913105,-73.829317,city
+Newburgh city,28856,41.503249,-74.01964,city
+New City CDP,34135,41.152205,-73.990426,city
+New Rochelle city,79726,40.923243,-73.779344,city
+New York city,8804190,40.662712,-73.938677,city
+Niagara Falls city,48671,43.092841,-79.014743,city
+North Tonawanda city,30496,43.049157,-78.871224,city
+Oceanside CDP,32637,40.63302,-73.637701,city
+Ossining village,27551,41.15349,-73.870587,city
+Peekskill city,25431,41.287396,-73.923597,city
+Plainview CDP,27100,40.781771,-73.473118,city
+Port Chester village,31693,41.004701,-73.667175,city
+Poughkeepsie city,31577,41.694595,-73.919869,city
+Rochester city,211328,43.169927,-77.616891,city
+Rockville Centre village,26016,40.664024,-73.638048,city
+Rome city,32127,43.226002,-75.489523,city
+Saratoga Springs city,28491,43.067704,-73.778142,city
+Schenectady city,67047,42.802641,-73.9272,city
+Shirley CDP,26360,40.793602,-72.875911,city
+Smithtown CDP,25629,40.857482,-73.21667,city
+Spring Valley village,33066,41.114567,-74.048712,city
+Syracuse city,148620,43.040998,-76.143554,city
+Tonawanda Town CDP,57431,42.985114,-78.875755,city
+Troy city,51401,42.735812,-73.675321,city
+Uniondale CDP,32473,40.717593,-73.594656,city
+Utica city,65283,43.096382,-75.225983,city
+Valley Stream village,40634,40.664747,-73.704902,city
+West Babylon CDP,43213,40.712417,-73.359727,city
+West Islip CDP,27048,40.702861,-73.295526,city
+West Seneca CDP,45500,42.837777,-78.751233,city
+White Plains city,59559,41.0238,-73.751048,city
+Yonkers city,211569,40.945862,-73.867446,city
+Champlain–Lacolle border (I-87),0,45.0067,-73.4497,gateway
+Thousand Islands Bridge (I-81),0,44.348,-75.982,gateway
+Ogdensburg–Prescott bridge,0,44.7333,-75.458,gateway
+Massena–Cornwall crossing (Rooseveltown),0,44.9865,-74.738,gateway
+Lewiston–Queenston bridge,0,43.153,-79.044,gateway

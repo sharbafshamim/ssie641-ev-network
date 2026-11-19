@@ -143,22 +143,6 @@ code("""
 display(t("robustness_snapshot.csv"))
 """)
 md("""
-## 6b. Extension (c): a second, lower-density state (Maine)
-
-`scripts/run_maine.py` runs the same pipeline on Maine (DOE station export Nov 19, 2026; Census 2020 places;
-OSRM road distances for all 7,626 site pairs) and compares it with New York.
-""")
-code("""
-display(pd.read_csv(TAB / "ny_vs_maine.csv", index_col=0))
-display(t("maine_weakest_links.csv").head(6))
-display(t("maine_critical_sites.csv"))
-display(t("maine_attack.csv"))
-display(t("maine_q3_cost_curve.csv"))
-display(t("maine_control_summary.csv").round(3))
-f("fig9_maine.png")
-""")
-
-md("""
 ## 7. Summary (OSRM road distances)
 
 - **Q1.** One network from **43.5 road miles**; weakest link Saranac Lake – Malone, then Malone – Massena (37.2),
@@ -174,9 +158,6 @@ md("""
 - **Winter.** One network needs a nominal 74 road miles; at 60 miles nominal two stations (Paul Smiths, Massena) suffice.
 - **Control.** Better than 98% of 100 random networks at 30 miles; no better than chance on the overall threshold:
   the North Country gap is geographic.
-- **Maine (extension c).** One piece only from 151 road miles (Medway – Van Buren); 6 new stations for 50 miles
-  (19–60% of its $19.3M NEVI funds); 40 miles and below infeasible; critical sites again isolated, not small;
-  sited worse than 95% of random networks from its own charging locations.
 """)
 
 nb["cells"] = C
