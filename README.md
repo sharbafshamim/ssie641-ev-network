@@ -36,6 +36,8 @@ src/evnet/                    analysis package
     control.py                random-siting control
 scripts/run_all.py            runs everything -> results/tables, results/figures, results/summary.json
 scripts/build_notebook.py     builds notebooks/ev_network_final.ipynb
+scripts/osrm_fetch_browser.js browser script used to download the OSRM road distances
+scripts/build_report.sh       builds paper/report.pdf from paper/report.md
 notebooks/ev_network_final.ipynb   question-by-question walkthrough (executed)
 notebooks/ev_network_v3.ipynb      earlier exploratory notebook
 results/                      every table and figure used in the paper
@@ -56,7 +58,8 @@ jupyter nbconvert --to notebook --execute --inplace notebooks/ev_network_final.i
 Links between existing sites use OpenStreetMap driving distances from the public OSRM server, queried on
 Nov 19, 2026 for every site pair within 60 straight-line miles (54,737 pairs; no analysis uses a longer link).
 They are stored compactly in `data/derived/road_miles_pairs_le60.u16.gz` (uint16, miles × 20, upper-triangle
-order) and unpacked to `data/derived/road_miles.npy` on first run (`evnet.data.unpack_road_miles`). The median
+order) and unpacked to `data/derived/road_miles.npy` on first run (`evnet.data.unpack_road_miles`). They were downloaded
+with `scripts/osrm_fetch_browser.js` (run in a browser tab on router.project-osrm.org). The median
 road/straight-line ratio for those pairs is 1.22, which is used for links to new stations and city centres.
 To rebuild the full matrix from OSRM (network access required):
 
