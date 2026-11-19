@@ -134,7 +134,7 @@ def main(quick=False):
     save(fig, "figS1_sites_map")
 
     # ============================================================ 3. Q1
-    eps_values = np.arange(5, 101)
+    eps_values = np.arange(5, 61)
     perc = {k: net.percolation(d, eps_values) for k, d in
             [(ALL_KEY, R), ("all_straight_x1.2", D12), (CCS_KEY, R_ccs)]}
     pc = pd.concat({k: v.set_index("miles") for k, v in perc.items()}, axis=1)
@@ -307,7 +307,7 @@ def main(quick=False):
     far = places.assign(nearest=C.min(axis=1)).nlargest(8, "nearest")[["name", "pop", "nearest"]]
     far.to_csv(TAB / "coverage_farthest_cities.csv", index=False)
     rows = []
-    for eps in range(1, 81):
+    for eps in range(1, 61):
         g = net.build_graph(R, eps)
         u, wcv = cov.coverage(g, C, eps, pop)
         _, w_ex = cov.coverage(g, C, eps, pop, exclude=nyc)
@@ -475,6 +475,7 @@ def main(quick=False):
     ax.plot(summer.index, summer["coverage"], c=BLUE, label="mild weather")
     ax.plot(winter["nominal_miles"], winter["coverage"], c=ORANGE, marker="o", ms=3, label="20 F with heat (-41% range)")
     ax.set_xlim(20, 100)
+    ax.text(62, 0.66, 'mild-weather curve shown to 60 mi;\nit is 1.0 from 46 mi on', fontsize=7, color=INK2)
     ax.set_xlabel("nominal spacing standard (miles)")
     ax.set_ylabel("city-pair coverage")
     ax.legend(loc="lower right")

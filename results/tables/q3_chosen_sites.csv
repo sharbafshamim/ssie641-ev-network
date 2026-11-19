@@ -1,60 +1,39 @@
 objective,miles,name,city,lat,lon
-network,20,Stone Ridge Library,Stone Ridge,41.84942606145003,-74.14276224607127
-network,20,Days Inn Liberty,Liberty,41.783836,-74.72946
-network,20,SI - STATION 1 STATION 1,Shandaken,42.117025,-74.409617
+network,20,Foster Supply Hospitality,Neversink,41.84975,-74.61793
 network,20,Village of Cherry Valley,Cherry Valley,42.797294,-74.758022
-network,20,Nannen Arboretum,Ellicottville,42.283144,-78.669294
+network,20,26 South St,Cattaraugus,42.329551,-78.86664
 network,20,Hope Lake Lodge at Greek Peak Mountain Resort,Cortland,42.51237,-76.14749
-network,20,Inns of Aurora: Farmhouse,Aurora,42.757508,-76.693085
-network,20,The Switzerland Inn - Tesla Destination,Hammondsport,42.4914842,-77.1224002
-network,20,Silver Creek Police Department,Silver Creek,42.5451540630892,-79.1697256804936
-network,20,FSA FENTON HALL,Fredonia,42.45176,-79.336104
+network,20,SI - STATION 1 STATION 1,Shandaken,42.117025,-74.409617
+network,20,Olean General Hospital,Olean,42.090044,-78.426908
 network,20,QI COUNTRY INN 1,Mount Morris,42.736849,-77.880321
-network,20,Saxon Inn - Alfred University,Alfred,42.25218,-77.78839
 network,20,Hampton Inn Cooperstown - Tesla Destination,Cooperstown,42.65945253,-74.95716965
-network,20,Main St. Parking Lot,Waterville,42.9308218,-75.3807523
 network,20,MAIN LOT SNC 2,Sterling,43.378711,-76.657265
 network,20,The Alpine Lodge - Tesla Destination,North Creek,43.700142,-73.9860757
 network,25,Foster Supply Hospitality,Neversink,41.84975,-74.61793
 network,25,COLCHESTER EV DOWNSVILLEDINER,Downsville,42.079406,-74.993625
 network,25,Village of Cherry Valley,Cherry Valley,42.797294,-74.758022
-network,25,VILLAGE OF DELH VILLAGEOFDELHI,Delhi,42.276271,-74.916803
-network,25,GARNET HILL LOG HOUSE #2,North River,43.712299,-74.107122
 network,25,TOWN OF NEWCOMB TON3,Newcomb,43.957513,-74.103422
 network,25,Parking Lot,Jay,44.3749342,-73.7276605
 network,25,SURGERY PARKING 2(RIGHT),Lowville,43.796084,-75.50004
 network,25,Snow Ridge Ski Resort,Turin,43.64013,-75.42005
 network,25,Erwin Park,Boonville,43.48240357276243,-75.32612786100533
-network,25,TOC CEROW ARENA STATION 3,Clayton,44.232963,-76.077107
+network,30,Wylder Windham,Windham,42.3069,-74.23162
 network,30,TOWN OF NEWCOMB TON1,Newcomb,43.969144,-74.159714
-network,30,SURGERY PARKING 2(RIGHT),Lowville,43.796084,-75.50004
-network,30,SKICENTER EVSE1,Camden,43.50487,-75.70037
-network,35,Sherman Inn Ogdensburg,Ogdensburg,44.69479,-75.4874
-network,35,CON TECH CON TECH STATIO,Gouverneur,44.319026,-75.462164
+network,35,VIC AND CAMPUS SUGAR SHACK 1.2,Paul Smiths,44.44867,-74.2581
 network,35,NYPA - Hawkins Point Visitors Center,Massena,44.999505,-74.797209
 network,40,VIC AND CAMPUS SUGAR SHACK 1.2,Paul Smiths,44.44867,-74.2581
-network,45,FEHBOCES FEH BOCES,Malone,44.841328,-74.28194
-coverage,20,TOWNOFTHOMPSON LAKE IDA PARK 1,Glen Wild,41.640709,-74.589646
 coverage,20,Village of Cherry Valley,Cherry Valley,42.797294,-74.758022
 coverage,20,Silver Creek Police Department,Silver Creek,42.5451540630892,-79.1697256804936
-coverage,20,308 Main Street,Groton,42.585743,-76.366351
+coverage,20,MUNICIPAL LOT EARLVILLE,Earlville,42.741029,-75.545269
 coverage,20,Hampton Inn Cooperstown - Tesla Destination,Cooperstown,42.65945253,-74.95716965
-coverage,20,Nannen Arboretum,Ellicottville,42.283144,-78.669294
+coverage,20,26 South St,Cattaraugus,42.329551,-78.86664
 coverage,20,Hope Lake Lodge at Greek Peak Mountain Resort,Cortland,42.51237,-76.14749
 coverage,20,QI COUNTRY INN 1,Mount Morris,42.736849,-77.880321
-coverage,20,Poland Town Court,Kennedy,42.1583113239972,-79.1014384057511
-coverage,20,MUNICIPAL LOT EARLVILLE,Earlville,42.741029,-75.545269
-coverage,20,Main St. Parking Lot,Waterville,42.9308218,-75.3807523
 coverage,25,Village of Cherry Valley,Cherry Valley,42.797294,-74.758022
-coverage,25,Parking Lot,Jay,44.3749342,-73.7276605
-coverage,25,Paradox Brewery,North Hudson,43.94509,-73.7312
 coverage,25,SURGERY PARKING 2(RIGHT),Lowville,43.796084,-75.50004
 coverage,25,Snow Ridge Ski Resort,Turin,43.64013,-75.42005
 coverage,25,Erwin Park,Boonville,43.48240357276243,-75.32612786100533
-coverage,30,SURGERY PARKING 2(RIGHT),Lowville,43.796084,-75.50004
-coverage,30,SKICENTER EVSE1,Camden,43.50487,-75.70037
 coverage,35,CON TECH CON TECH STATIO,Gouverneur,44.319026,-75.462164
+coverage,35,VIC AND CAMPUS SUGAR SHACK 1.2,Paul Smiths,44.44867,-74.2581
 coverage,35,CANTON CSD UNIT 2,Canton,44.607747,-75.167378
-coverage,35,NYPA - Hawkins Point Visitors Center,Massena,44.999505,-74.797209
 coverage,40,VIC AND CAMPUS SUGAR SHACK 1.2,Paul Smiths,44.44867,-74.2581
-coverage,45,8101 NY-68,Ogdensburg,44.680164,-75.516847

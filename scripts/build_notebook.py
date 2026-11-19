@@ -32,7 +32,8 @@ rebuild everything (about three minutes). The analysis code lives in `src/evnet/
 Changes from notebook v3 (`notebooks/ev_network_v3.ipynb`):
 - Q3 uses a Steiner-tree heuristic (Takahashi & Matsuyama, 1980) with upper and lower bounds and an exact
   feasibility test, for two objectives (whole network, all city pairs), instead of the greedy search.
-- Links to new stations use the measured detour factor 1.27, not 1.2; 1.2 is kept as a sensitivity check.
+- Road distances re-queried from OSRM for all site pairs within 60 miles (data/derived/road_miles_pairs_le60.u16.gz);
+  links to new stations use the measured detour factor 1.22 for those distances; 1.2 is kept as a sensitivity check.
 - "Big or small" is answered by ports as well as degree.
 - Population share corrected: places with 5,000+ people hold 76% of the state, not 92%.
 - New: budget against the $175M NEVI allocation, winter range, NYC-excluded and access-capped coverage,
@@ -68,8 +69,7 @@ f("figS1_sites_map.png")
 md("""
 ## 2. Q1: When does the network split?
 
-The whole network is one piece from the longest link of its minimum spanning tree.
-Road distances (notebook v3): 43.5 miles. Calibrated straight-line × 1.27 (this run): 45.6 miles.
+The whole network is one piece from the longest link of its minimum spanning tree: 43.5 road miles.
 """)
 code("""
 print({k: round(v, 1) for k, v in S["threshold"].items()}, "| weakest link:", S["weakest_link"])
@@ -128,7 +128,7 @@ f("fig6_cost_curve.png")
 """)
 md("### 4.1 Winter (41% range loss at 20°F with heat; AAA 2019)")
 code("""
-print(f"nominal standard needed for one network in winter: {S['winter_nominal_needed']:.1f} miles (road: {43.5/0.59:.1f})")
+print(f"nominal standard needed for one network in winter: {S['winter_nominal_needed']:.1f} road miles")
 display(t("winter.csv"))
 display(t("winter_q3.csv"))
 f("fig7_winter.png")
@@ -143,19 +143,20 @@ code("""
 display(t("robustness_snapshot.csv"))
 """)
 md("""
-## 7. Summary
+## 7. Summary (OSRM road distances)
 
-- **Q1.** One network from 43.5 road miles (45.6 calibrated); weakest link Saranac Lake – Malone. The two large
-  regions join at 27 miles; the remaining small pieces are all in the Catskills, Adirondacks and North Country.
-- **Q2.** At 30 miles six sites are single points of failure, five on the I-87 Northway corridor. They are
-  isolated (median degree 7.5 vs 47), not small (median ports 5 vs 4). Betweenness attack removes them first:
-  18 removals (2.4%) cut the largest piece below 90% at 50 miles; degree attack does no more than random failure.
-- **Coverage.** At 30–45 miles 98–99% of sites but only 96–97% of city pairs are connected; every pair from 46 miles.
-- **Q3.** 0 stations at 50 miles, 1 at 40–45, 3 at 35 (all North Country), at most 3.3% of the $175M NEVI
-  allocation. 30 miles and below cannot be met from existing public charging locations (feasible at 30 with 6 if
-  the detour factor is 1.2).
+- **Q1.** One network from **43.5 road miles**; weakest link Saranac Lake – Malone, then Malone – Massena (37.2),
+  Arkville – Tannersville (34.7) and Chestertown – Indian Lake (33.3). The two large regions join at 26 miles.
+- **Q2.** At 30 miles five sites are single points of failure (Chestertown, Peru, Elizabethtown, Monticello, Roscoe),
+  four of them Tesla Superchargers. They are isolated (median degree 9 vs 50), not small (median ports 8 vs 4).
+  Betweenness attack: 17 removals (2.3%) cut the largest piece to 57% at 50 miles; at 30 miles the two Little Falls
+  Thruway plazas alone do it. Degree attack does no more than random failure.
+- **Coverage.** At 30–43 miles 99% of sites but 97.3% of city pairs are connected; every pair from 44 miles.
+- **Q3.** 0 stations at 45–50 miles, 1 at 40 (Paul Smiths), 2 at 35 (Paul Smiths, Massena), all optimal, at most
+  2.2% of the $175M NEVI allocation. 30 miles and below cannot be met from existing public charging locations
+  (feasible at 30 with 5 if the new-link detour factor is 1.2 instead of the measured 1.22).
 - **Winter.** One network needs a nominal 74 road miles; at 60 miles nominal two stations (Paul Smiths, Massena) suffice.
-- **Control.** Better than all 100 random networks at 30 miles; no better than chance on the overall threshold:
+- **Control.** Better than 98% of 100 random networks at 30 miles; no better than chance on the overall threshold:
   the North Country gap is geographic.
 """)
 

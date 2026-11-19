@@ -19,7 +19,7 @@ def haversine(lat1, lon1, lat2, lon2):
 def circuity(R, straight, min_miles=5):
     """Road / straight-line ratio over all pairs farther apart than min_miles."""
     iu = np.triu_indices(len(R), 1)
-    far = straight[iu] > min_miles
+    far = (straight[iu] > min_miles) & (R[iu] < 1e5)
     ratio = R[iu][far] / straight[iu][far]
     return {"median": float(np.median(ratio)),
             "p05": float(np.percentile(ratio, 5)),

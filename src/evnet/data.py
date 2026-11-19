@@ -92,11 +92,44 @@ def load_candidates(path=AFDC_ALL_OCT):
 
 
 def load_road_miles(n_sites):
-    """Road distances (OSRM) between sites, if the file exists; else None."""
+    """Road distances (OSRM) between sites, if the file exists; else None.
+
+    Pairs more than 60 straight-line miles apart may be stored as 1e6 (not
+    queried); no analysis here uses links longer than 60 miles.
+    """
     path = DERIVED / "road_miles.npy"
+    packed = DERIVED / "road_miles_pairs_le60.u16.gz"
+    if not path.exists() and packed.exists():
+        np.save(path, unpack_road_miles(packed))
     if not path.exists():
         return None
     R = np.load(path)
     if R.shape != (n_sites, n_sites):
         raise ValueError(f"road_miles.npy has shape {R.shape}, expected {(n_sites, n_sites)}")
+    return R
+
+
+def unpack_road_miles(packed_path, sites_path=None, max_straight=60.0):
+    """Rebuild the 754 x 754 road matrix from the compact OSRM download.
+
+    The file holds gzip'd little-endian uint16 values (miles x 20, i.e. 0.05-mile
+    resolution) for every site pair i < j whose straight-line distance is at most
+    60 miles, in row-major upper-triangle order. Other pairs get 1e6 (not queried).
+    """
+    import gzip
+
+    from .distance import haversine
+
+    sites = pd.read_csv(sites_path or DERIVED / "sites.csv")
+    lat, lon = sites.Latitude.round(6).values, sites.Longitude.round(6).values
+    n = len(sites)
+    vals = np.frombuffer(gzip.decompress(open(packed_path, "rb").read()), dtype="<u2")
+    i, j = np.triu_indices(n, 1)
+    mask = haversine(lat, lon, lat, lon)[i, j] <= max_straight
+    if mask.sum() != len(vals):
+        raise ValueError(f"{len(vals)} values for {mask.sum()} pairs")
+    R = np.full((n, n), 1e6)
+    np.fill_diagonal(R, 0)
+    R[i[mask], j[mask]] = vals / 20.0
+    R[j[mask], i[mask]] = vals / 20.0
     return R

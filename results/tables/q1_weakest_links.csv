@@ -1,17 +1,17 @@
-,all_calibrated,all_calibrated,all_calibrated,all_straight_x1.2,all_straight_x1.2,all_straight_x1.2,all_straight_xfactor,all_straight_xfactor,all_straight_xfactor,ccs_calibrated,ccs_calibrated,ccs_calibrated
+,all_road,all_road,all_road,all_straight_x1.2,all_straight_x1.2,all_straight_x1.2,all_straight_xfactor,all_straight_xfactor,all_straight_xfactor,ccs_road,ccs_road,ccs_road
 ,miles,from,to,miles,from,to,miles,from,to,miles,from,to
-0,45.63020712299764,Saranac Lake,Malone,43.11515633669068,Saranac Lake,Malone,45.63020712299764,Saranac Lake,Malone,45.63020712299764,Saranac Lake,Malone
-1,35.82562218077972,Malone,Massena,33.85098158813832,Malone,Massena,35.82562218077972,Malone,Massena,40.52296721689728,Warrensburg,North Hudson
-2,33.961560591229805,Pulaski,Watertown,32.08966355076832,Pulaski,Watertown,33.961560591229805,Pulaski,Watertown,36.64932435795496,Indian Lake,North Hudson
-3,32.05771566185564,Chestertown,Indian Lake,30.290754956084065,Chestertown,Indian Lake,32.05771566185564,Chestertown,Indian Lake,35.82562218077972,Malone,Massena
-4,27.861870785491863,Monticello,Roscoe,26.32617712014979,Monticello,Roscoe,27.861870785491863,Monticello,Roscoe,33.961560591229805,Pulaski,Watertown
-5,27.38832088809958,Watertown,Cape Vincent,25.878728398204327,Watertown,Cape Vincent,27.38832088809958,Watertown,Cape Vincent,31.975275164853095,Arkville,TANNERSVILLE
-6,27.37223973987284,Roscoe,Arkville,25.86353361247827,Roscoe,Arkville,27.37223973987284,Roscoe,Arkville,28.176546257666068,Hancock,Afton
-7,26.46072108633268,Watertown,Alexandria Bay,25.00225614456631,Watertown,Alexandria Bay,26.46072108633268,Watertown,Alexandria Bay,27.65200749458943,Cape Vincent,Alexandria Bay
-8,26.283289332675544,Lewis,Peru,24.834604093866655,Lewis,Peru,26.283289332675544,Lewis,Peru,26.46072108633268,Watertown,Alexandria Bay
-9,26.200578002537373,Whitney Point,Cortland,24.756451655940822,Whitney Point,Cortland,26.200578002537373,Whitney Point,Cortland,26.283289332675544,Lewis,Peru
-10,25.67531185143124,Elizabethtown,Lake Placid,24.260137182454713,Elizabethtown,Lake Placid,25.67531185143124,Elizabethtown,Lake Placid,26.200578002537373,Whitney Point,Cortland
-11,25.54483894290098,Richmondville,Cooperstown,24.136855694079667,Richmondville,Cooperstown,25.54483894290098,Richmondville,Cooperstown,25.67531185143124,Elizabethtown,Lake Placid
-12,25.286432124148245,Chestertown,North Hudson,23.892691770848735,Chestertown,North Hudson,25.286432124148245,Chestertown,North Hudson,25.54483894290098,Richmondville,Cooperstown
-13,25.26626646299412,Roscoe,Hancock,23.87363760282909,Roscoe,Hancock,25.26626646299412,Roscoe,Hancock,25.4472585831955,Bridgehampton,Montauk
-14,24.97742084237393,North Hudson,Elizabethtown,23.60071260696749,North Hudson,Elizabethtown,24.97742084237393,North Hudson,Elizabethtown,24.97742084237393,North Hudson,Elizabethtown
+0,43.5,Saranac Lake,Malone,43.11515633669068,Saranac Lake,Malone,43.83374227563553,Saranac Lake,Malone,43.5,Saranac Lake,Malone
+1,37.15,Malone,Massena,33.85098158813832,Malone,Massena,34.41516461460729,Malone,Massena,37.15,Malone,Massena
+2,34.65,Arkville,TANNERSVILLE,32.08966355076832,Pulaski,Watertown,32.62449127661446,Pulaski,Watertown,37.05,Warrensburg,Indian Lake
+3,33.25,Chestertown,Indian Lake,30.290754956084065,Chestertown,Indian Lake,30.795600872018802,Chestertown,Indian Lake,36.05,Warrensburg,North Hudson
+4,28.3,Pulaski,Watertown,26.32617712014979,Monticello,Roscoe,26.764946738818953,Monticello,Roscoe,34.65,Arkville,TANNERSVILLE
+5,27.1,Monticello,Roscoe,25.878728398204327,Watertown,Cape Vincent,26.310040538174402,Watertown,Cape Vincent,30.85,Hancock,Afton
+6,27.1,Elizabethtown,Lake Placid,25.86353361247827,Roscoe,Arkville,26.294592506019576,Roscoe,Arkville,28.3,Pulaski,Watertown
+7,26.0,Johnstown,Little Falls,25.00225614456631,Watertown,Alexandria Bay,25.418960413642417,Watertown,Alexandria Bay,27.1,Elizabethtown,Lake Placid
+8,25.55,Roscoe,Hancock,24.834604093866655,Lewis,Peru,25.248514162097766,Lewis,Peru,26.0,Johnstown,Little Falls
+9,24.9,Binghamton,Afton,24.756451655940822,Whitney Point,Cortland,25.169059183539837,Whitney Point,Cortland,24.9,Binghamton,Afton
+10,23.7,Watertown,Alexandria Bay,24.260137182454713,Elizabethtown,Lake Placid,24.664472802162294,Elizabethtown,Lake Placid,23.7,Watertown,Alexandria Bay
+11,23.1,Lewis,Peru,24.136855694079667,Richmondville,Cooperstown,24.539136622314327,Richmondville,Cooperstown,23.1,Lewis,Peru
+12,22.6,North Hudson,Elizabethtown,23.892691770848735,Chestertown,North Hudson,24.29090330036288,Chestertown,North Hudson,22.6,North Hudson,Elizabethtown
+13,22.55,Cape Vincent,Alexandria Bay,23.87363760282909,Roscoe,Hancock,24.27153156287624,Roscoe,Hancock,22.55,Cape Vincent,Alexandria Bay
+14,22.45,Whitney Point,Cortland,23.60071260696749,North Hudson,Elizabethtown,23.99405781708362,North Hudson,Elizabethtown,22.45,Whitney Point,Cortland

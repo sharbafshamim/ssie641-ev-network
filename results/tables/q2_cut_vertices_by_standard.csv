@@ -1,39 +1,39 @@
 miles,pieces_all,cut_all,cities_all,pieces_ccs,cut_ccs,cities_ccs
-20,32,10,East Hampton; Olean; Sherman; Watkins Glen; North Collins; Schoharie; Rotterdam; Chittenango; Fulton; Warrensburg,31,11,Elmira; Sherman; Castle Creek; Watkins Glen; North Collins; Schoharie; Rotterdam; Tully; Syracuse; Chittenango; Fulton
-21,27,15,East Hampton; Ellenville; Stone Ridge; Sherman; Painted Post; Westfield; Bath; South Dayton; Watkins Glen; Fredonia; North Collins; Schoharie; Chittenango; Fulton; Warrensburg,27,11,Ellenville; Stone Ridge; Sherman; Westfield; South Dayton; Watkins Glen; Fredonia; North Collins; Schoharie; Chittenango; Fulton
-22,25,9,East Hampton; Sherman; Westfield; South Dayton; North Collins; Schoharie; Geneseo; Fulton; Warrensburg,24,8,Sherman; Westfield; South Dayton; Dansville; North Collins; Schoharie; Geneseo; Fulton
-23,18,18,East Hampton; Olean; Kirkwood; Sherman; Friendship; Afton; Angelica; Sidney; Westfield; South Dayton; Hornell; Oneonta; Oneonta; North Collins; Schoharie; Geneseo; Fulton; Warrensburg,17,17,Olean; Kirkwood; Sherman; Friendship; Afton; Angelica; Sidney; Westfield; South Dayton; Hornell; Oneonta; Oneonta; Dansville; North Collins; Schoharie; Geneseo; Fulton
-24,17,14,East Hampton; Sherman; Friendship; Afton; Angelica; Sidney; Westfield; South Dayton; Hornell; Oneonta; North Collins; Schoharie; Geneseo; Warrensburg,16,13,Sherman; Friendship; Afton; Angelica; Sidney; Westfield; South Dayton; Hornell; Oneonta; Dansville; North Collins; Schoharie; Geneseo
-25,15,11,East Hampton; Friendship; Afton; Angelica; Sidney; South Dayton; Hornell; Oneonta; Schoharie; Warrensburg; Elizabethtown,15,9,Friendship; Afton; Angelica; Sidney; South Dayton; Hornell; Oneonta; Schoharie; Elizabethtown
-26,11,11,Friendship; Afton; Angelica; Sidney; South Dayton; Hornell; Richmondville; Schoharie; Warrensburg; Chestertown; Elizabethtown,12,11,Bridgehampton; Montauk; Friendship; Afton; Angelica; Sidney; South Dayton; Hornell; Richmondville; Schoharie; Elizabethtown
-27,8,11,Afton; Sidney; Whitney Point; Richmondville; Schoharie; Warrensburg; Chestertown; Watertown; Elizabethtown; Lewis; Peru,9,12,Bridgehampton; Friendship; Afton; Sidney; Whitney Point; Hornell; Richmondville; Schoharie; Watertown; Elizabethtown; Lewis; Peru
-28,5,12,Monticello; Roscoe; Afton; Sidney; Whitney Point; Richmondville; Schoharie; Warrensburg; Chestertown; Elizabethtown; Lewis; Peru,8,11,Bridgehampton; Friendship; Afton; Sidney; Whitney Point; Hornell; Richmondville; Schoharie; Elizabethtown; Lewis; Peru
-29,5,6,Roscoe; Warrensburg; Chestertown; Elizabethtown; Lewis; Peru,7,7,Bridgehampton; Friendship; Afton; Hornell; Elizabethtown; Lewis; Peru
-30,5,6,Roscoe; Warrensburg; Chestertown; Elizabethtown; Lewis; Peru,7,6,Bridgehampton; Afton; Hornell; Elizabethtown; Lewis; Peru
-31,5,5,Roscoe; Chestertown; Elizabethtown; Lewis; Peru,7,4,Afton; Elizabethtown; Lewis; Peru
-32,5,3,Chestertown; Lewis; Peru,6,3,TANNERSVILLE; Lewis; Peru
-33,4,2,Chestertown; Peru,6,2,TANNERSVILLE; Peru
-34,3,4,Pulaski; Chestertown; Watertown; Peru,5,4,TANNERSVILLE; Pulaski; Watertown; Peru
-35,3,2,Chestertown; Peru,5,2,TANNERSVILLE; Peru
-36,2,3,Chestertown; Malone; Massena,4,3,TANNERSVILLE; Malone; Massena
-37,2,3,Chestertown; Malone; Massena,3,2,Malone; Massena
-38,2,2,Chestertown; Massena,3,1,Massena
-39,2,2,Chestertown; Massena,3,1,Massena
-40,2,2,Chestertown; Massena,3,1,Massena
-41,2,1,Massena,2,2,Warrensburg; Massena
-42,2,1,Massena,2,2,Warrensburg; Massena
-43,2,1,Massena,2,2,Warrensburg; Massena
-44,2,0,,2,1,Warrensburg
-45,2,0,,2,1,Warrensburg
+20,26,13,East Hampton; Stone Ridge; Olean; Sherman; Painted Post; Westfield; Bath; Watkins Glen; North Collins; Schoharie; Pembroke; Oneida; Warrensburg,26,8,Stone Ridge; Sherman; Westfield; Watkins Glen; North Collins; Schoharie; Pembroke; Oneida
+21,22,12,East Hampton; Stone Ridge; Sherman; Angelica; Sidney; Westfield; South Dayton; Hornell; Oneonta; North Collins; Schoharie; Warrensburg,21,11,Stone Ridge; Sherman; Angelica; Sidney; Westfield; South Dayton; Hornell; Watkins Glen; Oneonta; North Collins; Schoharie
+22,18,13,Stone Ridge; Sherman; Angelica; Sidney; Westfield; Hornell; Oneonta; Oneonta; Schoharie; Geneseo; Williamson; Warrensburg; Chestertown,17,14,Bridgehampton; Montauk; Stone Ridge; Sherman; Angelica; Sidney; Westfield; Hornell; Oneonta; Oneonta; Dansville; Schoharie; Geneseo; Williamson
+23,13,15,Stone Ridge; Olean; Sherman; Friendship; Angelica; Sidney; Whitney Point; Westfield; Hornell; Oneonta; Schoharie; Geneseo; Warrensburg; Chestertown; Elizabethtown,13,17,Bridgehampton; Montauk; Stone Ridge; Olean; Sherman; Friendship; Angelica; Sidney; Whitney Point; Westfield; Hornell; Oneonta; Dansville; Schoharie; Geneseo; Williamson; Elizabethtown
+24,11,16,Sherman; Friendship; Angelica; Sidney; Whitney Point; Westfield; Hornell; Schoharie; Geneseo; Warrensburg; Chestertown; Watertown; Elizabethtown; Lewis; Alexandria Bay; Peru,11,17,Bridgehampton; Montauk; Sherman; Friendship; Angelica; Sidney; Whitney Point; Westfield; Hornell; Dansville; Schoharie; Geneseo; Watertown; Elizabethtown; Lewis; Alexandria Bay; Peru
+25,10,13,Binghamton; Friendship; Afton; Sidney; Whitney Point; Westfield; Hornell; Schoharie; Warrensburg; Chestertown; Elizabethtown; Lewis; Peru,10,12,Bridgehampton; Binghamton; Friendship; Afton; Sidney; Whitney Point; Westfield; Hornell; Schoharie; Elizabethtown; Lewis; Peru
+26,8,13,Friendship; Afton; Sidney; Whitney Point; Hornell; Schoharie; Johnstown; Little Falls; Warrensburg; Chestertown; Elizabethtown; Lewis; Peru,9,12,Binghamton; Friendship; Afton; Sidney; Whitney Point; Hornell; Schoharie; Johnstown; Little Falls; Elizabethtown; Lewis; Peru
+27,8,8,Friendship; Hornell; Schoharie; Little Falls; Chestertown; Elizabethtown; Lewis; Peru,9,7,Friendship; Hornell; Schoharie; Little Falls; Elizabethtown; Lewis; Peru
+28,6,9,Monticello; Roscoe; Hornell; Schoharie; Little Falls; Chestertown; Elizabethtown; Lewis; Peru,8,6,Hornell; Schoharie; Little Falls; Elizabethtown; Lewis; Peru
+29,5,8,Monticello; Roscoe; Hornell; Schoharie; Pulaski; Chestertown; Elizabethtown; Peru,7,5,Hornell; Schoharie; Pulaski; Elizabethtown; Peru
+30,5,5,Monticello; Roscoe; Chestertown; Elizabethtown; Peru,7,3,Hornell; Elizabethtown; Peru
+31,5,2,Chestertown; Elizabethtown,6,3,Afton; Hornell; Elizabethtown
+32,5,2,Chestertown; Elizabethtown,6,3,Afton; Hornell; Elizabethtown
+33,5,2,Chestertown; Elizabethtown,6,2,Hornell; Elizabethtown
+34,4,1,Chestertown,6,1,Hornell
+35,3,2,TANNERSVILLE; Chestertown,5,1,TANNERSVILLE
+36,3,2,TANNERSVILLE; Chestertown,5,1,TANNERSVILLE
+37,3,1,Chestertown,4,2,TANNERSVILLE; Warrensburg
+38,2,1,Malone,2,2,Warrensburg; Malone
+39,2,0,,2,1,Warrensburg
+40,2,0,,2,1,Warrensburg
+41,2,0,,2,1,Warrensburg
+42,2,0,,2,1,Warrensburg
+43,2,0,,2,1,Warrensburg
+44,1,1,Saranac Lake,1,2,Warrensburg; Saranac Lake
+45,1,1,Saranac Lake,1,2,Warrensburg; Saranac Lake
 46,1,1,Saranac Lake,1,2,Warrensburg; Saranac Lake
-47,1,1,Saranac Lake,1,2,Warrensburg; Saranac Lake
-48,1,1,Saranac Lake,1,2,Warrensburg; Saranac Lake
-49,1,0,,1,1,Warrensburg
-50,1,0,,1,1,Warrensburg
-51,1,0,,1,1,Warrensburg
-52,1,0,,1,1,Warrensburg
-53,1,0,,1,1,Warrensburg
-54,1,0,,1,1,Warrensburg
+47,1,0,,1,1,Warrensburg
+48,1,0,,1,0,
+49,1,0,,1,0,
+50,1,0,,1,0,
+51,1,0,,1,0,
+52,1,0,,1,0,
+53,1,0,,1,0,
+54,1,0,,1,0,
 55,1,0,,1,0,
 56,1,0,,1,0,
 57,1,0,,1,0,

@@ -1,15 +1,15 @@
 objective,miles,pieces_before,lower_bound,new_stations,feasible,v3_greedy,where,unreachable
-network,20,32,3.0,16,False,,Stone Ridge; Liberty; Shandaken; Cherry Valley; Ellicottville; Cortland; Aurora; Hammondsport; Silver Creek; Fredonia; Mount Morris; Alfred; Cooperstown; Waterville; Sterling; North Creek,Afton; Alexandria Bay; Cape Vincent; Champlain; Elizabethtown; Hancock; Lake Placid; Lewis; Malone; Massena; North Hudson; Peru; Plattsburgh; Potsdam; Saranac Lake; Sidney; Watertown; West Carthage
-network,25,15,5.0,11,False,,Neversink; Downsville; Cherry Valley; Delhi; North River; Newcomb; Jay; Lowville; Turin; Boonville; Clayton,Malone; Massena; Potsdam
-network,30,5,2.0,3,False,,Newcomb; Lowville; Camden,Malone; Massena; Potsdam
-network,35,3,2.0,3,True,,Ogdensburg; Gouverneur; Massena,
+network,20,26,3.0,10,False,,Neversink; Cherry Valley; Cattaraugus; Cortland; Shandaken; Olean; Mount Morris; Cooperstown; Sterling; North Creek,Afton; Alexandria Bay; Cape Vincent; Champlain; Elizabethtown; Hancock; Lake Placid; Lewis; Malone; Massena; North Hudson; Peru; Plattsburgh; Potsdam; Saranac Lake; Sidney; Watertown; West Carthage
+network,25,10,4.0,8,False,,Neversink; Downsville; Cherry Valley; Newcomb; Jay; Lowville; Turin; Boonville,Malone; Massena; Potsdam
+network,30,5,1.0,2,False,,Windham; Newcomb,Malone; Massena; Potsdam
+network,35,3,2.0,2,True,,Paul Smiths; Massena,
 network,40,2,1.0,1,True,,Paul Smiths,
-network,45,2,1.0,1,True,,Malone,
+network,45,1,0.0,0,True,,,
 network,50,1,0.0,0,True,,,
-coverage,20,32,,11,False,8.0,Glen Wild; Cherry Valley; Silver Creek; Groton; Cooperstown; Ellicottville; Cortland; Mount Morris; Kennedy; Earlville; Waterville,Canton village; Fort Drum CDP; Malone village; Massena village; Ogdensburg city; Plattsburgh city; Potsdam village; Watertown city
-coverage,25,15,,6,False,4.0,Cherry Valley; Jay; North Hudson; Lowville; Turin; Boonville,Canton village; Malone village; Massena village; Ogdensburg city; Potsdam village
-coverage,30,5,,2,False,3.0,Lowville; Camden,Canton village; Malone village; Massena village; Ogdensburg city; Potsdam village
-coverage,35,3,,3,True,3.0,Gouverneur; Canton; Massena,
+coverage,20,26,,7,False,8.0,Cherry Valley; Silver Creek; Earlville; Cooperstown; Cattaraugus; Cortland; Mount Morris,Canton village; Fort Drum CDP; Malone village; Massena village; Ogdensburg city; Plattsburgh city; Potsdam village; Watertown city
+coverage,25,10,,4,False,4.0,Cherry Valley; Lowville; Turin; Boonville,Canton village; Malone village; Massena village; Ogdensburg city; Potsdam village
+coverage,30,5,,0,False,3.0,,Canton village; Malone village; Massena village; Ogdensburg city; Potsdam village
+coverage,35,3,,3,True,3.0,Gouverneur; Paul Smiths; Canton,
 coverage,40,2,,1,True,1.0,Paul Smiths,
-coverage,45,2,,1,True,0.0,Ogdensburg,
+coverage,45,1,,0,True,0.0,,
 coverage,50,1,,0,True,0.0,,

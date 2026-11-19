@@ -14,10 +14,10 @@ August 2025 and left the number to the states.
 
 | Question | Answer |
 | --- | --- |
-| **Q1.** How close is the network to breaking apart, and where? | One connected network from **43.5 road miles** (45.6 calibrated). Weakest link: **Saranac Lake – Malone**. The two large regions join at 27 miles; every remaining gap is in the Catskills, Adirondacks or North Country. |
-| **Q2.** Which stations hold it together: big or small? | At 30 miles, **six single points of failure**, five on the I-87 Northway corridor (Warrensburg, Chestertown, Elizabethtown, Lewis, Peru) plus Roscoe. They are **isolated, not small**: median degree 7.5 vs 47, median ports 5 vs 4. Removing the 18 highest-betweenness sites (2.4%) cuts the largest piece below 90% at 50 miles; removing the 18 busiest by degree does nothing. |
-| **Q3.** How many new stations per standard, and can NY afford them? | **0 at 50 miles, 1 at 40–45, 3 at 35**, all in the North Country, at most 3.3% of NY's $175M NEVI allocation. **30 miles and below cannot be met** by upgrading existing public charging locations: new host sites are needed. |
-| Control | Better sited than all 100 random networks at 30 miles; no better than chance on the overall threshold: the North Country gap is geographic. |
+| **Q1.** How close is the network to breaking apart, and where? | One connected network from **43.5 road miles**. Weakest link: **Saranac Lake – Malone**, then Malone – Massena (37.2) and Arkville – Tannersville (34.7). The two large regions join at 26 miles; every remaining gap is in the Catskills, Adirondacks or North Country. |
+| **Q2.** Which stations hold it together: big or small? | At 30 miles, **five single points of failure**: Chestertown, Peru, Elizabethtown, Monticello, Roscoe (four Tesla Superchargers). They are **isolated, not small**: median degree 9 vs 50, median ports 8 vs 4. Removing the 17 highest-betweenness sites (2.3%) shrinks the largest piece to 57% at 50 miles; at 30 miles the two **Little Falls Thruway plazas** alone do it. Degree attack does no more than random failure. |
+| **Q3.** How many new stations per standard, and can NY afford them? | **0 at 45–50 miles, 1 at 40 (Paul Smiths), 2 at 35 (Paul Smiths, Massena)**, all provably optimal, at most 2.2% of NY's $175M NEVI allocation. **30 miles and below cannot be met** by upgrading existing public charging locations: new host sites are needed. |
+| Control | Better sited than 98% of 100 random networks at 30 miles; no better than chance on the overall threshold: the North Country gap is geographic. |
 | Winter (−41% range) | One network needs a nominal 74 road miles; a 60-mile standard needs two winter stations (Paul Smiths, Massena). |
 
 The full report is in `paper/` and in the project's Claude doc.
@@ -26,7 +26,7 @@ The full report is in `paper/` and in the project's Claude doc.
 
 ```
 data/raw/                     input data (public; see below)
-data/derived/                 sites.csv, ny_places.csv, candidates.csv (+ road_miles.npy if available)
+data/derived/                 sites.csv, ny_places.csv, candidates.csv, OSRM road distances
 src/evnet/                    analysis package
     data.py                   loading AFDC and Census files, sites, candidates
     distance.py               haversine, circuity, OSRM road-distance builder
@@ -37,9 +37,9 @@ src/evnet/                    analysis package
 scripts/run_all.py            runs everything -> results/tables, results/figures, results/summary.json
 scripts/build_notebook.py     builds notebooks/ev_network_final.ipynb
 notebooks/ev_network_final.ipynb   question-by-question walkthrough (executed)
-notebooks/ev_network_v3.ipynb      earlier exploratory notebook (road distances from OSRM)
+notebooks/ev_network_v3.ipynb      earlier exploratory notebook
 results/                      every table and figure used in the paper
-paper/                        proposal and final report
+paper/                        proposal and final report (report.docx, report.pdf, report.md)
 ```
 
 ## Reproduce
@@ -53,13 +53,12 @@ jupyter nbconvert --to notebook --execute --inplace notebooks/ev_network_final.i
 
 ### Distances
 
-Notebook v3 queried driving distances between all 754 sites from the public OSRM server and saved them as
-`road_miles.npy`; the median road/straight-line ratio was **1.27** (90% of pairs between 1.10 and 1.48). That
-matrix was not available for the final run and the OSRM server could not be reached, so the committed results use
-straight-line distance × 1.27 for every link. In v3 the two versions gave the same weakest links and thresholds
-within 1–2 miles. To use road distances, put the matrix at `data/derived/road_miles.npy` (754 × 754, rows in the
-order of `data/derived/sites.csv`) and rerun `scripts/run_all.py`; it is picked up automatically. To rebuild it
-(network access to OSRM required):
+Links between existing sites use OpenStreetMap driving distances from the public OSRM server, queried on
+Nov 19, 2026 for every site pair within 60 straight-line miles (54,737 pairs; no analysis uses a longer link).
+They are stored compactly in `data/derived/road_miles_pairs_le60.u16.gz` (uint16, miles × 20, upper-triangle
+order) and unpacked to `data/derived/road_miles.npy` on first run (`evnet.data.unpack_road_miles`). The median
+road/straight-line ratio for those pairs is 1.22, which is used for links to new stations and city centres.
+To rebuild the full matrix from OSRM (network access required):
 
 ```python
 import sys; sys.path.insert(0, "src")

@@ -1,4 +1,4 @@
 nominal_miles,winter_effective_miles,pieces,lower_bound,new_stations,feasible,where
-50,29.5,5,2,3,False,Newcomb; Lowville; Camden
+50,29.5,5,1,2,False,Windham; Newcomb
 60,35.4,3,2,2,True,Paul Smiths; Massena
-70,41.3,2,1,1,True,Paul Smiths
+70,41.3,2,1,1,True,Ogdensburg

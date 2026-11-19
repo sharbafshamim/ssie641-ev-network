@@ -8,9 +8,9 @@ SSIE 641 Advanced Topics in Network Science · Final project report · Code: [gi
 
 ## Abstract
 
-New York's public DC fast-charging network becomes one connected network once a driver can cover about 44 to 46 miles between chargers. Below that, it breaks apart at a handful of small rural sites in the Adirondacks and the North Country. We model the 754 fast-charging sites in the Department of Energy's station list (September 23, 2026) as an epsilon-neighbourhood network and treat the spacing standard as the variable, not a fixed assumption. That matters because federal guidance dropped the 50-mile spacing rule in August 2025 and left the number to the states.
+New York's public DC fast-charging network becomes one connected network once a driver can cover 43.5 road miles between chargers. Below that it breaks apart at a handful of rural sites in the Catskills, the Adirondacks and the North Country. We model the 754 fast-charging sites in the Department of Energy's station list (September 23, 2026) as an epsilon-neighbourhood network on OpenStreetMap road distances, and treat the spacing standard as the variable rather than a fixed assumption. That matters because federal guidance dropped the 50-mile spacing rule in August 2025 and left the number to the states.
 
-Three results follow. First, the whole network is connected from 43.5 miles on road distances (45.6 miles on calibrated straight-line distances). The weakest link is Saranac Lake to Malone, and the network first splits into its two large regions below about 27 miles. Second, the sites that hold the network together are isolated, not small: at a 30-mile standard six sites are single points of failure, with a median of 7.5 neighbours against 47 for all sites, yet a median of 5 ports against 4. Removing the 18 highest-betweenness sites (2.4% of the network) cuts the largest connected piece below 90% at 50 miles, while removing the 18 busiest sites by degree does almost nothing. Third, a 50-mile standard needs no new stations. Standards of 35 to 45 miles need one to three, all in the North Country, at well under 4% of New York's $175 million NEVI allocation. Standards below 30 miles cannot be met by upgrading existing public charging locations at all. A random-siting control shows the real network is better placed than 100% of random alternatives at 30 miles, but no better than chance on the overall threshold: the remaining gap is a matter of geography.
+Three results follow. First, the weakest link in the state is Saranac Lake to Malone (43.5 road miles), and the network first splits into its two large regions below 26 miles. Second, the sites that hold the network together are isolated, not small. At a 30-mile standard five sites are single points of failure, four of them rural Tesla Superchargers, with a median of 9 neighbours against 50 for all sites but a median of 8 ports against 4. Removing the 17 highest-betweenness sites (2.3% of the network) shrinks the largest connected piece from all sites to 57% at 50 miles; at 30 miles removing just the two Thruway service plazas at Little Falls does the same. Attacks on the busiest sites do no more harm than random failure. Third, 45- and 50-mile standards need no new stations, and 35 to 40 miles need one or two, all in the North Country, at no more than 2.2% of New York's $175 million NEVI allocation. Standards of 30 miles or less cannot be met by upgrading existing public charging locations at all. A random-siting control shows the real network is better placed than 98% of random alternatives at 30 miles but no better than chance on the overall threshold: the remaining gap is a matter of geography.
 
 ## 1. Introduction
 
@@ -56,7 +56,7 @@ All inputs are public and are included in the code repository.
 | All public charging, NY, Oct 13, 2026 | DOE Alternative Fuels Data Center | 4,756 Level 1/Level 2 locations as candidate sites; 793 fast-charging sites for the robustness check |
 | Census 2020 place centroids | [Census Gazetteer files](https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html) | internal point of 1,293 New York places |
 | Census 2020 place population | [Census P.L. 94-171, table P1](https://data.census.gov/) | total population per place |
-| Road distances | [OSRM](https://project-osrm.org/) on OpenStreetMap | 754 × 754 driving distances (notebook v3) |
+| Road distances | [OSRM](https://project-osrm.org/) on OpenStreetMap | driving distances for 54,737 site pairs within 60 miles (queried Nov 19, 2026) |
 
 **Stations and sites.** We keep only DC fast charging. A Level 2 charge takes hours, so it does not support travel between cities, and including it would let dense city charging hide the rural pattern. Stations at identical coordinates are merged into one site, which joins only the two New Baltimore Thruway travel plazas: 754 sites. Of these, 661 offer a CCS plug, which most non-Tesla cars use; 87 stations are Tesla-only. ChargePoint (188 stations), Tesla (125) and Electrify America (86) operate the most stations.
 
@@ -64,7 +64,7 @@ All inputs are public and are included in the code repository.
 
 **Candidate sites.** New fast chargers are placed only at locations that already host public Level 1 or Level 2 charging: open, public, with no DC fast ports. They already have a grid connection and a host business. Merging identical coordinates gives 4,756 candidate locations.
 
-**Distances.** For the 754 sites, notebook v3 queried driving distances from the public OSRM server. The median ratio of road to straight-line distance, over all pairs more than 5 miles apart, was 1.27, with 90% of pairs between 1.10 and 1.48. This is above the 1.2 factor of [Ballou, Rahardja and Sakai (2002)](<https://doi.org/10.1016/S0965-8564(01)00044-1>) that the proposal assumed. The final pipeline uses straight-line distance × 1.27 for every link, calibrated on those road distances, because the stored road matrix was not available for the final run and the OSRM server was not reachable from our environment. In v3 the road and straight-line versions gave the same weakest links and thresholds within 1 mile (43.5 vs 43.1 miles); we quote the road values where v3 measured them. The pipeline uses the road matrix automatically when the file is present.
+**Distances.** Links between existing sites use driving distances on the OpenStreetMap road network from the public [OSRM](https://project-osrm.org/) routing service. We queried every pair of sites within 60 straight-line miles of each other (54,737 pairs); no analysis uses a link longer than 60 miles. For those pairs more than 5 miles apart, the median ratio of road to straight-line distance is 1.22, with 90% of pairs between 1.07 and 1.58. The earlier all-pairs run in notebook v3 gave 1.27, because long trips detour more. Both are above or at the 1.2 factor of [Ballou, Rahardja and Sakai (2002)](<https://doi.org/10.1016/S0965-8564(01)00044-1>) that the proposal assumed. Links that involve a new station or a city centre have no road distance, so they use straight-line distance × 1.22, the measured factor for trips of this length.
 
 **Limits.** The data shows what is installed, not what is working on a given day, so results describe the network as built. Coordinates are reported by operators and are not audited.
 
@@ -74,7 +74,7 @@ Every measure below is computed for each spacing standard ε, from a strict stan
 
 **Network.** Each site is a node. Two sites are linked when the distance between them is at most ε miles: an epsilon-neighbourhood (random geometric) graph. ε is the spacing standard, the distance a driver must be able to cover between chargers. We build two versions: all 754 sites, and the 661 CCS sites, which is the network a non-Tesla car can use.
 
-**Q1: where the network splits.** For ε from 5 to 100 miles we record the number of connected pieces and the share of sites in the largest piece (a percolation curve). The smallest ε at which the network is one piece equals the longest link of its minimum spanning tree (MST), so we compute it exactly. The MST's longest links, in order, are the weakest links in the state. We map the pieces just below the main jump.
+**Q1: where the network splits.** For ε from 5 to 60 miles we record the number of connected pieces and the share of sites in the largest piece (a percolation curve). The smallest ε at which the network is one piece equals the longest link of its minimum spanning tree (MST), so we compute it exactly. The MST's longest links, in order, are the weakest links in the state. We map the pieces just below the main jump.
 
 **Q2: which stations hold it together.** An articulation point (cut vertex) is a site whose removal alone splits its piece of the network: a single point of failure. For each one we count the sites cut off from the rest. To answer "big or small", we compare critical and non-critical sites on degree (number of neighbours within ε) and on ports (station size). We then test robustness three ways, following the course's Module 3 material:
 
@@ -90,35 +90,36 @@ Every measure below is computed for each spacing standard ε, from a strict stan
 
 As a sensitivity check we cap the access distance at 15 miles, so a city far from any charger cannot count as served through a long first leg.
 
-**Q3: how many new stations.** For each ε we ask how few candidate locations must be upgraded to fast charging so that (a) every existing site is in one network, the proposal's definition, or (b) every pair of cities is connected. This is a node-weighted Steiner tree problem: the pieces (or cities) are terminals, each candidate costs one station, and nodes within ε are linked. Cities are leaves: a city can attach to the network, but a driver cannot recharge there, so a city never joins two pieces. The problem is NP-hard. We use the shortest-path heuristic of [Takahashi and Matsuyama (1980)](https://cir.nii.ac.jp/crid/1570009750462176256): start from the largest piece, repeatedly join the terminal reachable through the fewest new stations, then drop any station that turns out to be redundant. This gives an upper bound. For objective (a) we also report a lower bound: every plan must connect the largest piece to the farthest piece, so the fewest stations on that one path is a floor. If some piece cannot be reached even with every candidate upgraded, the standard is infeasible with existing locations. Links to new stations use the same 1.27 detour factor; we repeat Q3 at 1.2 as a sensitivity check. This replaces the greedy search of notebook v3, which had no bound and could stop early.
+**Q3: how many new stations.** For each ε we ask how few candidate locations must be upgraded to fast charging so that (a) every existing site is in one network, the proposal's definition, or (b) every pair of cities is connected. This is a node-weighted Steiner tree problem: the pieces (or cities) are terminals, each candidate costs one station, and nodes within ε are linked. Cities are leaves: a city can attach to the network, but a driver cannot recharge there, so a city never joins two pieces. The problem is NP-hard. We use the shortest-path heuristic of [Takahashi and Matsuyama (1980)](https://cir.nii.ac.jp/crid/1570009750462176256): start from the largest piece, repeatedly join the terminal reachable through the fewest new stations, then drop any station that turns out to be redundant. This gives an upper bound. For objective (a) we also report a lower bound: every plan must connect the largest piece to the farthest piece, so the fewest stations on that one path is a floor. If some piece cannot be reached even with every candidate upgraded, the standard is infeasible with existing locations. Links to new stations use the measured 1.22 detour factor; we repeat Q3 at the proposal's 1.2 as a sensitivity check. This replaces the greedy search of notebook v3, which had no bound and could stop early.
 
 **Budget.** New York's five-year NEVI formula apportionment is $175 million through September 2026 ([NYSDOT, 2025](https://ebtc.info/wp-content/uploads/2025/05/NEVI-Powerpoint-EBTC-NYSDOT-2025-1-1.pdf)). Per-site cost varies with grid conditions, so we use three levels for a NEVI-style site of four 150 kW ports: $0.6 million (low end of construction estimates), $1.0 million (average total cost of NEVI projects, $0.92–$1.05 million, [Paren via Denver Gazette, 2024](https://www.denvergazette.com/2024/12/31/colorado-granted-another-17-3-million-by-the-federal-government-to-add-more-ev-fast-chargers-c1197d88-c70c-11ef-bf3d-07ca681e048a/)), and $1.92 million (NYSERDA's maximum award of $1.536 million at its 80% cost share, [Barclay Damon, 2024](https://www.barclaydamon.com/alerts/175-million-of-federal-funds-available-for-electric-vehicle-chargers-in-new-york-state)). Results are stated in stations first and dollars second.
 
 **Winter.** We rerun the analysis with effective range 0.59 × ε, the 41% loss AAA measured at 20°F with cabin heat.
 
-**Control.** Some fragility comes from the shape of New York itself. To separate geography from siting decisions, we draw 754 locations at random, without replacement, from the pool of all 5,510 public charging locations (fast plus Level 1/2), 100 times, and compute the same measures. The question is: given the sites actually available, was the fast-charging network sited well?
+**Control.** Some fragility comes from the shape of New York itself. To separate geography from siting decisions, we draw 754 locations at random, without replacement, from the pool of all 5,510 public charging locations (fast plus Level 1/2), 100 times, and compute the same measures, using straight-line distance × 1.22 for real and random networks alike, since random draws have no road distances. The question is: given the sites actually available, was the fast-charging network sited well?
 
 **Robustness.** We repeat Q1, Q2 and Q3 on the October 13, 2026 station list, which has 39 more fast-charging sites.
 
 ## 5. Q1: When does the network split?
 
-**Answer: New York's fast-charging network is one connected network from 43.5 road miles (45.6 calibrated), and it is closest to breaking in the North Country, between Saranac Lake and Malone.** The 50-mile benchmark of the former federal guidance is already met with 4 to 6 miles to spare.
+**Answer: New York's fast-charging network is one connected network from 43.5 road miles, and it is closest to breaking in the North Country, between Saranac Lake and Malone.** The 50-mile benchmark of the former federal guidance is already met with 6.5 miles to spare.
 
-The percolation curve has one sharp jump (Figure 1). Below 26 miles the largest piece holds only 54–59% of sites: the state is split into a downstate-plus-Capital-Region piece (405 sites at 24 miles) and a western-and-central piece (280 sites), plus 15 small pieces in the Southern Tier, the Adirondacks and the North Country (Figure 2). At 27 miles the two large pieces join along the Thruway corridor and the largest piece jumps to 97% of sites. From there, the remaining small pieces join one at a time: five pieces at 28–32 miles, two from 36 to 45 miles, and one from 46 miles.
+The percolation curve has one sharp jump (Figure 1). Up to 25 miles the largest piece holds only 54–56% of sites: the state is split into a downstate-plus-Capital-Region piece (421 sites at 24 miles) and a western-and-central piece (294 sites), plus nine small pieces around Oneonta and Cooperstown, Watertown, Lake Placid, Potsdam and Massena, Malone, Hancock, Roscoe, Arkville and Indian Lake (Figure 2). At 26 miles the two large pieces join and the largest piece jumps to 96% of sites. The small pieces then join one at a time: five pieces at 29–33 miles, three at 35–37, two from 38 to 43 miles, and one from 44 miles.
 
-The network's weakest links are the longest links of its minimum spanning tree. All five are rural, and four are in the Adirondacks or the North Country:
+The network's weakest links are the longest links of its minimum spanning tree. All are rural, in the Adirondacks, the North Country or the Catskills:
 
-| Rank | Link | Calibrated miles | Straight × 1.2 miles |
+| Rank | Link | Road miles | Straight × 1.2 miles |
 | --- | --- | --- | --- |
-| 1 | Saranac Lake – Malone | 45.6 | 43.1 |
-| 2 | Malone – Massena | 35.8 | 33.9 |
-| 3 | Pulaski – Watertown | 34.0 | 32.1 |
-| 4 | Chestertown – Indian Lake | 32.1 | 30.3 |
-| 5 | Monticello – Roscoe | 27.9 | 26.3 |
+| 1 | Saranac Lake – Malone | 43.5 | 43.1 |
+| 2 | Malone – Massena | 37.2 | 33.9 |
+| 3 | Arkville – Tannersville | 34.7 | 30.2 (Arkville joins via Roscoe instead) |
+| 4 | Chestertown – Indian Lake | 33.3 | 30.3 |
+| 5 | Pulaski – Watertown | 28.3 | 32.1 |
+| 6 | Monticello – Roscoe | 27.1 | 26.3 |
 
-The road-distance run in notebook v3 gave the same top link at 43.5 miles. On that top link the proposal's 1.2 factor is 0.4 miles short of the road distance and the median 1.27 factor is 2.1 miles long: mountain roads in the North Country run straighter than the state average. All three distance versions agree on which links are weakest.
+The proposal's straight-line × 1.2 estimate got the threshold almost right (43.1 vs 43.5 miles) but missed the order of the links behind it. The Catskill road from Arkville to Tannersville winds far more than the straight line suggests and becomes the third-weakest link, while the I-81 link from Pulaski to Watertown is shorter by road than the estimate. Measuring the critical links directly, as the proposal planned, changes which places matter.
 
-For a non-Tesla driver the picture is similar at the top but more fragile in the middle. The CCS-only network also becomes one piece at 46 miles. But at 30 miles it is in 7 pieces rather than 5, because some links, such as Warrensburg to North Hudson (40.5 miles), are bridged only by Tesla-only sites.
+For a non-Tesla driver the picture is the same at the top but more fragile in the middle. The CCS-only network also becomes one piece at 44 miles, but at 30 miles it is in 7 pieces rather than 5, because the Northway links from Warrensburg to Indian Lake (37.1 miles) and to North Hudson (36.1 miles) are bridged only by the Tesla-only Chestertown site.
 
 ![Percolation curve and number of pieces by spacing standard](../results/figures/fig1_percolation.png)
 
@@ -130,24 +131,23 @@ For a non-Tesla driver the picture is similar at the top but more fragile in the
 
 ## 6. Q2: Which stations hold the network together?
 
-**Answer: a handful of isolated rural sites, half of them Tesla Superchargers and half car dealers or public chargers, not the big downstate hubs.** They are "small" only by degree, the number of neighbours: by ports they are typical or larger.
+**Answer: a handful of isolated rural sites, mostly Tesla Superchargers in the Adirondacks and Catskills, and the Thruway service plazas of the Mohawk Valley, not the big downstate hubs.** They are "small" only by degree, the number of neighbours. By ports they are typical or larger.
 
 ### 6.1 Single points of failure
 
-At a 30-mile standard six sites are cut vertices (Figure 3). Each one alone cuts a region off from the rest of the state:
+At a 30-mile standard five sites are cut vertices (Figure 3). Each one alone cuts a region off from the rest of the state:
 
 | Site | Operator | Neighbours | Ports | Sites cut off |
 | --- | --- | --- | --- | --- |
-| Warren Ford, Warrensburg | Ford dealer | 16 | 2 | 25 |
-| Tesla Supercharger, Chestertown | Tesla | 3 | 6 | 24 |
-| Egglefield Bros, Elizabethtown | Ford dealer | 8 | 2 | 21 |
-| EVolve NY, Lewis | Electrify America | 7 | 4 | 12 |
-| Tesla Supercharger, Peru | Tesla | 11 | 8 | 11 |
-| Tesla Supercharger, Roscoe | Tesla | 4 | 8 | 1 |
+| Tesla Supercharger, Chestertown | Tesla | 8 | 6 | 24 |
+| Tesla Supercharger, Peru | Tesla | 12 | 8 | 11 |
+| Egglefield Bros, Elizabethtown | Ford dealer | 9 | 2 | 8 |
+| Tesla Supercharger, Monticello | Tesla | 9 | 12 | 3 |
+| Tesla Supercharger, Roscoe | Tesla | 3 | 8 | 2 |
 
-Five of the six lie on the I-87 Northway corridor between Lake George and Plattsburgh. Their median degree is 7.5 against 47 for all sites, so all six sit in the bottom 19% by degree. Their median port count is 5 against 4 for all sites, and the two Peru and Roscoe Superchargers are in the top quarter by ports. The pattern holds across standards: at 25 to 40 miles the critical sites' median degree is 6 to 13 against 41 to 63 for all sites, while their median ports stay at 4 to 7. Degree is a measure of where a site is, not of how big it is, and here it is a poor guide to importance.
+Three are on the I-87 Northway corridor north of Lake George and two on NY-17 in the Catskills. All five are in the bottom 11% of sites by degree: their median is 9 neighbours against 50 for all sites. Yet their median port count is 8 against 4, and Monticello's 12 ports put it in the top 9% of sites. The pattern holds across standards: at 25 to 45 miles the critical sites' median degree is 6 to 24 against 42 to 73 for all sites, while their median ports range from 2 to 8 against 4. Degree measures where a site is, not how big it is, and here it is a poor guide to importance. These are the same five sites that notebook v3 found, which is a useful check on the road-distance run.
 
-The number of cut vertices falls from 9 to 18 at 20–23 miles to two or fewer from 38 miles, and to none from 49 miles. For CCS drivers one site matters most: at 45 miles, Warren Ford in Warrensburg, a two-port dealer charger, is the only link between the Capital Region and 22 Adirondack and North Country sites.
+The number of cut vertices falls from 12 to 16 at 20–26 miles to two or fewer from 31 miles, and to none from 47 miles. At 44–46 miles one site remains critical: the two-port Upstate Auto charger in Saranac Lake, the only link to Malone. For CCS drivers, at 45 miles Warren Ford in Warrensburg, a two-port dealer charger, is the only link between the Capital Region and 28 Adirondack and North Country sites.
 
 ![Single points of failure on a map](../results/figures/fig3_critical_sites.png)
 
@@ -157,12 +157,12 @@ The number of cut vertices falls from 9 to 18 at 20–23 miles to two or fewer f
 
 The network tolerates random failure well and targeted attack on its bridges badly (Figure 4).
 
-| Standard | Random failure R | Attack by degree R | Attack by betweenness R | Betweenness removals until largest piece < 90% |
+| Standard | Random failure R | Attack by degree R | Attack by betweenness R | Largest piece after removals |
 | --- | --- | --- | --- | --- |
-| 50 miles | 0.696 | 0.677 | 0.231 | 18 |
-| 30 miles | 0.635 | 0.618 | 0.157 | 7 |
+| 50 miles | 0.698 | 0.696 | 0.240 | 57% after 17 betweenness removals (98% after 17 by degree) |
+| 30 miles | 0.638 | 0.633 | 0.148 | 57% after 2 betweenness removals (99% after 2 by degree) |
 
-R is the mean largest-piece share over 0 to 60% of sites removed; its upper bound is 0.70. Under random failure at 50 miles the network stays close to that bound: even when 60% of sites fail, 97% of the survivors are still in one piece (64% at 30 miles). An attack by degree removes busy Westchester and Long Island sites first (Thornwood, Hartsdale, White Plains) and does no more damage than random failure: after 18 removals the largest piece still holds 97.6% of sites. An attack by betweenness removes the rural corridor sites first: Monticello, Arkville, Roscoe, Tannersville, Richmondville, then Frankfort, Herkimer and Little Falls on the Mohawk Valley. Eighteen such removals, 2.4% of the network, cut the largest piece below 90% at 50 miles; at 30 miles seven are enough. This matches Hamim et al.'s finding that targeted removal is far more damaging than random removal, but here the damage is concentrated in identifiable rural sites.
+R is the mean largest-piece share over 0 to 60% of sites removed; its upper bound is 0.70. Under random failure at 50 miles the network stays at that bound: even when 60% of sites fail, 98% of the survivors are still in one piece (68% at 30 miles). An attack by degree removes busy Bronx, Queens and Long Island sites first and does no more damage than random failure. An attack by betweenness removes the corridor sites that link regions: Schoharie, Arkville and Roscoe in the Catskills, then Chittenango, New Baltimore, Ravena, and the Thruway plazas at Little Falls, Herkimer and Frankfort in the Mohawk Valley. At 50 miles, 17 such removals (2.3% of sites) cut the largest piece to 57%. At 30 miles the first two removals are both Little Falls service plazas, and they alone split the state between east and west. This matches Hamim et al.'s finding that targeted removal is far more damaging than random removal, and here the damage is concentrated in a few identifiable sites.
 
 ![Random failure versus targeted attack](../results/figures/fig4_failure_attack.png)
 
@@ -170,18 +170,18 @@ R is the mean largest-piece share over 0 to 60% of sites removed; its upper boun
 
 ### 6.3 Coverage is not connectivity
 
-Measured by people and cities instead of sites, the network looks better at loose standards and worse at strict ones (Figure 5). Half of the 362 cities have a fast charger within 2.0 miles of their centre; the farthest are Ogdensburg (29.7 miles), Norwich (21.1), Albion (19.1), Medina (18.6) and Port Jervis (17.5).
+Measured by people and cities instead of sites, the network looks better at loose standards and worse at strict ones (Figure 5). Half of the 362 cities have a fast charger within 1.9 miles of their centre; the farthest are Ogdensburg (28.6 miles), Norwich (20.2), Albion (18.3), Medina (17.9) and Port Jervis (16.8).
 
 | Standard | Connectivity (sites) | Coverage (city pairs) | Coverage, population-weighted | Weighted, without NYC | Coverage, access ≤ 15 mi |
 | --- | --- | --- | --- | --- | --- |
-| 20 miles | 0.533 | 0.595 | 0.658 | 0.543 | 0.588 |
-| 30 miles | 0.978 | 0.962 | 0.984 | 0.975 | 0.940 |
+| 20 miles | 0.536 | 0.607 | 0.661 | 0.552 | 0.596 |
+| 30 miles | 0.988 | 0.973 | 0.992 | 0.987 | 0.951 |
 | 40 miles | 0.991 | 0.973 | 0.992 | 0.987 | 0.951 |
 | 50 miles | 1.000 | 1.000 | 1.000 | 1.000 | 0.973 |
 
-At 30 to 45 miles almost every site is connected (98–99%), yet about 3% of city pairs are not: the cut-off North Country pieces contain few sites but several cities (Malone, Massena, Potsdam, Canton, Ogdensburg). Every pair of cities is connected from 46 miles. With access capped at 15 miles, coverage never reaches 1, because Ogdensburg, Norwich, Albion, Medina and Port Jervis have no charger within 15 miles: for those cities the problem is access, not spacing.
+At 30 to 43 miles 99% of sites are connected, yet 2.7% of city pairs are not: the cut-off North Country piece holds only a few sites but several cities (Malone, Massena, Potsdam, Canton, Ogdensburg). Every pair of cities is connected from 44 miles. With access capped at 15 miles coverage never reaches 1, because Ogdensburg, Norwich, Albion, Medina and Port Jervis have no charger within 15 miles: for those cities the problem is access, not spacing.
 
-Under failure, coverage separates the two attacks even more clearly. At 50 miles, random failure and degree attack leave coverage at R = 0.99 and 0.98, but betweenness attack cuts it to 0.43 (0.50 population-weighted). What breaks is the link between regions, not service within a region.
+Under failure, coverage separates the two kinds of attack even more clearly. At 50 miles, random failure and degree attack leave coverage at R = 0.99, but betweenness attack cuts it to 0.47 (0.56 population-weighted). What breaks is the link between regions, not service within a region.
 
 ![Connectivity versus coverage by spacing standard](../results/figures/fig5_coverage_curve.png)
 
@@ -189,30 +189,30 @@ Under failure, coverage separates the two attacks even more clearly. At 50 miles
 
 ## 7. Q3: How many new stations does each standard need, and can New York afford them?
 
-**Answer: none at 50 miles, one to three between 35 and 45 miles, all in the North Country, and the cost is a small fraction of the federal budget. Below 30 miles, money is not the constraint: no existing public charging location lies along the North Country gaps.**
+**Answer: none at 45 or 50 miles, one or two between 35 and 40 miles, all in the North Country, at a small fraction of the federal budget. At 30 miles and below, money is not the constraint: no chain of existing public charging locations crosses the North Country gap.**
 
 ### 7.1 The cost curve
 
-The table gives the stations needed to put every existing site into one network (objective a), with the heuristic's lower and upper bounds, and the cost at the central $1.0 million per site (Figure 6).
+The table gives the stations needed to put every existing site into one network (objective a), with the heuristic's lower and upper bounds and the cost at the central $1.0 million per site (Figure 6).
 
 | Standard | Pieces now | Lower bound | New stations | Where (upgraded Level 2 locations) | Central cost | Share of $175M |
 | --- | --- | --- | --- | --- | --- | --- |
 | 50 miles | 1 | 0 | 0 | none needed | $0 | 0% |
-| 45 miles | 2 | 1 | 1 | Malone | $1.0M | 0.6% |
+| 45 miles | 1 | 0 | 0 | none needed | $0 | 0% |
 | 40 miles | 2 | 1 | 1 | Paul Smiths | $1.0M | 0.6% |
-| 35 miles | 3 | 2 | 3 | Ogdensburg, Gouverneur, Massena | $3.0M | 1.7% |
-| 30 miles | 5 | 2 | 3+, infeasible | Newcomb, Lowville, Camden; Malone–Massena–Potsdam unreachable | — | — |
-| 25 miles | 15 | 5 | 11+, infeasible | 11 sites, Catskills to Thousand Islands; Malone–Massena–Potsdam unreachable | — | — |
-| 20 miles | 32 | 3 | 16+, infeasible | 16 sites; 18 northern towns unreachable | — | — |
+| 35 miles | 3 | 2 | 2 | Paul Smiths, Massena | $2.0M | 1.1% |
+| 30 miles | 5 | 1 | 2+, infeasible | Windham, Newcomb; Malone–Massena–Potsdam unreachable | — | — |
+| 25 miles | 10 | 4 | 8+, infeasible | 8 sites, Catskills to Tug Hill; Malone–Massena–Potsdam unreachable | — | — |
+| 20 miles | 26 | 3 | 10+, infeasible | 10 sites; much of the North Country unreachable | — | — |
 
-Where the upper bound equals the lower bound (50, 45 and 40 miles), the count is optimal. At 45 miles the one station is an artifact of the 1.27 factor: on road distances the network is already connected at 43.5 miles, so 45 miles needs none. Across the cost range of $0.6–$1.92 million per site, the feasible standards cost between $0 and $5.8 million, at most 3.3% of New York's NEVI allocation, which could fund 91 to 291 such sites.
+At every feasible standard the upper bound equals the lower bound, so these counts are optimal, not just upper bounds. Across the cost range of $0.6–$1.92 million per site, the feasible standards cost between $0 and $3.8 million, at most 2.2% of New York's NEVI allocation, which could fund 91 to 291 such sites. Paul Smiths, on the road north from Saranac Lake toward Malone, appears at both 35 and 40 miles: a single station there closes the state's weakest link.
 
 The stricter standards fail for a physical reason. At 30 miles and below, the piece around Malone, Massena and Potsdam cannot be reached even if every one of the 4,756 public Level 1/Level 2 locations were upgraded: no chain of existing locations crosses the gap within the standard. Meeting those standards needs new host sites, which is a siting and grid-connection problem rather than a budget problem.
 
-Two checks change the details but not this conclusion:
+Two checks bear on this conclusion:
 
-- *Detour factor.* With the proposal's 1.2 factor for new links, 30 miles becomes feasible with six stations (Newcomb, Lowville, Camden, Canton, Gouverneur, Hogansburg) and 35 miles needs two (Paul Smiths, Massena). 25 and 20 miles stay infeasible. Whether 30 miles is reachable at all depends on a few road miles in the St. Lawrence Valley, which is where true road distances matter most.
-- *Coverage objective.* Connecting every pair of cities, rather than every site, needs the same number of stations: 0 at 50 miles, 1 at 40–45 miles, 3 at 35 miles (Gouverneur, Canton, Massena), and it is infeasible below 35 miles at the 1.27 factor. Notebook v3's greedy search reported 3 stations at 30 miles using the 1.2 factor; at that factor our method also connects every city pair at 30 miles, with 6 stations.
+- *Detour factor.* With the proposal's 1.2 factor instead of the measured 1.22 for new links, 30 miles becomes feasible with five stations (Windham, Newcomb, Canton, Gouverneur, Hogansburg), and the other counts do not change. Whether 30 miles is reachable at all turns on less than a mile of road in the St. Lawrence Valley; a site-specific road survey of those candidate locations would settle it.
+- *Coverage objective.* Connecting every pair of cities rather than every site needs 0 stations at 45–50 miles, 1 at 40 (Paul Smiths) and 3 at 35 (Gouverneur, Paul Smiths, Canton), and is infeasible at 30 miles and below. At the 1.2 factor it is feasible at 30 miles with four stations (Gouverneur, Ogdensburg, Waddington, Hogansburg), close to the three that notebook v3's greedy search found with the same factor.
 
 ![Cost curve: stations needed and share of the NEVI allocation](../results/figures/fig6_cost_curve.png)
 
@@ -220,7 +220,7 @@ Two checks change the details but not this conclusion:
 
 ### 7.2 Winter
 
-Winter makes the network need a much longer nominal range (Figure 7). With 41% less range, a driver needs a nominal 74 road miles (77 calibrated) between chargers for the whole network to be connected. At the old 50-mile benchmark, the winter-effective range of 29.5 miles leaves the network in five pieces and 4% of city pairs disconnected, and the North Country gap cannot be closed from existing locations. A nominal 60-mile standard (35.4 effective) needs two winter stations, at Paul Smiths and Massena; a 70-mile standard needs one, at Paul Smiths. A North Country station at Paul Smiths or Massena does double duty: it tightens the summer standard and keeps the region connected in winter.
+Winter makes the network need a much longer nominal range (Figure 7). With 41% less range, a driver needs a nominal 74 road miles between chargers for the whole network to be connected. At the old 50-mile benchmark, the winter-effective range of 29.5 miles leaves the network in five pieces and 2.7% of city pairs disconnected, and the North Country gap cannot be closed from existing locations. A nominal 60-mile standard (35.4 effective) needs two winter stations, at Paul Smiths and Massena; a 70-mile standard needs one, at Ogdensburg. The station at Paul Smiths does double duty: it tightens the summer standard and keeps the North Country connected in winter.
 
 ![City-pair coverage in mild weather and in winter](../results/figures/fig7_winter.png)
 
@@ -230,18 +230,18 @@ Winter makes the network need a much longer nominal range (Figure 7). With 41% l
 
 ### 8.1 Is the network well sited?
 
-**Answer: yes along the corridors, no better than chance at the edges.** We compare the real network with 100 random networks of 754 locations drawn from all 5,510 public charging locations in New York (Figure 8).
+**Answer: yes along the corridors, no better than chance at the edges.** We compare the real network with 100 random networks of 754 locations drawn from all 5,510 public charging locations in New York (Figure 8). Both use straight-line distance × 1.22, so the real network's threshold here is 43.8 miles.
 
 | Measure | Real network | Random mean | Random 5th–95th percentile | Random draws that do better |
 | --- | --- | --- | --- | --- |
-| Connectivity threshold (miles) | 45.6 | 46.9 | 38.1–56.1 | 43% |
-| Coverage at 30 miles | 0.962 | 0.733 | 0.596–0.946 | 0% |
-| Weighted coverage at 30 miles | 0.984 | 0.775 | 0.653–0.975 | 0% |
-| Pieces at 30 miles | 5 | 9.7 | 7–14 | 0% |
-| Single points of failure at 30 miles | 6 | 9.4 | 5–14 | 13% |
-| Coverage at 40 miles | 0.973 | 0.947 | 0.654–1.000 | 29% |
+| Connectivity threshold (miles) | 43.8 | 45.1 | 36.6–53.9 | 43% |
+| Coverage at 30 miles | 0.962 | 0.770 | 0.599–0.956 | 2% |
+| Weighted coverage at 30 miles | 0.984 | 0.809 | 0.654–0.980 | 2% |
+| Pieces at 30 miles | 5 | 8.4 | 5–12 | 1% |
+| Single points of failure at 30 miles | 5 | 8.5 | 4–13 | 7% |
+| Coverage at 40 miles | 0.973 | 0.971 | 0.956–1.000 | 43% |
 
-At 30 miles the real network beats every random draw on coverage and on the number of pieces. Random draws often split the state into two large halves; the real network avoids that because fast chargers were placed along the Thruway and the other main corridors. The overall threshold, by contrast, is ordinary: 43% of random networks connect the whole state at a shorter distance. Random networks do not close the North Country gap either, because the available locations are where people and businesses are. The remaining weak point is therefore geographic, which agrees with Q3: closing it needs new host sites, not better choices among existing ones.
+At 30 miles the real network beats 98% of random draws on coverage and 99% on the number of pieces. Random draws often split the state into two large halves; the real network avoids that because fast chargers were placed along the Thruway and the other main corridors. The overall threshold, by contrast, is ordinary: 43% of random networks connect the whole state at a shorter distance, and coverage at 40 miles is the same as chance. Random networks do not close the North Country gap either, because the available locations are where people and businesses are. The remaining weak point is therefore geographic, which agrees with Q3: closing it needs new host sites, not better choices among existing ones.
 
 ![Real network versus 100 random networks](../results/figures/fig8_control.png)
 
@@ -249,35 +249,36 @@ At 30 miles the real network beats every random draw on coverage and on the numb
 
 ### 8.2 Newer station data
 
-The October 13, 2026 station list has 793 fast-charging sites, 39 more than September. Of the 48 stations added, 18 are EVolve NY stations opened in 2020–2022 that were missing from the September extract, including Keene, Schroon Lake, Westport and Liberty in the Adirondacks and Catskills. The headline results do not change: the threshold stays at 45.6 calibrated miles, the weakest link is still Saranac Lake – Malone, and Q3 still needs 3, 3 and 1 stations at 30, 35 and 40 miles. The critical sites change at the edges: at 30 miles Elizabethtown is no longer a cut vertex, and at 35 miles only Peru remains, most likely because the new Schroon Lake site gives the Northway corridor a second route past Chestertown.
+The October 13, 2026 station list has 793 fast-charging sites, 39 more than September. Of the 48 stations added, 18 are EVolve NY stations opened in 2020–2022 that were missing from the September extract, including Keene, Schroon Lake, Westport and Liberty in the Adirondacks and Catskills. With straight-line distance × 1.22 for both lists, the headline results do not change: the threshold stays at 43.8 miles, the weakest link is still Saranac Lake – Malone, and Q3 needs the same 3, 1 and 1 stations at 30, 35 and 40 miles. The critical sites change at the edges: at 30 miles Elizabethtown is no longer a cut vertex, and at 35 miles Chestertown drops out, most likely because the new Schroon Lake site gives the Northway corridor a second route past it.
 
 ### 8.3 Other checks
 
-- *Population weighting.* Removing New York City's weight lowers weighted coverage at 20 miles from 0.66 to 0.54 but changes it by less than 0.01 from 30 miles up. The conclusions do not depend on New York City's size.
-- *Plug type.* The CCS-only network has the same threshold and the same weakest link but more pieces at strict standards, and its single most critical site is a two-port dealer charger (Warrensburg).
+- *Population weighting.* Removing New York City's weight lowers weighted coverage at 20 miles from 0.66 to 0.55 but changes it by less than 0.01 from 30 miles up. The conclusions do not depend on New York City's size.
+- *Plug type.* The CCS-only network has the same threshold and the same weakest link but more pieces at strict standards, and at 45 miles its most critical site is a two-port dealer charger in Warrensburg.
+- *Distance model.* The proposal's straight-line × 1.2 estimate gives a threshold within 0.4 miles of the road value, and the same five single points of failure at 30 miles appear on road distances and in notebook v3. What the estimate misses is the order of the weaker links (Section 5).
 
 ## 9. Discussion
 
-**What a state should take from this.** The choice of standard is a choice about one region. Everywhere south of the Adirondacks, New York's network is connected by 28 miles; every decision between 30 and 50 miles is about the North Country. At 50 miles the state has nothing to build. At 35 to 45 miles it needs one to three stations around Malone, Paul Smiths, Massena, Gouverneur and Ogdensburg, at 1–3% of its NEVI allocation. Below 30 miles it needs new host sites where none exist today. A state that sets a standard on coverage figures alone would miss this, because the cut-off region holds only 1–2% of sites and 3–4% of city pairs.
+**What a state should take from this.** The choice of standard is a choice about one region. Apart from one Catskill link (Arkville to Tannersville, 34.7 miles), every decision between 30 and 50 miles is about the Adirondacks and the North Country. At 45 to 50 miles the state has nothing to build. At 35 to 40 miles it needs one or two stations, at Paul Smiths and Massena, for 1–2% of its NEVI allocation. At 30 miles or less it needs new host sites where none exist today. A state that set its standard on coverage figures alone would miss this, because the cut-off region holds only about 1% of sites and 3% of city pairs.
 
-**Protecting what exists.** The sites that matter most are not the ones a capacity-based or demand-based plan would protect. Two-port dealer chargers in Warrensburg and Elizabethtown and three rural Superchargers carry the connection between regions. Reliability requirements, maintenance priority and backup power for these few sites would protect statewide travel more than adding ports where chargers are already dense. Betweenness, not degree, is the measure that finds them.
+**Protecting what exists.** The sites that matter most are not the ones a capacity-based or demand-based plan would protect. A few rural Superchargers, a two-port dealer charger in Elizabethtown and the Thruway service plazas at Little Falls carry the connection between regions. Reliability requirements, maintenance priority and backup power at these few sites would protect statewide travel more than adding ports where chargers are already dense. Betweenness, not degree, is the measure that finds them. Several of them are Tesla-only, so opening them to other cars would also remove the CCS network's extra fragility.
 
-**Coverage is not connectivity.** The two measures disagree in both directions. At 30–45 miles almost every site is connected while 3% of city pairs are not; with a 15-mile access cap, five cities stay unserved at any spacing. A spacing standard cannot fix an access gap, and a coverage target cannot fix a spacing gap.
+**Coverage is not connectivity.** The two measures disagree in both directions. At 30–43 miles 99% of sites are connected while 2.7% of city pairs are not; with a 15-mile access cap, five cities stay unserved at any spacing. A spacing standard cannot fix an access gap, and a coverage target cannot fix a spacing gap.
 
 ### Limitations
 
-- *Distances.* The final run uses straight-line distance × 1.27, calibrated on OSRM road distances, rather than the road matrix itself. The two agree on the weakest links and on thresholds within 2 miles, but whether 30 miles is feasible depends on a few miles in the St. Lawrence Valley.
+- *Distances.* Road distances come from OSRM's public demo server on current OpenStreetMap data, for pairs within 60 straight-line miles, stored to 0.05 miles. Links to candidate sites and city centres use straight-line distance × 1.22, and whether 30 miles is feasible depends on that factor (Section 7.1).
 - *Installed, not working.* The station list records installed equipment. Real availability is lower, which makes the single points of failure matter more than this analysis shows.
 - *Plug access.* We treat Tesla-only sites as unusable for other cars. Some are being opened to other brands, which the data does not record.
-- *Heuristic.* Q3 counts are upper bounds; they equal the lower bound only at 40–50 miles.
+- *Heuristic.* Q3 counts at infeasible standards are partial; at feasible standards they match the lower bound and are optimal.
 - *Cost.* Per-site costs are national NEVI averages and a NYSERDA award cap, not New York site estimates; grid upgrades in remote areas may cost more.
 - *Network model.* A link means two sites are within range, not that a driver would route that way, and traffic is not modelled.
 
 ### Conclusion
 
-New York's fast-charging network already meets the former 50-mile federal benchmark, and is better sited along its main corridors than random placement from the same locations would be. Its weak points are a few isolated rural chargers that link the regions, and one geographic gap in the North Country that no existing public charging location can bridge at strict standards. Protecting the corridor chargers and adding one to three North Country stations would do more for statewide travel than any number of chargers where chargers are already dense.
+New York's fast-charging network already meets the former 50-mile federal benchmark, and the 45-mile standard as well. Along its main corridors it is better sited than 98% of random placements from the same locations. Its weak points are a few isolated rural chargers and Thruway plazas that link the regions, and one geographic gap in the North Country that no existing public charging location can bridge at strict standards. Protecting the corridor chargers and adding one or two North Country stations, starting at Paul Smiths, would do more for statewide travel than any number of chargers where chargers are already dense.
 
-**Future work.** Rerun every link on true road distances; repeat the analysis for a second, lower-density state; and add station reliability data so that "installed" can be replaced by "working".
+**Future work.** Measure road distances to the candidate sites as well; repeat the analysis for a second, lower-density state; and add station reliability data so that "installed" can be replaced by "working".
 
 ## Code and data availability
 
