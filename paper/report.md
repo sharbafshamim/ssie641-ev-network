@@ -10,7 +10,7 @@ SSIE 641 Advanced Topics in Network Science · Final project report · Code: [gi
 
 New York's public DC fast-charging network becomes one connected network once a driver can cover 43.5 road miles between chargers. Below that it breaks apart at a handful of rural sites in the Catskills, the Adirondacks and the North Country. We model the 754 fast-charging sites in the Department of Energy's station list (September 23, 2026) as an epsilon-neighbourhood network on OpenStreetMap road distances, and treat the spacing standard as the variable rather than a fixed assumption. That matters because federal guidance dropped the 50-mile spacing rule in August 2025 and left the number to the states.
 
-Three results follow. First, the weakest link in the state is Saranac Lake to Malone (43.5 road miles), and the network first splits into its two large regions below 26 miles. Second, the sites that hold the network together are isolated, not small. At a 30-mile standard five sites are single points of failure, four of them rural Tesla Superchargers, with a median of 9 neighbours against 50 for all sites but a median of 8 ports against 4. Removing the 17 highest-betweenness sites (2.3% of the network) shrinks the largest connected piece from all sites to 57% at 50 miles; at 30 miles removing just the two Thruway service plazas at Little Falls does the same. Attacks on the busiest sites do no more harm than random failure. Third, 45- and 50-mile standards need no new stations, and 35 to 40 miles need one or two, all in the North Country, at no more than 2.2% of New York's $175 million NEVI allocation. Standards of 30 miles or less cannot be met by upgrading existing public charging locations at all. A random-siting control shows the real network is better placed than 98% of random alternatives at 30 miles but no better than chance on the overall threshold: the remaining gap is a matter of geography. Repeating the analysis for Maine, a state with a quarter of New York's charger density, shows the same isolated critical stations but a network that is one piece only from 151 road miles, needs six new stations for a 50-mile standard, and is sited worse than random draws from its own charging locations.
+Three results follow. First, the weakest link in the state is Saranac Lake to Malone (43.5 road miles), and the network first splits into its two large regions below 26 miles. Second, the sites that hold the network together are isolated, not small. At a 30-mile standard five sites are single points of failure, four of them rural Tesla Superchargers, with a median of 9 neighbours against 50 for all sites but a median of 8 ports against 4. Removing the 17 highest-betweenness sites (2.3% of the network) shrinks the largest connected piece from all sites to 57% at 50 miles; at 30 miles removing just the two Thruway service plazas at Little Falls does the same. Attacks on the busiest sites do no more harm than random failure. Third, 45- and 50-mile standards need no new stations, and 35 to 40 miles need one or two, all in the North Country, at no more than 2.2% of New York's $175 million NEVI allocation. Standards of 30 miles or less cannot be met by upgrading existing public charging locations at all. A random-siting control shows the real network is better placed than 98% of random alternatives at 30 miles but no better than chance on the overall threshold: the remaining gap is a matter of geography.
 
 ## 1. Introduction
 
@@ -100,7 +100,6 @@ As a sensitivity check we cap the access distance at 15 miles, so a city far fro
 
 **Robustness.** We repeat Q1, Q2 and Q3 on the October 13, 2026 station list, which has 39 more fast-charging sites.
 
-**Second state.** Following the proposal's third extension, we run the same pipeline for Maine (Section 8.4), with OSRM road distances for every pair of its sites, the same candidate rule, cost range and control, and Maine's own NEVI allocation.
 
 ## 5. Q1: When does the network split?
 
@@ -228,7 +227,7 @@ Winter makes the network need a much longer nominal range (Figure 7). With 41% l
 
 *Figure 7. City-pair coverage by nominal spacing standard, in mild weather and with a 41% winter range loss.*
 
-## 8. Control, robustness and a second state
+## 8. Control and robustness
 
 ### 8.1 Is the network well sited?
 
@@ -259,39 +258,6 @@ The October 13, 2026 station list has 793 fast-charging sites, 39 more than Sept
 - *Plug type.* The CCS-only network has the same threshold and the same weakest link but more pieces at strict standards, and at 45 miles its most critical site is a two-port dealer charger in Warrensburg.
 - *Distance model.* The proposal's straight-line × 1.2 estimate gives a threshold within 0.4 miles of the road value, and the same five single points of failure at 30 miles appear on road distances and in notebook v3. What the estimate misses is the order of the weaker links (Section 5).
 
-### 8.4 A second, lower-density state: Maine
-
-**Answer: the patterns hold, but Maine's network is far further from connected, and there the gap is partly a siting choice rather than geography.** The proposal's third extension asked whether the patterns hold in a lower-density state. We chose Maine because it shares the features that make New York's North Country fragile: a long border with Canada, few corridors and hard winters. It has a quarter of New York's fast-charging density.
-
-**Data.** The same pipeline (`scripts/run_maine.py`) was run on the DOE station locator export for Maine (November 19, 2026), Maine's Census 2020 places and P.L. 94-171 populations, and OSRM road distances for all 7,626 pairs of Maine sites. Maine has 127 open, public fast-charging stations with 425 ports at 124 sites, 101 of them with a CCS plug, and 524 public Level 1/Level 2 locations as candidates. Its 31 places of 5,000 or more people hold only 34% of the state's 1.36 million residents, because most Mainers live in towns that are not Census places, so city-pair coverage is a weaker measure there. The median road/straight ratio is 1.20 (90% of pairs between 1.07 and 1.39). For the budget we use Maine's $19.3 million in NEVI formula funds ([MaineDOT](https://www.maine.gov/dot/programs-services/environmental-efforts/climate-initiative/electrification)).
-
-| Measure | New York | Maine |
-| --- | --- | --- |
-| Fast-charging sites | 754 | 124 |
-| Sites per 1,000 sq mi of land | 16.0 | 4.0 |
-| Connectivity threshold (road miles) | 43.5 | 151.2 |
-| Weakest link | Saranac Lake – Malone | Medway – Van Buren |
-| Largest piece first holds 90% of sites | 26 miles | 43 miles |
-| Single points of failure at 30 miles | 5 | 3 |
-| R, random failure / degree attack / betweenness attack, 50 miles | 0.698 / 0.696 / 0.240 | 0.639 / 0.554 / 0.429 |
-| New stations at 50 miles | 0 | 6 (lower bound 3) |
-| New stations at 40 miles | 1 | infeasible |
-| NEVI allocation | $175M | $19.3M |
-| Cost at 50 miles, share of allocation | 0% | 19–60% |
-| Random networks with a lower threshold | 43% | 95% |
-
-**Q1.** Maine's network is one piece only from 151 road miles. The weakest link runs from the Medway Supercharger on I-95 to three single-port chargers in Van Buren in the St. John Valley, with nothing in between. The next weakest links are also rural edges: Baileyville to Lincoln (69.7 miles, the Calais area), Newport to Greenville (52.0) and Greenville to Jackman (49.2). At the former 50-mile benchmark Maine is in four pieces (Figure 9A).
-
-**Q2.** The "isolated, not small" pattern holds: at 30 miles Maine's three single points of failure (Searsport, Brunswick, Medway) have a median of 12 neighbours against 21 for all sites, but 4 ports against 1.5. As in New York, betweenness attack is the most damaging: removing two chargers in Augusta and one in neighbouring Hallowell, where I-95 meets the Kennebec corridor, cuts the largest piece below 90% at 50 miles. Unlike New York, attack by degree is also worse than random failure (R = 0.554 against 0.639), because Maine has no dense cluster of redundant sites to absorb it.
-
-**Q3.** Meeting a 50-mile standard needs six new stations (Monson, Lubec, Milbridge, Presque Isle, Houlton, Weston), against a lower bound of three (Figure 9B). At $0.6–$1.92 million each that is $3.6–$11.5 million, or 19–60% of Maine's NEVI funds, compared with nothing for New York. Standards of 40 miles and below cannot be met from existing locations, because Jackman and Van Buren cannot be reached. At 60 miles three stations suffice (Weston, Caribou, Houlton), and at 70 miles two (Limestone, Houlton), which is optimal. In winter Maine needs a nominal 256 road miles for one network. Presque Isle and Caribou, Aroostook County's two largest cities, have no fast charger within 39.0 and 26.6 miles, so city-pair coverage stays at 0.875 up to 100 miles.
-
-**Control.** Here the two states differ. New York's network is better sited than random along its corridors and ordinary at its edges. Maine's is worse than random: 95% of random networks drawn from Maine's own public charging locations connect the state at a shorter distance (mean 86 miles against 132 on the same straight-line basis), and 72% give better coverage at 30 miles. Maine already has public Level 2 chargers in Houlton, Presque Isle and Caribou, so random draws often reach Aroostook County while the real fast-charging network does not. In Maine, unlike New York, the remaining gap is partly a siting decision, and upgrading existing Aroostook locations would close much of it.
-
-![New York and Maine compared](../results/figures/fig9_maine.png)
-
-*Figure 9. (A) Share of sites in the largest piece, New York and Maine, on road distances. (B) Maine at a 50-mile standard: the four pieces (colours) and the six new stations that join them (stars). (C) New stations needed to connect the whole network, by standard; red circles mark standards that cannot be met from existing locations.*
-
 ## 9. Discussion
 
 **What a state should take from this.** The choice of standard is a choice about one region. Apart from one Catskill link (Arkville to Tannersville, 34.7 miles), every decision between 30 and 50 miles is about the Adirondacks and the North Country. At 45 to 50 miles the state has nothing to build. At 35 to 40 miles it needs one or two stations, at Paul Smiths and Massena, for 1–2% of its NEVI allocation. At 30 miles or less it needs new host sites where none exist today. A state that set its standard on coverage figures alone would miss this, because the cut-off region holds only about 1% of sites and 3% of city pairs.
@@ -299,8 +265,6 @@ The October 13, 2026 station list has 793 fast-charging sites, 39 more than Sept
 **Protecting what exists.** The sites that matter most are not the ones a capacity-based or demand-based plan would protect. A few rural Superchargers, a two-port dealer charger in Elizabethtown and the Thruway service plazas at Little Falls carry the connection between regions. Reliability requirements, maintenance priority and backup power at these few sites would protect statewide travel more than adding ports where chargers are already dense. Betweenness, not degree, is the measure that finds them. Several of them are Tesla-only, so opening them to other cars would also remove the CCS network's extra fragility.
 
 **Coverage is not connectivity.** The two measures disagree in both directions. At 30–43 miles 99% of sites are connected while 2.7% of city pairs are not; with a 15-mile access cap, five cities stay unserved at any spacing. A spacing standard cannot fix an access gap, and a coverage target cannot fix a spacing gap.
-
-**What Maine adds.** The network-level patterns travel: in both states the stations that hold the network together are isolated rather than small, and betweenness, not degree, finds them. What does not travel is the scale of the problem or its cause. Maine is one piece only from 151 miles, needs six stations and up to 60% of its NEVI funds to meet a 50-mile standard, and is sited worse than random draws from its own charging locations. A spacing standard that is free for New York would be a major commitment for Maine. That argues for states setting the number themselves, as the 2025 guidance now allows, and for checking it against a cost curve like Figure 6 before they do.
 
 ### Limitations
 
@@ -310,17 +274,16 @@ The October 13, 2026 station list has 793 fast-charging sites, 39 more than Sept
 - *Heuristic.* Q3 counts at infeasible standards are partial; at feasible standards they match the lower bound and are optimal.
 - *Cost.* Per-site costs are national NEVI averages and a NYSERDA award cap, not New York site estimates; grid upgrades in remote areas may cost more.
 - *Network model.* A link means two sites are within range, not that a driver would route that way, and traffic is not modelled.
-- *Second state.* Maine's 31 places of 5,000 or more people hold only 34% of its population, so its coverage results speak for its cities, not its towns. Maine's station data is from November 2026, two months after New York's.
 
 ### Conclusion
 
 New York's fast-charging network already meets the former 50-mile federal benchmark, and the 45-mile standard as well. Along its main corridors it is better sited than 98% of random placements from the same locations. Its weak points are a few isolated rural chargers and Thruway plazas that link the regions, and one geographic gap in the North Country that no existing public charging location can bridge at strict standards. Protecting the corridor chargers and adding one or two North Country stations, starting at Paul Smiths, would do more for statewide travel than any number of chargers where chargers are already dense.
 
-**Future work.** Measure road distances to the candidate sites as well; extend the Maine comparison to towns rather than Census places, since most Mainers live outside places; and add station reliability data so that "installed" can be replaced by "working".
+**Future work.** Measure road distances to the candidate sites as well, and add station reliability data so that "installed" can be replaced by "working".
 
 ## Code and data availability
 
-All code, input data, result tables and figures are at [github.com/sharbafshamim/ssie641-ev-network](https://github.com/sharbafshamim/ssie641-ev-network). `python scripts/run_all.py` rebuilds every table and figure; `notebooks/ev_network_final.ipynb` walks through the results question by question; python scripts/run\_maine.py repeats the analysis for Maine.
+All code, input data, result tables and figures are at [github.com/sharbafshamim/ssie641-ev-network](https://github.com/sharbafshamim/ssie641-ev-network). `python scripts/run_all.py` rebuilds every table and figure; `notebooks/ev_network_final.ipynb` walks through the results question by question.
 
 ## Acknowledgements
 
@@ -347,4 +310,3 @@ Station data is provided by the U.S. Department of Energy's Alternative Fuels Da
 - U.S. Census Bureau. (2021). *2020 Census Redistricting Data (P.L. 94-171), table P1;* *2020 Gazetteer files, places.* <https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html>
 - U.S. Department of Energy, Alternative Fuels Data Center. (2026). Alternative fueling station locator. Retrieved September 23 and October 13, 2026. <https://afdc.energy.gov/stations>
 - Zhang, P., Chen, J., Tu, L., & Yin, L. (2022). Layout evaluation of new energy vehicle charging stations: A perspective using the complex network robustness theory. *World Electric Vehicle Journal, 13*(7), 127. <https://doi.org/10.3390/wevj13070127>
-- Maine Department of Transportation. (n.d.). Reducing emissions through electrification. <https://www.maine.gov/dot/programs-services/environmental-efforts/climate-initiative/electrification>
