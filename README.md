@@ -34,7 +34,11 @@ src/evnet/                    analysis package
     coverage.py               city-pair coverage (plain, population-weighted, access cap)
     placement.py              Q3: node-weighted Steiner heuristic with lower/upper bounds and feasibility
     control.py                random-siting control
+    structure.py              biconnectivity threshold, reliability of cut vertices, efficiency and harmonic
+                              centrality, city-pair betweenness, k-cores, spectral gap, Leiden communities
 scripts/run_all.py            runs everything -> results/tables, results/figures, results/summary.json
+scripts/run_structure.py      network-structure analyses -> results/tables/s*_*.csv, fig9-11,
+                              results/structure_summary.json (run after run_all.py)
 scripts/build_notebook.py     builds notebooks/ev_network_final.ipynb
 scripts/osrm_fetch_browser.js browser script used to download the OSRM road distances
 scripts/build_report.sh       builds paper/report.pdf from paper/report.md
@@ -49,6 +53,7 @@ paper/                        proposal and final report (report.docx, report.pdf
 ```bash
 pip install -r requirements.txt
 python scripts/run_all.py          # about 3 minutes
+python scripts/run_structure.py    # about 3 minutes
 python scripts/build_notebook.py
 jupyter nbconvert --to notebook --execute --inplace notebooks/ev_network_final.ipynb
 ```

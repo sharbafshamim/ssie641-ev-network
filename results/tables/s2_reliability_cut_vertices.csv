@@ -1,0 +1,13 @@
+miles,cut_vertices,cities,source,p_unavailable,prob_any_cut_vertex_down,expected_sites_cut_off,prob_some_piece_splits_mc,survivors_cut_off_share_mc
+30,5,Chestertown; Peru; Elizabethtown; Monticello; Roscoe,NEVI 97% uptime rule,0.03,0.1412659743000001,1.44,0.157,0.0022303036164676303
+30,5,Chestertown; Peru; Elizabethtown; Monticello; Roscoe,J.D. Power 2025 failed visits,0.14,0.5295729824000001,6.720000000000001,0.594,0.0176306027931466
+30,5,Chestertown; Peru; Elizabethtown; Monticello; Roscoe,Rempel et al. 2022 Bay Area audit,0.275,0.799695810546875,13.200000000000001,0.908,0.059493592503280096
+35,2,Chestertown; TANNERSVILLE,NEVI 97% uptime rule,0.03,0.05910000000000004,0.78,0.068,0.0011527564434337429
+35,2,Chestertown; TANNERSVILLE,J.D. Power 2025 failed visits,0.14,0.2604000000000001,3.6400000000000006,0.318,0.006555028384382201
+35,2,Chestertown; TANNERSVILLE,Rempel et al. 2022 Bay Area audit,0.275,0.474375,7.15,0.558,0.018405917541177905
+40,0,,NEVI 97% uptime rule,0.03,0.0,0.0,0.005,0.00014546173316776684
+40,0,,J.D. Power 2025 failed visits,0.14,0.0,0.0,0.058,0.0015887337187702117
+40,0,,Rempel et al. 2022 Bay Area audit,0.275,0.0,0.0,0.23,0.00628501985958546
+45,1,Saranac Lake,NEVI 97% uptime rule,0.03,0.030000000000000027,0.21,0.031,0.00029193033593617713
+45,1,Saranac Lake,J.D. Power 2025 failed visits,0.14,0.14,0.9800000000000001,0.188,0.002562615559494992
+45,1,Saranac Lake,Rempel et al. 2022 Bay Area audit,0.275,0.275,1.9250000000000003,0.399,0.00699949285571502

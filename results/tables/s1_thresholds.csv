@@ -1,0 +1,4 @@
+network,connectivity_threshold,biconnectivity_threshold,last_single_points_of_failure
+"all sites, road",43.5,46.2,Saranac Lake
+"CCS sites, road",43.5,47.45,Warrensburg
+"all sites, straight x 1.2",43.11515633669068,45.65297123193147,Saranac Lake

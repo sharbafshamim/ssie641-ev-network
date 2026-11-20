@@ -1,0 +1,820 @@
+{
+  "seed": 641,
+  "thresholds": [
+    {
+      "network": "all sites, road",
+      "connectivity_threshold": 43.5,
+      "biconnectivity_threshold": 46.2,
+      "last_single_points_of_failure": "Saranac Lake"
+    },
+    {
+      "network": "CCS sites, road",
+      "connectivity_threshold": 43.5,
+      "biconnectivity_threshold": 47.45,
+      "last_single_points_of_failure": "Warrensburg"
+    },
+    {
+      "network": "all sites, straight x 1.2",
+      "connectivity_threshold": 43.11515633669068,
+      "biconnectivity_threshold": 45.65297123193147,
+      "last_single_points_of_failure": "Saranac Lake"
+    }
+  ],
+  "reliability": [
+    {
+      "miles": 30,
+      "cut_vertices": 5,
+      "source": "NEVI 97% uptime rule",
+      "p_unavailable": 0.03,
+      "prob_any_cut_vertex_down": 0.1413,
+      "expected_sites_cut_off": 1.44,
+      "prob_some_piece_splits_mc": 0.157,
+      "survivors_cut_off_share_mc": 0.0022
+    },
+    {
+      "miles": 30,
+      "cut_vertices": 5,
+      "source": "J.D. Power 2025 failed visits",
+      "p_unavailable": 0.14,
+      "prob_any_cut_vertex_down": 0.5296,
+      "expected_sites_cut_off": 6.72,
+      "prob_some_piece_splits_mc": 0.594,
+      "survivors_cut_off_share_mc": 0.0176
+    },
+    {
+      "miles": 30,
+      "cut_vertices": 5,
+      "source": "Rempel et al. 2022 Bay Area audit",
+      "p_unavailable": 0.275,
+      "prob_any_cut_vertex_down": 0.7997,
+      "expected_sites_cut_off": 13.2,
+      "prob_some_piece_splits_mc": 0.908,
+      "survivors_cut_off_share_mc": 0.0595
+    },
+    {
+      "miles": 35,
+      "cut_vertices": 2,
+      "source": "NEVI 97% uptime rule",
+      "p_unavailable": 0.03,
+      "prob_any_cut_vertex_down": 0.0591,
+      "expected_sites_cut_off": 0.78,
+      "prob_some_piece_splits_mc": 0.068,
+      "survivors_cut_off_share_mc": 0.0012
+    },
+    {
+      "miles": 35,
+      "cut_vertices": 2,
+      "source": "J.D. Power 2025 failed visits",
+      "p_unavailable": 0.14,
+      "prob_any_cut_vertex_down": 0.2604,
+      "expected_sites_cut_off": 3.64,
+      "prob_some_piece_splits_mc": 0.318,
+      "survivors_cut_off_share_mc": 0.0066
+    },
+    {
+      "miles": 35,
+      "cut_vertices": 2,
+      "source": "Rempel et al. 2022 Bay Area audit",
+      "p_unavailable": 0.275,
+      "prob_any_cut_vertex_down": 0.4744,
+      "expected_sites_cut_off": 7.15,
+      "prob_some_piece_splits_mc": 0.558,
+      "survivors_cut_off_share_mc": 0.0184
+    },
+    {
+      "miles": 40,
+      "cut_vertices": 0,
+      "source": "NEVI 97% uptime rule",
+      "p_unavailable": 0.03,
+      "prob_any_cut_vertex_down": 0.0,
+      "expected_sites_cut_off": 0.0,
+      "prob_some_piece_splits_mc": 0.005,
+      "survivors_cut_off_share_mc": 0.0001
+    },
+    {
+      "miles": 40,
+      "cut_vertices": 0,
+      "source": "J.D. Power 2025 failed visits",
+      "p_unavailable": 0.14,
+      "prob_any_cut_vertex_down": 0.0,
+      "expected_sites_cut_off": 0.0,
+      "prob_some_piece_splits_mc": 0.058,
+      "survivors_cut_off_share_mc": 0.0016
+    },
+    {
+      "miles": 40,
+      "cut_vertices": 0,
+      "source": "Rempel et al. 2022 Bay Area audit",
+      "p_unavailable": 0.275,
+      "prob_any_cut_vertex_down": 0.0,
+      "expected_sites_cut_off": 0.0,
+      "prob_some_piece_splits_mc": 0.23,
+      "survivors_cut_off_share_mc": 0.0063
+    },
+    {
+      "miles": 45,
+      "cut_vertices": 1,
+      "source": "NEVI 97% uptime rule",
+      "p_unavailable": 0.03,
+      "prob_any_cut_vertex_down": 0.03,
+      "expected_sites_cut_off": 0.21,
+      "prob_some_piece_splits_mc": 0.031,
+      "survivors_cut_off_share_mc": 0.0003
+    },
+    {
+      "miles": 45,
+      "cut_vertices": 1,
+      "source": "J.D. Power 2025 failed visits",
+      "p_unavailable": 0.14,
+      "prob_any_cut_vertex_down": 0.14,
+      "expected_sites_cut_off": 0.98,
+      "prob_some_piece_splits_mc": 0.188,
+      "survivors_cut_off_share_mc": 0.0026
+    },
+    {
+      "miles": 45,
+      "cut_vertices": 1,
+      "source": "Rempel et al. 2022 Bay Area audit",
+      "p_unavailable": 0.275,
+      "prob_any_cut_vertex_down": 0.275,
+      "expected_sites_cut_off": 1.925,
+      "prob_some_piece_splits_mc": 0.399,
+      "survivors_cut_off_share_mc": 0.007
+    }
+  ],
+  "efficiency": [
+    {
+      "miles": 50,
+      "strategy": "random",
+      "R_efficiency": 0.5167,
+      "fraction_to_0.2_relative_efficiency": 0.56,
+      "relative_efficiency_after_5pct": 0.9025,
+      "E0_hops": 0.3318,
+      "E0_miles": 0.0299
+    },
+    {
+      "miles": 50,
+      "strategy": "degree",
+      "R_efficiency": 0.4646,
+      "fraction_to_0.2_relative_efficiency": 0.5,
+      "relative_efficiency_after_5pct": 0.8804,
+      "E0_hops": 0.3318,
+      "E0_miles": 0.0299
+    },
+    {
+      "miles": 50,
+      "strategy": "betweenness",
+      "R_efficiency": 0.2752,
+      "fraction_to_0.2_relative_efficiency": 0.26,
+      "relative_efficiency_after_5pct": 0.6428,
+      "E0_hops": 0.3318,
+      "E0_miles": 0.0299
+    },
+    {
+      "miles": 50,
+      "strategy": "harmonic",
+      "R_efficiency": 0.4479,
+      "fraction_to_0.2_relative_efficiency": 0.46,
+      "relative_efficiency_after_5pct": 0.873,
+      "E0_hops": 0.3318,
+      "E0_miles": 0.0299
+    },
+    {
+      "miles": 30,
+      "strategy": "random",
+      "R_efficiency": 0.5032,
+      "fraction_to_0.2_relative_efficiency": 0.54,
+      "relative_efficiency_after_5pct": 0.8973,
+      "E0_hops": 0.2193,
+      "E0_miles": 0.0294
+    },
+    {
+      "miles": 30,
+      "strategy": "degree",
+      "R_efficiency": 0.4268,
+      "fraction_to_0.2_relative_efficiency": 0.44,
+      "relative_efficiency_after_5pct": 0.8623,
+      "E0_hops": 0.2193,
+      "E0_miles": 0.0294
+    },
+    {
+      "miles": 30,
+      "strategy": "betweenness",
+      "R_efficiency": 0.2254,
+      "fraction_to_0.2_relative_efficiency": 0.24,
+      "relative_efficiency_after_5pct": 0.5046,
+      "E0_hops": 0.2193,
+      "E0_miles": 0.0294
+    },
+    {
+      "miles": 30,
+      "strategy": "harmonic",
+      "R_efficiency": 0.4159,
+      "fraction_to_0.2_relative_efficiency": 0.42,
+      "relative_efficiency_after_5pct": 0.8614,
+      "E0_hops": 0.2193,
+      "E0_miles": 0.0294
+    }
+  ],
+  "betweenness_top3": {
+    "30_hops": [
+      {
+        "city": "Little Falls",
+        "score": 71541.03259561835
+      },
+      {
+        "city": "Fultonville",
+        "score": 63803.57875539561
+      },
+      {
+        "city": "Little Falls",
+        "score": 63199.03733447849
+      }
+    ],
+    "30_road miles": [
+      {
+        "city": "Ravena",
+        "score": 129323.0
+      },
+      {
+        "city": "Fultonville",
+        "score": 116407.94166666662
+      },
+      {
+        "city": "Fishkill",
+        "score": 106496.31687370464
+      }
+    ],
+    "30_city pairs": [
+      {
+        "city": "Ravena",
+        "score": 0.4169892371601209
+      },
+      {
+        "city": "Fishkill",
+        "score": 0.3866888749762164
+      },
+      {
+        "city": "Ossining",
+        "score": 0.36638500755287007
+      }
+    ],
+    "30_city pairs, population-weighted": [
+      {
+        "city": "Brooklyn",
+        "score": 0.4162130222680478
+      },
+      {
+        "city": "Long Island City",
+        "score": 0.4162130222680478
+      },
+      {
+        "city": "Long Island",
+        "score": 0.4162130222680478
+      }
+    ],
+    "50_hops": [
+      {
+        "city": "Schoharie",
+        "score": 48367.26147220951
+      },
+      {
+        "city": "Chittenango",
+        "score": 26321.532315486842
+      },
+      {
+        "city": "Roscoe",
+        "score": 25906.305819358775
+      }
+    ],
+    "50_road miles": [
+      {
+        "city": "Roscoe",
+        "score": 72478.11515151514
+      },
+      {
+        "city": "Monticello",
+        "score": 63957.781818181815
+      },
+      {
+        "city": "Castle Creek",
+        "score": 50077.0904761905
+      }
+    ],
+    "50_city pairs": [
+      {
+        "city": "Roscoe",
+        "score": 0.2694132831351423
+      },
+      {
+        "city": "Monticello",
+        "score": 0.25121643888727346
+      },
+      {
+        "city": "Castle Creek",
+        "score": 0.1933023165648929
+      }
+    ],
+    "50_city pairs, population-weighted": [
+      {
+        "city": "Brooklyn",
+        "score": 0.41749878125209366
+      },
+      {
+        "city": "Long Island",
+        "score": 0.41749878125209366
+      },
+      {
+        "city": "Long Island City",
+        "score": 0.41749878125209366
+      }
+    ]
+  },
+  "betweenness_spearman_vs_hops": [
+    {
+      "miles": 30,
+      "road_miles": 0.397,
+      "city_pairs": 0.425,
+      "pop_weighted": 0.411
+    },
+    {
+      "miles": 50,
+      "road_miles": 0.377,
+      "city_pairs": 0.38,
+      "pop_weighted": 0.354
+    }
+  ],
+  "core": [
+    {
+      "miles": 30,
+      "group": "all sites",
+      "sites": 754,
+      "median_core": 40.0,
+      "min_core": 0,
+      "max_core": 96,
+      "mean_core_percentile": 0.475,
+      "median_ports": 4.0
+    },
+    {
+      "miles": 30,
+      "group": "single points of failure",
+      "sites": 5,
+      "median_core": 6.0,
+      "min_core": 2,
+      "max_core": 10,
+      "mean_core_percentile": 0.049,
+      "median_ports": 8.0
+    },
+    {
+      "miles": 30,
+      "group": "top 17 by betweenness",
+      "sites": 17,
+      "median_core": 27.0,
+      "min_core": 17,
+      "max_core": 62,
+      "mean_core_percentile": 0.379,
+      "median_ports": 4.0
+    },
+    {
+      "miles": 50,
+      "group": "all sites",
+      "sites": 754,
+      "median_core": 59.0,
+      "min_core": 4,
+      "max_core": 136,
+      "mean_core_percentile": 0.454,
+      "median_ports": 4.0
+    },
+    {
+      "miles": 50,
+      "group": "top 17 by betweenness",
+      "sites": 17,
+      "median_core": 43.0,
+      "min_core": 6,
+      "max_core": 77,
+      "mean_core_percentile": 0.267,
+      "median_ports": 4.0
+    }
+  ],
+  "spectral": [
+    {
+      "miles": 26,
+      "largest_piece_sites": 725,
+      "lambda2": 0.99991,
+      "spectral_gap": 9e-05,
+      "relaxation_time": 11134.74602
+    },
+    {
+      "miles": 30,
+      "largest_piece_sites": 745,
+      "lambda2": 0.9996,
+      "spectral_gap": 0.0004,
+      "relaxation_time": 2473.03509
+    },
+    {
+      "miles": 35,
+      "largest_piece_sites": 747,
+      "lambda2": 0.99934,
+      "spectral_gap": 0.00066,
+      "relaxation_time": 1522.68624
+    },
+    {
+      "miles": 40,
+      "largest_piece_sites": 747,
+      "lambda2": 0.99888,
+      "spectral_gap": 0.00112,
+      "relaxation_time": 895.50202
+    },
+    {
+      "miles": 43,
+      "largest_piece_sites": 747,
+      "lambda2": 0.99864,
+      "spectral_gap": 0.00136,
+      "relaxation_time": 737.0644
+    },
+    {
+      "miles": 44,
+      "largest_piece_sites": 754,
+      "lambda2": 0.99842,
+      "spectral_gap": 0.00158,
+      "relaxation_time": 634.02076
+    },
+    {
+      "miles": 45,
+      "largest_piece_sites": 754,
+      "lambda2": 0.99824,
+      "spectral_gap": 0.00176,
+      "relaxation_time": 567.52576
+    },
+    {
+      "miles": 50,
+      "largest_piece_sites": 754,
+      "lambda2": 0.99758,
+      "spectral_gap": 0.00242,
+      "relaxation_time": 414.00183
+    },
+    {
+      "miles": 60,
+      "largest_piece_sites": 754,
+      "lambda2": 0.99489,
+      "spectral_gap": 0.00511,
+      "relaxation_time": 195.56775
+    }
+  ],
+  "spectral_paul_smiths": [
+    {
+      "miles": 40,
+      "lambda2_now": 0.99888,
+      "lambda2_with_paul_smiths": 0.99888,
+      "tau_now": 895.50202,
+      "tau_with_paul_smiths": 895.58993,
+      "piece_now": 747,
+      "piece_with_paul_smiths": 755
+    },
+    {
+      "miles": 44,
+      "lambda2_now": 0.99842,
+      "lambda2_with_paul_smiths": 0.99842,
+      "tau_now": 634.02076,
+      "tau_with_paul_smiths": 634.03435,
+      "piece_now": 754,
+      "piece_with_paul_smiths": 755
+    },
+    {
+      "miles": 45,
+      "lambda2_now": 0.99824,
+      "lambda2_with_paul_smiths": 0.99824,
+      "tau_now": 567.52576,
+      "tau_with_paul_smiths": 567.53484,
+      "piece_now": 754,
+      "piece_with_paul_smiths": 755
+    },
+    {
+      "miles": 50,
+      "lambda2_now": 0.99758,
+      "lambda2_with_paul_smiths": 0.99758,
+      "tau_now": 414.00183,
+      "tau_with_paul_smiths": 414.01231,
+      "piece_now": 754,
+      "piece_with_paul_smiths": 755
+    }
+  ],
+  "spectral_split": [
+    {
+      "miles": 30,
+      "side_a_sites": 317,
+      "side_b_sites": 428,
+      "cut_links": 55,
+      "normalised_cut": 0.0066,
+      "seam_cities": "Schenectady; Rotterdam; Amsterdam; Fultonville; Ballston Spa; Johnstown; Schoharie; Glenville; Pattersonville; Ballston"
+    },
+    {
+      "miles": 50,
+      "side_a_sites": 438,
+      "side_b_sites": 316,
+      "cut_links": 78,
+      "normalised_cut": 0.00553,
+      "seam_cities": "Oneonta; Cooperstown; Ellenville; Amsterdam; Fultonville; Johnstown; Little Falls; Herkimer; Monticello; Roscoe"
+    }
+  ],
+  "communities": [
+    {
+      "miles": 30,
+      "resolution": 0.5,
+      "modularity": 0.6572,
+      "communities": 12,
+      "largest_community": 234,
+      "median_conductance": 0.011,
+      "boundary_sites": 116,
+      "top17_betweenness_on_boundary": 13,
+      "cut_vertices_on_boundary": 1,
+      "cut_vertices": 5
+    },
+    {
+      "miles": 30,
+      "resolution": 1.0,
+      "modularity": 0.6936,
+      "communities": 15,
+      "largest_community": 149,
+      "median_conductance": 0.025,
+      "boundary_sites": 278,
+      "top17_betweenness_on_boundary": 13,
+      "cut_vertices_on_boundary": 1,
+      "cut_vertices": 5
+    },
+    {
+      "miles": 30,
+      "resolution": 2.0,
+      "modularity": 0.6568,
+      "communities": 16,
+      "largest_community": 101,
+      "median_conductance": 0.0336,
+      "boundary_sites": 296,
+      "top17_betweenness_on_boundary": 13,
+      "cut_vertices_on_boundary": 1,
+      "cut_vertices": 5
+    },
+    {
+      "miles": 50,
+      "resolution": 0.5,
+      "modularity": 0.6005,
+      "communities": 6,
+      "largest_community": 238,
+      "median_conductance": 0.043,
+      "boundary_sites": 302,
+      "top17_betweenness_on_boundary": 14,
+      "cut_vertices_on_boundary": 0,
+      "cut_vertices": 0
+    },
+    {
+      "miles": 50,
+      "resolution": 1.0,
+      "modularity": 0.6059,
+      "communities": 6,
+      "largest_community": 225,
+      "median_conductance": 0.0446,
+      "boundary_sites": 372,
+      "top17_betweenness_on_boundary": 14,
+      "cut_vertices_on_boundary": 0,
+      "cut_vertices": 0
+    },
+    {
+      "miles": 50,
+      "resolution": 2.0,
+      "modularity": 0.4974,
+      "communities": 48,
+      "largest_community": 153,
+      "median_conductance": 1.0,
+      "boundary_sites": 536,
+      "top17_betweenness_on_boundary": 15,
+      "cut_vertices_on_boundary": 0,
+      "cut_vertices": 0
+    }
+  ],
+  "share_sites_within_60km_nyc": 0.21485411140583555,
+  "centrality_localisation": [
+    {
+      "measure": "degree",
+      "share_of_score_within_60km_of_NYC": 0.4159,
+      "share_of_top10_within_60km_of_NYC": 1.0,
+      "top5_cities": "Bronx; The Bronx; Bronx; The Bronx; Bronx"
+    },
+    {
+      "measure": "harmonic",
+      "share_of_score_within_60km_of_NYC": 0.2689,
+      "share_of_top10_within_60km_of_NYC": 1.0,
+      "top5_cities": "Hartsdale; White Plains; Hastings on Hudson; Yonkers; White Plains"
+    },
+    {
+      "measure": "betweenness",
+      "share_of_score_within_60km_of_NYC": 0.0856,
+      "share_of_top10_within_60km_of_NYC": 0.0,
+      "top5_cities": "Schoharie; Chittenango; Roscoe; Hamilton; Hudson"
+    },
+    {
+      "measure": "eigenvector",
+      "share_of_score_within_60km_of_NYC": 0.7762,
+      "share_of_top10_within_60km_of_NYC": 1.0,
+      "top5_cities": "Great Neck; Roslyn Heights; North New Hyde Park; Bronx; Bronx"
+    },
+    {
+      "measure": "pagerank",
+      "share_of_score_within_60km_of_NYC": 0.2511,
+      "share_of_top10_within_60km_of_NYC": 0.0,
+      "top5_cities": "Waterloo; Waterloo; Waterloo; Batavia; Batavia"
+    }
+  ],
+  "friendship_paradox": {
+    "30": {
+      "mean_degree": 57.30238726790451,
+      "mean_neighbour_degree": 60.960980726994265
+    },
+    "50": {
+      "mean_degree": 97.74535809018568,
+      "mean_neighbour_degree": 102.55387151997076
+    }
+  },
+  "city_standard_needed": {
+    "reach_all_unique_values": [
+      43.5
+    ],
+    "reach_90_median": 26.0,
+    "reach_90_top": [
+      {
+        "name": "Massena village",
+        "pop": 10151,
+        "standard_to_reach_all": 43.5,
+        "standard_to_reach_90pct": 43.5
+      },
+      {
+        "name": "Ogdensburg city",
+        "pop": 10064,
+        "standard_to_reach_all": 43.5,
+        "standard_to_reach_90pct": 43.5
+      },
+      {
+        "name": "Malone village",
+        "pop": 5483,
+        "standard_to_reach_all": 43.5,
+        "standard_to_reach_90pct": 43.5
+      },
+      {
+        "name": "Potsdam village",
+        "pop": 8312,
+        "standard_to_reach_all": 43.5,
+        "standard_to_reach_90pct": 43.5
+      },
+      {
+        "name": "Canton village",
+        "pop": 7155,
+        "standard_to_reach_all": 43.5,
+        "standard_to_reach_90pct": 43.5
+      },
+      {
+        "name": "Fort Drum CDP",
+        "pop": 15896,
+        "standard_to_reach_all": 43.5,
+        "standard_to_reach_90pct": 28.5
+      },
+      {
+        "name": "Watertown city",
+        "pop": 24685,
+        "standard_to_reach_all": 43.5,
+        "standard_to_reach_90pct": 28.5
+      },
+      {
+        "name": "Orange Lake CDP",
+        "pop": 9770,
+        "standard_to_reach_all": 43.5,
+        "standard_to_reach_90pct": 26.0
+      }
+    ],
+    "reach_90_share_cities_above_30": 0.013812154696132596
+  },
+  "other_standards": [
+    {
+      "standard": "AFIR core, 60 km",
+      "miles": 37.2823,
+      "pieces": 2,
+      "cut_vertices": 2,
+      "coverage": 0.9727,
+      "coverage_weighted": 0.992,
+      "lower_bound": 1,
+      "new_stations": 1,
+      "feasible": true,
+      "where": "Paul Smiths"
+    },
+    {
+      "standard": "AFIR low-traffic, 100 km",
+      "miles": 62.1371,
+      "pieces": 1,
+      "cut_vertices": 0,
+      "coverage": 1.0,
+      "coverage_weighted": 1.0,
+      "lower_bound": 0,
+      "new_stations": 0,
+      "feasible": true,
+      "where": ""
+    },
+    {
+      "standard": "former NEVI guidance",
+      "miles": 50.0,
+      "pieces": 1,
+      "cut_vertices": 0,
+      "coverage": 1.0,
+      "coverage_weighted": 1.0,
+      "lower_bound": 0,
+      "new_stations": 0,
+      "feasible": true,
+      "where": ""
+    }
+  ],
+  "winter_band": [
+    {
+      "winter_case": "IEA lower (20%)",
+      "range_loss": 0.2,
+      "nominal_needed_connected": 54.375,
+      "nominal_needed_biconnected": 57.75,
+      "effective_miles_at_nominal_50": 40.0,
+      "pieces_at_nominal_50": 2,
+      "coverage_at_nominal_50": 0.973
+    },
+    {
+      "winter_case": "30%",
+      "range_loss": 0.3,
+      "nominal_needed_connected": 62.143,
+      "nominal_needed_biconnected": 66.0,
+      "effective_miles_at_nominal_50": 35.0,
+      "pieces_at_nominal_50": 3,
+      "coverage_at_nominal_50": 0.973
+    },
+    {
+      "winter_case": "Recurrent (37%)",
+      "range_loss": 0.37,
+      "nominal_needed_connected": 69.048,
+      "nominal_needed_biconnected": 73.333,
+      "effective_miles_at_nominal_50": 31.5,
+      "pieces_at_nominal_50": 5,
+      "coverage_at_nominal_50": 0.973
+    },
+    {
+      "winter_case": "AAA 20 F with heat (41%)",
+      "range_loss": 0.41,
+      "nominal_needed_connected": 73.729,
+      "nominal_needed_biconnected": 78.305,
+      "effective_miles_at_nominal_50": 29.5,
+      "pieces_at_nominal_50": 5,
+      "coverage_at_nominal_50": 0.973
+    }
+  ],
+  "circuity_log_mean_ratio": 1.2515704082214494,
+  "control_stratified": {
+    "cells": 59,
+    "cell_degrees": 0.5,
+    "summary": {
+      "mst_threshold": {
+        "real": 43.8337,
+        "random_mean": 41.0008,
+        "random_p05": 33.8421,
+        "random_p95": 46.6239,
+        "share_random_better": 0.6
+      },
+      "coverage_30": {
+        "real": 0.9618,
+        "random_mean": 0.915,
+        "random_p05": 0.6221,
+        "random_p95": 0.9672,
+        "share_random_better": 0.18
+      },
+      "coverage_40": {
+        "real": 0.9727,
+        "random_mean": 0.9821,
+        "random_p05": 0.9672,
+        "random_p95": 1.0,
+        "share_random_better": 0.42
+      },
+      "weighted_coverage_30": {
+        "real": 0.9841,
+        "random_mean": 0.9433,
+        "random_p05": 0.6656,
+        "random_p95": 0.9881,
+        "share_random_better": 0.18
+      },
+      "cut_vertices_30": {
+        "real": 5.0,
+        "random_mean": 6.34,
+        "random_p05": 3.0,
+        "random_p95": 10.0,
+        "share_random_better": 0.2
+      },
+      "pieces_30": {
+        "real": 5.0,
+        "random_mean": 5.83,
+        "random_p05": 3.0,
+        "random_p95": 8.0,
+        "share_random_better": 0.21
+      }
+    }
+  },
+  "runtime_s": 145.3
+}
