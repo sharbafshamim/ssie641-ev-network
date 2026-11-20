@@ -102,3 +102,69 @@ def test_road_matrix_pack_roundtrip(tmp_path):
     R = data.unpack_road_miles(packed, sp, None)
     assert np.allclose(R[i, j], np.round(true * 20) / 20)
     assert np.allclose(R, R.T)
+
+
+# ---------------------------------------------------------------- structure.py
+from evnet import structure as st  # noqa: E402
+
+
+def _line(xs):
+    x = np.asarray(xs, float)
+    return np.abs(x[:, None] - x[None, :])
+
+
+def test_biconnectivity_threshold_on_a_cycle_of_points():
+    # four points on a square of side 1: connected (a path) at 1, but every vertex of
+    # the path's interior is a cut vertex until the cycle closes, also at 1 -> threshold 1
+    pts = np.array([[0, 0], [1, 0], [1, 1], [0, 1]], float)
+    d = np.sqrt(((pts[:, None] - pts[None]) ** 2).sum(-1))
+    thr, _ = st.biconnectivity_threshold(d)
+    assert thr == pytest.approx(1.0)
+
+
+def test_biconnectivity_threshold_on_a_line_needs_skipping_links():
+    d = _line([0, 1, 2, 3])          # path at 1; no cut vertex once each site links two steps ahead (2)
+    thr, last = st.biconnectivity_threshold(d)
+    assert thr == pytest.approx(2.0)
+    assert sorted(last) == [1, 2]
+
+
+def test_prob_any_down():
+    assert st.prob_any_down(5, 0.03) == pytest.approx(1 - 0.97 ** 5)
+    assert st.prob_any_down(0, 0.5) == 0
+
+
+def test_global_efficiency_complete_and_path():
+    import igraph as ig
+    assert st.global_efficiency(ig.Graph.Full(5)) == pytest.approx(1.0)
+    p = ig.Graph(n=3, edges=[(0, 1), (1, 2)])
+    assert st.global_efficiency(p) == pytest.approx((1 + 1 + 0.5) * 2 / 6)
+
+
+def test_city_pair_betweenness_middle_site_carries_all_flow():
+    # sites at 0, 10, 20 on a line; city A next to site 0, city B next to site 20
+    S = _line([0, 10, 20])
+    Y = np.abs(np.array([[0.5], [19.5]]) - np.array([[0, 10, 20]]))
+    u, w = st.city_pair_betweenness(S, Y, 10.0, np.array([100.0, 1.0]))
+    assert u[1] == pytest.approx(1.0) and w[1] == pytest.approx(1.0)
+    # both cities reach the middle site directly (9.5 mi), so the shortest route A-site1-B skips the ends
+    assert u[0] == pytest.approx(0.0) and u[2] == pytest.approx(0.0)
+
+
+def test_spectral_gap_small_for_two_cliques_and_a_bridge():
+    import igraph as ig
+    g = ig.Graph.Full(5) + ig.Graph.Full(5)
+    g.add_edge(0, 5)
+    lam2, tau, ids, psi2 = st.random_walk_spectrum(g)
+    assert 0.9 < lam2 < 1 and len(ids) == 10
+    side = psi2 > 0
+    assert side[:5].all() != side[5:].all() or side[:5].any() != side[5:].any()
+    sp = st.spectral_split(g, ids, psi2)
+    assert sp["cut_links"] == 1
+
+
+def test_split_probability_ignores_pieces_that_are_already_separate():
+    d = _line([0, 1, 100, 101])
+    g = net.build_graph(d, 1.5)
+    ps, share = st.split_probability(g, 0.0, 20, np.random.default_rng(0))
+    assert ps == 0 and share == 0

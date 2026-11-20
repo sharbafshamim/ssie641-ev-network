@@ -14,8 +14,8 @@ August 2025 and left the number to the states.
 
 | Question | Answer |
 | --- | --- |
-| **Q1.** How close is the network to breaking apart, and where? | One connected network from **43.5 road miles**. Weakest link: **Saranac Lake – Malone**, then Malone – Massena (37.2) and Arkville – Tannersville (34.7). The two large regions join at 26 miles; every remaining gap is in the Catskills, Adirondacks or North Country. |
-| **Q2.** Which stations hold it together: big or small? | At 30 miles, **five single points of failure**: Chestertown, Peru, Elizabethtown, Monticello, Roscoe (four Tesla Superchargers). They are **isolated, not small**: median degree 9 vs 50, median ports 8 vs 4. Removing the 17 highest-betweenness sites (2.3%) shrinks the largest piece to 57% at 50 miles; at 30 miles the two **Little Falls Thruway plazas** alone do it. Degree attack does no more than random failure. |
+| **Q1.** How close is the network to breaking apart, and where? | One connected network from **43.5 road miles**. Weakest link: **Saranac Lake – Malone**, then Malone – Massena (37.2) and Arkville – Tannersville (34.7). The two large regions join at 26 miles; every remaining gap is in the Catskills, Adirondacks or North Country. No single point of failure from **46.2 miles** (biconnectivity threshold). |
+| **Q2.** Which stations hold it together: big or small? | At 30 miles, **five single points of failure**: Chestertown, Peru, Elizabethtown, Monticello, Roscoe (four Tesla Superchargers). They are **isolated, not small**: median degree 9 vs 50, median ports 8 vs 4. Removing the 17 highest-betweenness sites (2.3%) shrinks the largest piece to 57% at 50 miles; at 30 miles the two **Little Falls Thruway plazas** alone do it. Degree attack does no more than random failure. Two kinds of critical site: cut vertices at the rural edges, high-betweenness sites on the east–west seam (spectral split, Leiden boundaries). With 14% unavailability, at least one 30-mile cut vertex is down 53% of the time. |
 | **Q3.** How many new stations per standard, and can NY afford them? | **0 at 45–50 miles, 1 at 40 (Paul Smiths), 2 at 35 (Paul Smiths, Massena)**, all provably optimal, at most 2.2% of NY's $175M NEVI allocation. **30 miles and below cannot be met** by upgrading existing public charging locations: new host sites are needed. |
 | Control | Better sited than 98% of 100 random networks at 30 miles; no better than chance on the overall threshold: the North Country gap is geographic. |
 | Winter (−41% range) | One network needs a nominal 74 road miles; a 60-mile standard needs two winter stations (Paul Smiths, Massena). |
@@ -34,7 +34,11 @@ src/evnet/                    analysis package
     coverage.py               city-pair coverage (plain, population-weighted, access cap)
     placement.py              Q3: node-weighted Steiner heuristic with lower/upper bounds and feasibility
     control.py                random-siting control
+    structure.py              biconnectivity threshold, reliability of cut vertices, efficiency and harmonic
+                              centrality, city-pair betweenness, k-cores, spectral gap, Leiden communities
 scripts/run_all.py            runs everything -> results/tables, results/figures, results/summary.json
+scripts/run_structure.py      network-structure analyses -> results/tables/s*_*.csv, fig9-11,
+                              results/structure_summary.json (run after run_all.py)
 scripts/build_notebook.py     builds notebooks/ev_network_final.ipynb
 scripts/osrm_fetch_browser.js browser script used to download the OSRM road distances
 scripts/build_report.sh       builds paper/report.pdf from paper/report.md
@@ -49,6 +53,7 @@ paper/                        proposal and final report (report.docx, report.pdf
 ```bash
 pip install -r requirements.txt
 python scripts/run_all.py          # about 3 minutes
+python scripts/run_structure.py    # about 3 minutes
 python scripts/build_notebook.py
 jupyter nbconvert --to notebook --execute --inplace notebooks/ev_network_final.ipynb
 ```

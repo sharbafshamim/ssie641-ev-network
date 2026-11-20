@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build paper/report.pdf from paper/report.md (exported from the project's Claude doc).
+# Build paper/report.pdf and paper/report.docx from paper/report.md.
 # Needs pandoc, wkhtmltopdf and Python with matplotlib.
 set -euo pipefail
 cd "$(dirname "$0")/.."
@@ -22,3 +22,15 @@ open("/tmp/report.html", "w").write(h)
 PY
 wkhtmltopdf -q --enable-local-file-access --page-size Letter -B 18mm -T 18mm -L 16mm -R 16mm /tmp/report.html paper/report.pdf
 echo "wrote paper/report.pdf"
+# Word version: the same markdown, with the formula block replaced by its image
+python3 - <<'PY2'
+import re
+s = open("paper/report.md").read()
+s = re.sub(r"```latex\n.*?\n```", "![](formula.png){width=70%}", s, flags=re.S)
+open("/tmp/report_docx.md", "w").write(s)
+PY2
+REF=()
+[ -f paper/reference.docx ] && REF=(--reference-doc paper/reference.docx)
+pandoc -f markdown-implicit_figures /tmp/report_docx.md "${REF[@]}" --resource-path paper:results/figures \
+  -o paper/report.docx
+echo "wrote paper/report.docx"

@@ -1,0 +1,4 @@
+standard,miles,pieces,cut_vertices,coverage,coverage_weighted,lower_bound,new_stations,feasible,where
+"AFIR core, 60 km",37.28227153424004,2,2,0.972681777138397,0.9919723440528871,1,1,True,Paul Smiths
+"AFIR low-traffic, 100 km",62.13711922373339,1,0,1.0,1.0,0,0,True,
+former NEVI guidance,50.0,1,0,1.0,1.0,0,0,True,
