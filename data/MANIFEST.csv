@@ -1,0 +1,9 @@
+file,source,retrieved,bytes,rows,sha256
+data/raw/alt_fuel_stations_Sep_23_2026.csv,"DOE AFDC Station Locator, NY, electric, DC fast, open, public",2026-09-23,258912,755,d5925663b65681cda63114d11f37c00ca75c142311f5c38da1c5522569424ed7
+data/raw/all_station_Oct_13_2026.csv,"DOE AFDC Station Locator, NY, all electric stations",2026-10-13,2158969,6094,03290dc50d196648d4332181bafbc49ef2d80b714f3c652414fda4695d737dbc
+data/raw/2020_gaz_place_36.txt,"U.S. Census Bureau, 2020 Gazetteer, places, New York",2026-09-26,260084,1293,ae2574019e59f35f515101985353d7767cd56d9b5ad0a99c1875ff36e0b227b1
+data/raw/DECENNIALPL2020.P1-Data.csv,"U.S. Census Bureau, 2020 Census P.L. 94-171 table P1, NY places (data.census.gov)",2026-09-26,467383,1294,a0c4e28035dbd38e51ce540cc9b90cd4c390c1c469a79e88f8487554ddc2bc8d
+data/raw/nysdot_aadt_principal_arterials_2026-11-19.json.gz,"NYSDOT RoadwayData AADT layer (gisdev.dot.ny.gov .../Roadways/RoadwayData/MapServer/13), functional classes 1,2,3,11,12,14",2026-11-19,802906,0,feecb1a484c80ef43e1c37b51795482b522d2e55408fe8edb1eaa65c803120f2
+data/derived/road_miles_pairs_le60.u16.gz,"OSRM demo server (router.project-osrm.org), site pairs within 60 straight miles",2026-11-19,72252,,9a095cbf6aff1e49a37664a6819fa11280dc994fe79522282ecf010d1694a106
+data/derived/osrm_matrix_blocks.u16.gz,"OSRM demo server, sites/candidates/cities blocks listed in data/jobs/osrm_job_matrix.json",2026-11-19,5454266,,a1446b64211723fcca203a21e38e11cbb44c69ca85cbc4f722a2c1b25868637f
+data/derived/osrm_routes.json.gz,"OSRM demo server, routes for OD pairs in data/jobs/osrm_job_routes.json",2026-11-19,4160096,0,634f679e67ab461645e8f53fa89e1e6fa8b62d35304b1ec07c8ab6eb18181bb3

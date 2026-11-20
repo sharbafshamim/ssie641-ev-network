@@ -143,7 +143,51 @@ code("""
 display(t("robustness_snapshot.csv"))
 """)
 md("""
-## 7. Summary (OSRM road distances)
+## 7. The cost of robustness, solved exactly
+
+`scripts/run_exact.py` solves the station-placement problem as an integer program (HiGHS via SciPy) with lazy
+vertex-separator cuts (`src/evnet/exact.py`). *Connectivity*: every pair of sites that the full candidate graph can join
+must be joined. *Robustness*: in addition, no single station failure may separate two sites that the full candidate graph
+keeps together after that failure (2-vertex-connectivity relative to what is achievable). `lower_bound` equals
+`stations` when the solver proved optimality.
+""")
+code("""
+display(t("exact_cost_curve.csv"))
+f("fig10_cost_of_robustness.png")
+display(t("exact_subnetworks.csv"))
+display(t("subnetwork_structure.csv"))
+""")
+md("## 8. Trips along real roads, traffic weights and the Hanig et al. coverage measure")
+code("""
+display(t("trips_feasibility.csv"))
+display(t("trips_hardest.csv").head(10))
+display(t("trips_border.csv"))
+display(t("hanig_consecutive_coverage.csv"))
+f("fig11_trip_ranges.png")
+""")
+md("## 9. How the network grew, 2015-2026")
+code("""
+display(t("history_by_year.csv"))
+f("fig12_history.png")
+""")
+md("## 10. Reliability: unavailable stations and regional outages")
+code("""
+display(t("reliability_regional_outages.csv"))
+display(t("random_failure_ci.csv"))
+""")
+md("## 11. Random baselines with 95% confidence intervals and random-geometric-graph theory")
+code("""
+display(t("baselines_with_ci.csv"))
+import json
+print(json.dumps(json.load(open(ROOT / "results" / "extended_summary.json")).get("rgg", {}), indent=1))
+""")
+md("## 12. Learning to place stations (benchmark and GNN)")
+code("""
+display(t("learning_summary.csv"))
+f("fig13_learning.png")
+""")
+md("""
+## 13. Summary (OSRM road distances)
 
 - **Q1.** One network from **43.5 road miles**; weakest link Saranac Lake – Malone, then Malone – Massena (37.2),
   Arkville – Tannersville (34.7) and Chestertown – Indian Lake (33.3). The two large regions join at 26 miles.

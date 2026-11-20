@@ -7,3 +7,5 @@ requests>=2.31   # only to rebuild road_miles.npy from OSRM
 nbformat>=5.9    # only to rebuild the notebook
 nbconvert>=7.0
 ipykernel>=6.0
+pytest>=8.0       # tests/
+torch>=2.2        # only for scripts/run_learning.py (GNN benchmark)

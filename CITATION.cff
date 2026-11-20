@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite it as below."
+title: "Coverage Is Not Connectivity: connectivity thresholds, critical stations, and the cost of robustness in New York State's EV fast-charging network"
+authors:
+  - family-names: Zahiri Khameneh
+    given-names: Joubin
+  - family-names: Sharbaf
+    given-names: Shamim
+  - family-names: Davoodmanesh
+    given-names: Zeinab
+version: 1.0.0
+date-released: 2026-11-19
+license: MIT
+repository-code: "https://github.com/sharbafshamim/ssie641-ev-network"
+keywords:
+  - electric vehicles
+  - charging infrastructure
+  - network science
+  - percolation
+  - robustness
+  - Steiner tree
+  - integer programming

@@ -138,3 +138,74 @@ def unpack_road_miles(packed_path, sites_path=None, max_straight=60.0):
     R[i[mask], j[mask]] = vals / 20.0
     R[j[mask], i[mask]] = vals / 20.0
     return R
+
+
+def load_osrm_matrix(job=ROOT / "data" / "jobs" / "osrm_job_matrix.json",
+                     packed=DERIVED / "osrm_matrix_blocks.u16.gz", fallback_factor=1.22):
+    """Road distances for sites (S), kept candidates (C) and cities (Y) from the OSRM block download.
+
+    The job file lists the points ([sites | kept candidates | cities with >= 5,000 people]) and the
+    50 x 50 blocks that were queried (only blocks holding at least one pair within 60 straight-line
+    miles, 70 for cities). The packed file holds every block's values (uint16, miles x 20, row-major,
+    65535 = no route) in job order. Pairs that were not queried get straight-line x fallback_factor;
+    they are all farther apart than any standard studied.
+    Returns dict with SC (S x C), CC (C x C), YS (Y x S), YC (Y x C), and points.
+    """
+    import gzip
+    import json
+
+    from .distance import haversine
+
+    J = json.load(open(job))
+    pts = np.array(J["pts"])
+    nS, nC, nY = J["nS"], J["nC"], J["nY"]
+    lon, lat = pts[:, 0], pts[:, 1]
+    full = fallback_factor * haversine(lat, lon, lat, lon)
+    vals = np.frombuffer(gzip.decompress(open(packed, "rb").read()), dtype="<u2")
+    o = 0
+    queried = np.zeros(full.shape, bool)
+    for a, na, b, nb in J["blocks"]:
+        blk = vals[o:o + na * nb].reshape(na, nb).astype(float)
+        o += na * nb
+        blk = np.where(blk == 65535, np.nan, blk / 20.0)
+        sub = full[a:a + na, b:b + nb]
+        full[a:a + na, b:b + nb] = np.where(np.isnan(blk), sub, blk)
+        queried[a:a + na, b:b + nb] = ~np.isnan(blk)
+    if o != len(vals):
+        raise ValueError(f"packed file has {len(vals)} values, job expects {o}")
+    # symmetrise: use the queried direction where only one exists, the minimum where both do
+    q = queried | queried.T
+    both = queried & queried.T
+    sym = np.where(both, np.minimum(full, full.T), np.where(queried, full, full.T))
+    full = np.where(q, sym, full)
+    S, C, Y = slice(0, nS), slice(nS, nS + nC), slice(nS + nC, nS + nC + nY)
+    return {"SC": full[S, C], "CC": full[C, C], "YS": full[Y, S], "YC": full[Y, C],
+            "queried_share_CC_le60": float(q[C, C][full[C, C] <= 60].mean()) if nC else 0.0,
+            "pts": pts, "nS": nS, "nC": nC, "nY": nY}
+
+
+def site_attributes(sites, sep_path=AFDC_SEP, oct_path=AFDC_ALL_OCT):
+    """Per-site flags from the October 13, 2026 list, matched to September sites by station ID.
+
+    hpc150: at least one CCS port rated 150 kW or more ("EV CCS 150+ kW Port Count (Beta)").
+    nevi_grade: at least four such ports (the federal minimum of four 150 kW CCS ports).
+    unavailable: every station at the site is listed as temporarily unavailable (status "T").
+    open_year: year the earliest station at the site opened.
+    """
+    sep = load_dcfc(sep_path)
+    raw = pd.read_csv(sep_path, low_memory=False)[["ID", "Open Date"]]
+    sep = sep.merge(raw, on="ID", how="left")
+    octo = pd.read_csv(oct_path, low_memory=False)
+    octo["hpc_ports"] = pd.to_numeric(octo["EV CCS 150+ kW Port Count (Beta)"], errors="coerce").fillna(0)
+    octo = octo[["ID", "hpc_ports", "Status Code"]].rename(columns={"Status Code": "oct_status"})
+    st = sep.merge(octo, on="ID", how="left")
+    st["hpc_ports"] = st["hpc_ports"].fillna(0)
+    st["t"] = st["oct_status"].eq("T")
+    st["open_year"] = pd.to_datetime(st["Open Date"], errors="coerce").dt.year
+    agg = st.groupby(["Latitude", "Longitude"]).agg(hpc_ports=("hpc_ports", "sum"), all_t=("t", "all"),
+                                                   open_year=("open_year", "min")).reset_index()
+    out = sites.merge(agg, on=["Latitude", "Longitude"], how="left")
+    out["hpc150"] = out["hpc_ports"] > 0
+    out["nevi_grade"] = out["hpc_ports"] >= 4
+    out["unavailable"] = out["all_t"].fillna(False).astype(bool)
+    return out
