@@ -1,0 +1,1 @@
+{"eps": 35.0, "objective": "connectivity", "stations": 2, "chosen": [2658, 2700], "lower_bound": 2, "iterations": 1, "cuts": 3, "status": "optimal", "seconds": 0.2, "network": "all", "sites": 754, "pieces": 3, "unreachable_sites": 0, "unreachable_cities": "", "where": "Paul Smiths; Hogansburg", "job_key": "all_connectivity_35"}

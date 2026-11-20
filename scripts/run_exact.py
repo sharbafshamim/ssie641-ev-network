@@ -50,6 +50,9 @@ def _job(args):
              where="; ".join(cand["city"].iloc[r["chosen"]]))
     if objective == "robustness":
         r["unprotectable_sites"] = len(P.unprotectable())
+    r["chosen"] = [int(c) for c in r["chosen"]]
+    r["eps"] = float(eps)
+    r["job_key"] = f"{name}_{objective}_{eps}"
     return r
 
 
@@ -65,19 +68,30 @@ def main(quick=False):
     full = np.ones(len(sites), bool)
     nets = {"all": full, "ccs": sites["ccs"].values, "hpc150": sites["hpc150"].values,
             "nevi_grade": sites["nevi_grade"].values, "working": ~sites["unavailable"].values}
-    eps_list = [30, 40, 50] if quick else [20, 25, 30, 35, 40, 45, 50, 55, 60]
+    afir = [round(60 / 1.609344, 2), round(100 / 1.609344, 2)]          # EU AFIR 60 km and 100 km
+    eps_conn = [30, 40, 50] if quick else [20, 25, 30, 35, 40, 45, 50, 55, 60] + afir
+    eps_rob = [30, 40, 50] if quick else [30, 35, 40, 45, 50]           # at 46.2+ the network is already biconnected
     tl_conn, tl_rob = (60, 120) if quick else (600, 1500)
-    jobs = [("all", full, e, "connectivity", tl_conn) for e in eps_list]
-    jobs += [("all", full, e, "robustness", tl_rob) for e in eps_list]
+    jobs = [("all", full, e, "connectivity", tl_conn) for e in eps_conn]
+    jobs += [("all", full, e, "robustness", tl_rob) for e in eps_rob]
     for name in ["ccs", "hpc150", "nevi_grade", "working"]:
         for e in ([40, 50] if quick else [30, 40, 50, 60]):
             jobs.append((name, nets[name], e, "connectivity", tl_conn))
         jobs.append((name, nets[name], 50, "robustness", tl_rob))
-    # hardest first so the pool finishes together
-    jobs.sort(key=lambda j: (j[3] != "robustness", j[2]))
-    with Pool(2, initializer=init, initargs=(G,)) as pool:
-        res = pool.map(_job, jobs, chunksize=1)
-    df = pd.DataFrame(res).drop(columns=["chosen"])
+    # each job is cached as it finishes, so an interrupted run resumes where it stopped
+    cache = ROOT / "results" / ("exact_jobs_quick" if quick else "exact_jobs")
+    cache.mkdir(parents=True, exist_ok=True)
+    key = lambda j: f"{j[0]}_{j[3]}_{j[2]}"  # noqa: E731
+    todo = [j for j in jobs if not (cache / f"{key(j)}.json").exists()]
+    todo.sort(key=lambda j: (j[3] != "robustness", j[2]))     # hardest first so the pool finishes together
+    print(f"{len(jobs) - len(todo)} cached, {len(todo)} to solve")
+    with Pool(2, initializer=init, initargs=(G,), maxtasksperchild=1) as pool:
+        for r in pool.imap_unordered(_job, todo, chunksize=1):
+            json.dump(r, open(cache / f"{r['job_key']}.json", "w"),
+                      default=lambda o: o.item() if hasattr(o, "item") else str(o))
+            print(f"  {r['network']:10s} {r['objective']:12s} {r['eps']:>6} -> {r['stations']} ({r['status']}, {r['seconds']} s)", flush=True)
+    res = [json.load(open(cache / f"{key(j)}.json")) for j in jobs]
+    df = pd.DataFrame(res).drop(columns=["chosen", "job_key"])
     df = df.sort_values(["network", "objective", "eps"]).reset_index(drop=True)
     for lvl, c in COST.items():
         df[f"cost_{lvl}_M"] = df["stations"] * c

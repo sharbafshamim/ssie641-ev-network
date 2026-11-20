@@ -16,9 +16,9 @@ August 2025 and left the number to the states.
 | --- | --- |
 | **Q1.** How close is the network to breaking apart, and where? | One connected network from **43.5 road miles**. Weakest link: **Saranac Lake – Malone**, then Malone – Massena (37.2) and Arkville – Tannersville (34.7). The two large regions join at 26 miles; every remaining gap is in the Catskills, Adirondacks or North Country. No single point of failure from **46.2 miles** (biconnectivity threshold). |
 | **Q2.** Which stations hold it together: big or small? | At 30 miles, **five single points of failure**: Chestertown, Peru, Elizabethtown, Monticello, Roscoe (four Tesla Superchargers). They are **isolated, not small**: median degree 9 vs 50, median ports 8 vs 4. Removing the 17 highest-betweenness sites (2.3%) shrinks the largest piece to 57% at 50 miles; at 30 miles the two **Little Falls Thruway plazas** alone do it. Degree attack does no more than random failure. Two kinds of critical site: cut vertices at the rural edges, high-betweenness sites on the east–west seam (spectral split, Leiden boundaries). With 14% unavailability, at least one 30-mile cut vertex is down 53% of the time. |
-| **Q3.** How many new stations per standard, and can NY afford them? | **0 at 45–50 miles, 1 at 40 (Paul Smiths), 2 at 35 (Paul Smiths, Massena)**, all provably optimal, at most 2.2% of NY's $175M NEVI allocation. **30 miles and below cannot be met** by upgrading existing public charging locations: new host sites are needed. |
-| Control | Better sited than 98% of 100 random networks at 30 miles; no better than chance on the overall threshold: the North Country gap is geographic. |
-| Winter (−41% range) | One network needs a nominal 74 road miles; a 60-mile standard needs two winter stations (Paul Smiths, Massena). |
+| **Q3.** How many new stations per standard, and can NY afford them? | Exact, on road distances: **0 at 45–50 miles, 1 at 37.3–40 (Ogdensburg or Paul Smiths), 2 at 35 (Paul Smiths, Hogansburg), 6 at 30**, at most 6.6% of NY's $175M NEVI allocation. Cost of robustness (survive any single failure): 0 at 50, 1 at 45, 2 at 40, 6 at 35, 13 at 30. Below 30 miles parts of the North Country cannot be reached from existing locations. |
+| Control | Better sited than 98% of 100 random networks at 30 miles; no better than chance on the overall threshold. Keeping each region's charger count, random draws come much closer: most of the advantage is how many chargers each region got. |
+| Winter (20–41% range loss) | One network needs a nominal 54–74 road miles (74 at AAA's 41%); a 60-mile standard needs two winter stations (Paul Smiths, Massena). |
 
 The full report is in `paper/` and in the project's Claude doc.
 
@@ -32,13 +32,18 @@ src/evnet/                    analysis package
     distance.py               haversine, circuity, OSRM road-distance builder
     network.py                epsilon graph, MST threshold, cut vertices, random failure, targeted attack
     coverage.py               city-pair coverage (plain, population-weighted, access cap)
-    placement.py              Q3: node-weighted Steiner heuristic with lower/upper bounds and feasibility
+    placement.py              Q3 check: node-weighted Steiner heuristic with lower/upper bounds and feasibility
+    exact.py                  Q3: exact integer program for the cost of connectivity and the cost of robustness
+    trips.py                  trip feasibility along real routes; consecutive coverage
     control.py                random-siting control
     structure.py              biconnectivity threshold, reliability of cut vertices, efficiency and harmonic
                               centrality, city-pair betweenness, k-cores, spectral gap, Leiden communities
 scripts/run_all.py            runs everything -> results/tables, results/figures, results/summary.json
-scripts/run_structure.py      network-structure analyses -> results/tables/s*_*.csv, fig9-11,
+scripts/run_structure.py      network-structure analyses -> results/tables/s*_*.csv, figS4-S6,
                               results/structure_summary.json (run after run_all.py)
+scripts/run_exact.py          exact Q3 on road distances -> exact_*.csv, fig10_cost_of_robustness (resumable)
+scripts/run_extended.py       trips, consecutive coverage, growth, correlated outages, baselines -> report Section 8.4
+scripts/run_learning.py       optional GNN benchmark (needs PyTorch; not used in the report)
 scripts/build_notebook.py     builds notebooks/ev_network_final.ipynb
 scripts/osrm_fetch_browser.js browser script used to download the OSRM road distances
 scripts/build_report.sh       builds paper/report.pdf from paper/report.md
@@ -54,6 +59,8 @@ paper/                        proposal and final report (report.docx, report.pdf
 pip install -r requirements.txt
 python scripts/run_all.py          # about 3 minutes
 python scripts/run_structure.py    # about 3 minutes
+python scripts/run_exact.py        # about 45 minutes; caches each case in results/exact_jobs/
+python scripts/run_extended.py     # about 1 hour
 python scripts/build_notebook.py
 jupyter nbconvert --to notebook --execute --inplace notebooks/ev_network_final.ipynb
 ```
@@ -94,9 +101,10 @@ per-site cost $0.6M / $1.0M / $1.92M (NEVI construction estimates; average NEVI 
 - **Single points of failure** = articulation points; `sites_cut_off` = sites no longer in the largest remaining part.
 - **Coverage**: a city (≥ 5,000 people) attaches to every site within ε of its centre; two cities are connected if
   they attach to the same piece.
-- **Q3** is a node-weighted Steiner tree problem (NP-hard). We use the shortest-path heuristic of Takahashi &
-  Matsuyama (1980) with redundancy pruning (upper bound), report a path-based lower bound, and flag standards
-  that are infeasible even with every candidate upgraded.
+- **Q3** is a node-weighted Steiner tree problem (NP-hard). The report's numbers come from the exact integer program
+  in `exact.py` (lazy vertex-separator cuts, HiGHS via SciPy) on OSRM road distances to 2,703 candidate locations.
+  The shortest-path heuristic of Takahashi & Matsuyama (1980) on straight-line distances is kept as a check.
+- **Biconnectivity threshold** = smallest ε with one piece and no articulation point (bisection; `structure.py`).
 
 ## License
 

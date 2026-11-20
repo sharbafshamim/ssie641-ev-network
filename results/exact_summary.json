@@ -1,0 +1,6 @@
+{
+  "runtime_s": 2709.6,
+  "candidates_kept": 2703,
+  "candidate_rule": "public L1/L2 locations more than 1 straight mile from any fast-charging site",
+  "queried_share_CC_le60": 1.0
+}

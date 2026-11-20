@@ -1,6 +1,6 @@
 """Run the full analysis and write every table and figure used in the paper.
 
-    python scripts/run_all.py            # full run (about 10 minutes)
+    python scripts/run_all.py            # full run (about 3 minutes)
     python scripts/run_all.py --quick    # fewer random trials, for testing
 
 Outputs: results/tables/*.csv, results/figures/*.png, results/summary.json

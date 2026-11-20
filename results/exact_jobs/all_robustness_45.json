@@ -1,0 +1,1 @@
+{"eps": 45.0, "objective": "robustness", "stations": 1, "chosen": [2633], "lower_bound": 1, "iterations": 1, "cuts": 2, "status": "optimal", "seconds": 0.2, "network": "all", "sites": 754, "pieces": 1, "unreachable_sites": 0, "unreachable_cities": "", "where": "Gouverneur", "unprotectable_sites": 0, "job_key": "all_robustness_45"}

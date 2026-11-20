@@ -1,0 +1,1 @@
+{"eps": 40.0, "objective": "connectivity", "stations": 2, "chosen": [2566, 2680], "lower_bound": 2, "iterations": 1, "cuts": 4, "status": "optimal", "seconds": 0.1, "network": "nevi_grade", "sites": 239, "pieces": 4, "unreachable_sites": 0, "unreachable_cities": "", "where": "North Creek; Ogdensburg", "job_key": "nevi_grade_connectivity_40"}

@@ -4,7 +4,7 @@
     python scripts/run_structure.py --quick    # fewer random trials, for testing
 
 Needs the outputs of run_all.py (data/derived/sites.csv and the road matrix).
-Writes results/tables/s*_*.csv, results/figures/fig9-12_*.png and
+Writes results/tables/s*_*.csv, results/figures/figS4-S6_*.png and
 results/structure_summary.json.
 
   A  connectivity and biconnectivity thresholds (Penrose 1997; Penrose & Yang 2024)
@@ -144,7 +144,7 @@ def main(quick=False):
     axes[0].set_ylabel("global efficiency / original")
     axes[0].text(0.01, 0.22, "0.2: collapse level used by Hamim et al. (2025)", ha="left", fontsize=7, color=INK2)
     axes[0].legend(loc="upper right", fontsize=7)
-    save(fig, "fig9_efficiency")
+    save(fig, "figS4_efficiency")
 
     # ============================================================ D. betweenness variants
     rows = []
@@ -245,7 +245,7 @@ def main(quick=False):
     seam = sp["seam_sites"]
     ax.scatter(sites.Longitude.values[seam], sites.Latitude.values[seam], s=22, facecolors="none", edgecolors=INK, lw=0.8)
     map_axes(ax, "B. Spectral split at 50 miles (ringed: sites on the cut)")
-    save(fig, "fig10_spectral")
+    save(fig, "figS5_spectral")
 
     # ============================================================ G. Leiden communities
     rows, memb50 = [], None
@@ -364,7 +364,7 @@ def main(quick=False):
     axes[2].set_ylabel("density (bar area = share)")
     axes[2].set_title("C. Circuity, log-binned", loc="left")
     axes[2].legend(fontsize=7)
-    save(fig, "fig11_distributions")
+    save(fig, "figS6_distributions")
 
     # ============================================================ L. region-stratified control
     pool_lat = np.append(sites.Latitude.values, cand.lat.values)

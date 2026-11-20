@@ -25,9 +25,19 @@ md("""
 
 SSIE 641 final project: Joubin Zahiri Khameneh, Shamim Sharbaf, Zeinab Davoodmanesh.
 
-This notebook walks through the results question by question. Every number comes from `scripts/run_all.py`,
-which writes `results/tables/*.csv`, `results/figures/*.png` and `results/summary.json`. Set `RUN = True` to
-rebuild everything (about three minutes). The analysis code lives in `src/evnet/`.
+This notebook walks through the results question by question, in the order of the report (`paper/report.md`).
+Every number comes from the scripts in `scripts/`, which write `results/tables/*.csv`, `results/figures/*.png`
+and the `results/*summary.json` files:
+
+| Script | What it adds | Time |
+| --- | --- | --- |
+| `run_all.py` | Q1, Q2, coverage, heuristic Q3, winter, control, October data | about 3 min |
+| `run_structure.py` | biconnectivity, reliability, efficiency, betweenness variants, k-cores, spectral split, communities | about 3 min |
+| `run_exact.py` | exact cost of connectivity and cost of robustness on road distances (report Section 7) | about 45 min |
+| `run_extended.py` | trips on real routes, Hanig-style coverage, growth over time, regional outages, baselines | about 1 hour |
+| `run_learning.py` | optional GNN benchmark (needs PyTorch; not used in the report) | long |
+
+Set `RUN = True` to rebuild the first two. The analysis code lives in `src/evnet/`.
 
 Changes from notebook v3 (`notebooks/ev_network_v3.ipynb`):
 - Q3 uses a Steiner-tree heuristic (Takahashi & Matsuyama, 1980) with upper and lower bounds and an exact
@@ -48,13 +58,23 @@ from IPython.display import Image, display
 ROOT = Path.cwd().parent if Path.cwd().name == "notebooks" else Path.cwd()
 RUN = False
 if RUN:
-    subprocess.run([sys.executable, str(ROOT / "scripts" / "run_all.py")], check=True)
+    for script in ["run_all.py", "run_structure.py"]:
+        subprocess.run([sys.executable, str(ROOT / "scripts" / script)], check=True)
 
 TAB, FIG = ROOT / "results" / "tables", ROOT / "results" / "figures"
 S = json.load(open(ROOT / "results" / "summary.json"))
 pd.set_option("display.max_colwidth", 120)
 def t(name): return pd.read_csv(TAB / name)
-def f(name): display(Image(filename=str(FIG / name), width=850))
+def f(name):
+    if (FIG / name).exists():
+        display(Image(filename=str(FIG / name), width=850))
+    else:
+        print(f"{name} not found: run the script that makes it")
+def tt(name):
+    if (TAB / name).exists():
+        display(t(name))
+    else:
+        print(f"{name} not found: run the script that makes it")
 """)
 md("## 1. Data")
 code("""
@@ -112,10 +132,52 @@ f("fig5_coverage_curve.png")
 f("figS3_coverage_attack.png")
 """)
 md("""
+### 3.3 Network structure (`run_structure.py`; report Sections 5, 6.1, 6.3 and 6.5)
+
+Biconnectivity threshold, reliability of the single points of failure, global efficiency under attack,
+betweenness variants, k-cores, random-walk spectral split, Leiden communities, centrality localisation,
+EU AFIR standards, a band of winter losses and a region-stratified control.
+""")
+code("""
+SS = json.load(open(ROOT / "results" / "structure_summary.json"))
+display(t("s1_thresholds.csv"))
+display(t("s2_reliability_cut_vertices.csv").round(3))
+display(t("s3_efficiency.csv").round(3))
+f("figS4_efficiency.png")
+b4 = t("s4_betweenness_top10.csv"); display(b4[b4["rank"] <= 5])
+display(t("s5_core_summary.csv").round(3))
+display(t("s6_spectral_split.csv"))
+display(t("s6_spectral_paul_smiths.csv").round(5))
+f("figS5_spectral.png")
+display(t("s7_communities.csv").round(3))
+display(t("s8_centrality_localisation.csv").round(3))
+print("friendship paradox:", SS["friendship_paradox"])
+display(t("s9_city_standard_needed.csv").head(10))
+display(t("s10_other_standards.csv"))
+display(t("s11_winter_band.csv").round(2))
+display(t("s12_control_stratified.csv").round(3))
+f("figS6_distributions.png")
+""")
+md("""
 ## 4. Q3: How many new stations does each standard need, and can New York afford them?
 
-`lower_bound` and `new_stations` bracket the true minimum for the whole-network objective. `feasible = False`
-means some piece cannot be reached even if every candidate location were upgraded.
+The report's cost curve is the exact one (`run_exact.py`): road distances to 2,703 candidate locations, solved as an
+integer program (HiGHS via SciPy) with lazy vertex-separator cuts (`src/evnet/exact.py`). *Connectivity*: every pair of
+sites that the full candidate graph can join must be joined. *Robustness*: in addition, no single station failure may
+separate two sites that the full candidate graph keeps together after that failure. `lower_bound` equals `stations`
+when the solver proved optimality.
+""")
+code("""
+tt("exact_cost_curve.csv")
+f("fig10_cost_of_robustness.png")
+tt("exact_subnetworks.csv")
+tt("subnetwork_structure.csv")
+""")
+md("""
+### 4.1 Checks: Steiner heuristic on straight-line distances to candidates
+
+`lower_bound` and `new_stations` bracket the minimum; `feasible = False` means some piece cannot be reached even if
+every candidate were upgraded under the straight-line distance model.
 """)
 code("""
 q3 = t("q3_cost_curve.csv")
@@ -126,7 +188,7 @@ display(b[b["objective"] == "network"].pivot(index="miles", columns="cost_level"
 print("sites the $175M allocation could fund:", S["budget"]["sites_affordable"])
 f("fig6_cost_curve.png")
 """)
-md("### 4.1 Winter (41% range loss at 20°F with heat; AAA 2019)")
+md("### 4.2 Winter (41% range loss at 20°F with heat; AAA 2019)")
 code("""
 print(f"nominal standard needed for one network in winter: {S['winter_nominal_needed']:.1f} road miles")
 display(t("winter.csv"))
@@ -142,66 +204,55 @@ md("## 6. Robustness: October 13, 2026 station list")
 code("""
 display(t("robustness_snapshot.csv"))
 """)
-md("""
-## 7. The cost of robustness, solved exactly
-
-`scripts/run_exact.py` solves the station-placement problem as an integer program (HiGHS via SciPy) with lazy
-vertex-separator cuts (`src/evnet/exact.py`). *Connectivity*: every pair of sites that the full candidate graph can join
-must be joined. *Robustness*: in addition, no single station failure may separate two sites that the full candidate graph
-keeps together after that failure (2-vertex-connectivity relative to what is achievable). `lower_bound` equals
-`stations` when the solver proved optimality.
-""")
+md("## 7. Further checks (`run_extended.py`; report Section 8.4)\n\n### 7.1 Trips along real roads and the Hanig et al. coverage measure")
 code("""
-display(t("exact_cost_curve.csv"))
-f("fig10_cost_of_robustness.png")
-display(t("exact_subnetworks.csv"))
-display(t("subnetwork_structure.csv"))
-""")
-md("## 8. Trips along real roads, traffic weights and the Hanig et al. coverage measure")
-code("""
-display(t("trips_feasibility.csv"))
-display(t("trips_hardest.csv").head(10))
-display(t("trips_border.csv"))
-display(t("hanig_consecutive_coverage.csv"))
+tt("trips_feasibility.csv")
+tt("trips_hardest.csv")
+tt("trips_border.csv")
+tt("hanig_consecutive_coverage.csv")
 f("fig11_trip_ranges.png")
 """)
-md("## 9. How the network grew, 2015-2026")
+md("### 7.2 How the network grew, 2015-2026")
 code("""
-display(t("history_by_year.csv"))
+tt("history_by_year.csv")
 f("fig12_history.png")
 """)
-md("## 10. Reliability: unavailable stations and regional outages")
+md("### 7.3 Reliability: unavailable stations and regional outages")
 code("""
-display(t("reliability_regional_outages.csv"))
-display(t("random_failure_ci.csv"))
+tt("reliability_regional_outages.csv")
+tt("random_failure_ci.csv")
 """)
-md("## 11. Random baselines with 95% confidence intervals and random-geometric-graph theory")
+md("### 7.4 Random baselines with 95% confidence intervals and random-geometric-graph theory")
 code("""
-display(t("baselines_with_ci.csv"))
+tt("baselines_with_ci.csv")
 import json
-print(json.dumps(json.load(open(ROOT / "results" / "extended_summary.json")).get("rgg", {}), indent=1))
+p = ROOT / "results" / "extended_summary.json"
+if p.exists():
+    print(json.dumps(json.load(open(p)).get("rgg", {}), indent=1))
 """)
-md("## 12. Learning to place stations (benchmark and GNN)")
+md("## 8. Optional: learning to place stations (`run_learning.py`, needs PyTorch; not in the report)")
 code("""
-display(t("learning_summary.csv"))
+tt("learning_summary.csv")
 f("fig13_learning.png")
 """)
 md("""
-## 13. Summary (OSRM road distances)
+## 9. Summary (matches the report's abstract and answers)
 
 - **Q1.** One network from **43.5 road miles**; weakest link Saranac Lake – Malone, then Malone – Massena (37.2),
-  Arkville – Tannersville (34.7) and Chestertown – Indian Lake (33.3). The two large regions join at 26 miles.
+  Arkville – Tannersville (34.7) and Chestertown – Indian Lake (33.3). No single point of failure from **46.2 miles**.
+  The two large regions join at 26 miles.
 - **Q2.** At 30 miles five sites are single points of failure (Chestertown, Peru, Elizabethtown, Monticello, Roscoe),
-  four of them Tesla Superchargers. They are isolated (median degree 9 vs 50), not small (median ports 8 vs 4).
-  Betweenness attack: 17 removals (2.3%) cut the largest piece to 57% at 50 miles; at 30 miles the two Little Falls
-  Thruway plazas alone do it. Degree attack does no more than random failure.
+  four of them Tesla Superchargers: isolated (median degree 9 vs 50, core number 6 vs 40), not small (median ports 8 vs 4).
+  With 14% unavailability at least one is down 53% of the time. High-betweenness sites sit on an east–west seam found
+  by the spectral split and Leiden boundaries; 17 betweenness removals (2.3%) cut the largest piece to 57% at 50 miles,
+  while degree attack does no more than random failure.
 - **Coverage.** At 30–43 miles 99% of sites but 97.3% of city pairs are connected; every pair from 44 miles.
-- **Q3.** 0 stations at 45–50 miles, 1 at 40 (Paul Smiths), 2 at 35 (Paul Smiths, Massena), all optimal, at most
-  2.2% of the $175M NEVI allocation. 30 miles and below cannot be met from existing public charging locations
-  (feasible at 30 with 5 if the new-link detour factor is 1.2 instead of the measured 1.22).
-- **Winter.** One network needs a nominal 74 road miles; at 60 miles nominal two stations (Paul Smiths, Massena) suffice.
-- **Control.** Better than 98% of 100 random networks at 30 miles; no better than chance on the overall threshold:
-  the North Country gap is geographic.
+- **Q3 (exact, road distances).** 0 stations at 45–50 miles, 1 at 37.3–40 (Ogdensburg or Paul Smiths), 2 at 35
+  (Paul Smiths, Hogansburg), 6 at 30, at most 6.6% of the $175M NEVI allocation. Cost of robustness: 0 at 50, 1 at 45,
+  2 at 40, 6 at 35, 13 at 30. Below 30 miles parts of the North Country cannot be reached from existing locations.
+- **Winter.** One network needs a nominal 54–74 road miles for 20–41% range loss.
+- **Control.** Better than 98% of 100 random networks at 30 miles; no better than chance on the overall threshold;
+  much of the advantage comes from how many chargers each region received.
 """)
 
 nb["cells"] = C

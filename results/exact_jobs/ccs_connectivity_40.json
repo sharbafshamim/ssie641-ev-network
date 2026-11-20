@@ -1,0 +1,1 @@
+{"eps": 40.0, "objective": "connectivity", "stations": 1, "chosen": [2680], "lower_bound": 1, "iterations": 1, "cuts": 2, "status": "optimal", "seconds": 0.1, "network": "ccs", "sites": 661, "pieces": 2, "unreachable_sites": 0, "unreachable_cities": "", "where": "Ogdensburg", "job_key": "ccs_connectivity_40"}

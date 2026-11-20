@@ -1,0 +1,6 @@
+network,sites,threshold_road_miles,weakest_link,cut_vertices_30,cut_vertices_50,pieces_50
+all,754,43.5,Saranac Lake - Malone,5,0,1
+ccs,661,43.5,Saranac Lake - Malone,3,0,1
+hpc150,371,43.6,Saranac Lake - Malone,4,1,1
+nevi_grade,239,47.4,Queensbury - North Hudson,7,1,1
+working,747,43.5,Saranac Lake - Malone,5,0,1
