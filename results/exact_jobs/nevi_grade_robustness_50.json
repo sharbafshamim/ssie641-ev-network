@@ -1,0 +1,1 @@
+{"eps": 50.0, "objective": "robustness", "stations": 1, "chosen": [2606], "lower_bound": 1, "iterations": 1, "cuts": 2, "status": "optimal", "seconds": 0.1, "network": "nevi_grade", "sites": 239, "pieces": 1, "unreachable_sites": 0, "unreachable_cities": "", "where": "Wanakena", "unprotectable_sites": 0, "job_key": "nevi_grade_robustness_50"}

@@ -1,0 +1,1 @@
+{"eps": 40.0, "objective": "robustness", "stations": 2, "chosen": [2633, 2680], "lower_bound": 2, "iterations": 7, "cuts": 18, "status": "optimal", "seconds": 0.8, "network": "all", "sites": 754, "pieces": 2, "unreachable_sites": 0, "unreachable_cities": "", "where": "Gouverneur; Ogdensburg", "unprotectable_sites": 0, "job_key": "all_robustness_40"}

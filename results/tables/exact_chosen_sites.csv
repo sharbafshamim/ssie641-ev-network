@@ -1,0 +1,109 @@
+network,objective,miles,name,city,lat,lon
+all,connectivity,20.0,Days Inn Liberty,Liberty,41.783836,-74.72946
+all,connectivity,20.0,Emerson Resort and Spa - Tesla Destination,Mt. Tremper,42.05189,-74.2895185
+all,connectivity,20.0,FLEISCHMANNS VILLAGE 1,Fleischmanns,42.156146,-74.529619
+all,connectivity,20.0,31 W Tioga St,Spencer,42.20934,-76.49448
+all,connectivity,20.0,Saxon Inn - Alfred University,Alfred,42.25218,-77.78839
+all,connectivity,20.0,26 South St,Cattaraugus,42.329551,-78.86664
+all,connectivity,20.0,Hampton Inn Cooperstown - Tesla Destination,Cooperstown,42.65945253,-74.95716965
+all,connectivity,20.0,BLENCOE CHARGEPOINT PED,Sharon Springs,42.789908,-74.622704
+all,connectivity,20.0,MUNI PARKIN LOT VILLAGE GENESEO,Geneseo,42.795196,-77.816084
+all,connectivity,20.0,BANKLOFTS STATION 2,Richfield Springs,42.853393,-74.987563
+all,connectivity,20.0,MAIN LOT SNC 2,Sterling,43.378711,-76.657265
+all,connectivity,20.0,The Alpine Lodge - Tesla Destination,North Creek,43.700142,-73.9860757
+all,connectivity,20.0,TOWN OF MORIAH MORIAHEV2,Port Henry,44.04852,-73.46112
+all,connectivity,20.0,TOC CEROW ARENA STATION 3,Clayton,44.232963,-76.077107
+all,connectivity,20.0,Parking Lot,Upper Jay,44.3338096,-73.774097
+all,connectivity,20.0,5 FARRELL ROAD TOWN HALL EVSE1,Willsboro,44.370823,-73.39599
+all,connectivity,20.0,Riley Ford,Chazy,44.8914456121597,-73.4375763448713
+all,connectivity,25.0,Days Inn Liberty,Liberty,41.783836,-74.72946
+all,connectivity,25.0,SI - STATION 1 STATION 1,Shandaken,42.117025,-74.409617
+all,connectivity,25.0,Village of Cherry Valley,Cherry Valley,42.797294,-74.758022
+all,connectivity,25.0,Erwin Park,Boonville,43.48240357276243,-75.32612786100533
+all,connectivity,25.0,SKICENTER EVSE1,Camden,43.50487,-75.70037
+all,connectivity,25.0,Snow Ridge Ski Resort,Turin,43.64013,-75.42005
+all,connectivity,25.0,The Alpine Lodge - Tesla Destination,North Creek,43.700142,-73.9860757
+all,connectivity,25.0,SURGERY PARKING 2(RIGHT),Lowville,43.796084,-75.50004
+all,connectivity,25.0,Parking Lot,Jay,44.3749342,-73.7276605
+all,connectivity,25.0,Saint Regis Mohawk Tribe Administration Building and Generations Park,Hogansburg,44.9780615216302,-74.6689162081386
+all,connectivity,30.0,VILLAGE OF DELH VILLAGEOFDELHI,Delhi,42.276271,-74.916803
+all,connectivity,30.0,GARNET HILL LOG HOUSE #2,North River,43.712299,-74.107122
+all,connectivity,30.0,Ledges Apartments,Evans Mills,44.05397,-75.83803
+all,connectivity,30.0,CON TECH CON TECH STATIO,Gouverneur,44.319026,-75.462164
+all,connectivity,30.0,CANTON CSD UNIT 2,Canton,44.607747,-75.167378
+all,connectivity,30.0,Saint Regis Mohawk Tribe Administration Building and Generations Park,Hogansburg,44.9780615216302,-74.6689162081386
+all,connectivity,35.0,VIC AND CAMPUS SUGAR SHACK 1.2,Paul Smiths,44.44867,-74.2581
+all,connectivity,35.0,Saint Regis Mohawk Tribe Administration Building and Generations Park,Hogansburg,44.9780615216302,-74.6689162081386
+all,connectivity,40.0,Sherman Inn Ogdensburg,Ogdensburg,44.69479,-75.4874
+all,connectivity,37.28,PT - The Stonefence Resort,Ogdensburg,44.67358765688889,-75.5283133758621
+all,robustness,30.0,COLCHESTER EV DOWNSVILLEDINER,Downsville,42.079406,-74.993625
+all,robustness,30.0,FLEISCHMANNS VILLAGE 1,Fleischmanns,42.156146,-74.529619
+all,robustness,30.0,NYS ORDA GORE MOUNTAIN 3,North Creek,43.671111,-74.007596
+all,robustness,30.0,Hoss Country Club,Long Lake,43.9688,-74.418652
+all,robustness,30.0,Ledges Apartments,Evans Mills,44.05397,-75.83803
+all,robustness,30.0,Faust Motel - Tesla Destination,Tupper Lake,44.2437641,-74.48741
+all,robustness,30.0,CON TECH CON TECH STATIO,Gouverneur,44.319026,-75.462164
+all,robustness,30.0,5 FARRELL ROAD TOWN HALL EVSE1,Willsboro,44.370823,-73.39599
+all,robustness,30.0,SLU - VILAS EV SLU-TENNISCOURT,Canton,44.586259,-75.163985
+all,robustness,30.0,CANTON CSD UNIT 2,Canton,44.607747,-75.167378
+all,robustness,30.0,Massena Hospital,Massena,44.936058,-74.908628
+all,robustness,30.0,AMCR CASINO 1.2,Akwesasne,44.971275,-74.64318
+all,robustness,30.0,AMCR CASINO 1.1,Akwesasne,44.97131,-74.643234
+all,robustness,35.0,Full Moon Resort - Tesla Destination,Big Indian,42.039179,-74.4415595
+all,robustness,35.0,The Fern Lodge - Tesla Destination,Chestertown,43.625261,-73.849046
+all,robustness,35.0,VIC AND CAMPUS LOT 13 1.1,Paul Smiths,44.43417,-74.24735
+all,robustness,35.0,VIC AND CAMPUS SUGAR SHACK 1.2,Paul Smiths,44.44867,-74.2581
+all,robustness,35.0,Akwesasne Mohawk RV Parking,Hogansburg,44.9683852425227,-74.6405489014238
+all,robustness,35.0,Saint Regis Mohawk Tribe Administration Building and Generations Park,Hogansburg,44.9780615216302,-74.6689162081386
+all,robustness,40.0,CON TECH CON TECH STATIO,Gouverneur,44.319026,-75.462164
+all,robustness,40.0,Sherman Inn Ogdensburg,Ogdensburg,44.69479,-75.4874
+all,robustness,45.0,CON TECH CON TECH STATIO,Gouverneur,44.319026,-75.462164
+ccs,connectivity,30.0,COLCHESTER EV DOWNSVILLEDINER,Downsville,42.079406,-74.993625
+ccs,connectivity,30.0,VILLAGE OF DELH VILLAGEOFDELHI,Delhi,42.276271,-74.916803
+ccs,connectivity,30.0,The Fern Lodge - Tesla Destination,Chestertown,43.625261,-73.849046
+ccs,connectivity,30.0,GARNET HILL LOG HOUSE #2,North River,43.712299,-74.107122
+ccs,connectivity,30.0,Ledges Apartments,Evans Mills,44.05397,-75.83803
+ccs,connectivity,30.0,CON TECH CON TECH STATIO,Gouverneur,44.319026,-75.462164
+ccs,connectivity,30.0,CANTON CSD UNIT 2,Canton,44.607747,-75.167378
+ccs,connectivity,30.0,Saint Regis Mohawk Tribe Administration Building and Generations Park,Hogansburg,44.9780615216302,-74.6689162081386
+ccs,connectivity,40.0,Sherman Inn Ogdensburg,Ogdensburg,44.69479,-75.4874
+hpc150,connectivity,30.0,COLCHESTER EV DOWNSVILLEDINER,Downsville,42.079406,-74.993625
+hpc150,connectivity,30.0,Saxon Inn - Alfred University,Alfred,42.25218,-77.78839
+hpc150,connectivity,30.0,VILLAGE OF DELH VILLAGEOFDELHI,Delhi,42.276271,-74.916803
+hpc150,connectivity,30.0,SKICENTER EVSE1,Camden,43.50487,-75.70037
+hpc150,connectivity,30.0,The Fern Lodge - Tesla Destination,Chestertown,43.625261,-73.849046
+hpc150,connectivity,30.0,Snow Ridge Ski Resort,Turin,43.64013,-75.42005
+hpc150,connectivity,30.0,GARNET HILL LOG HOUSE #2,North River,43.712299,-74.107122
+hpc150,connectivity,30.0,Ledges Apartments,Evans Mills,44.05397,-75.83803
+hpc150,connectivity,30.0,CON TECH CON TECH STATIO,Gouverneur,44.319026,-75.462164
+hpc150,connectivity,30.0,Parking Lot,Jay,44.3749342,-73.7276605
+hpc150,connectivity,30.0,CANTON CSD UNIT 2,Canton,44.607747,-75.167378
+hpc150,connectivity,30.0,Saint Regis Mohawk Tribe Administration Building and Generations Park,Hogansburg,44.9780615216302,-74.6689162081386
+hpc150,connectivity,30.0,NYPA - Hawkins Point Visitors Center,Massena,44.999505,-74.797209
+hpc150,connectivity,40.0,Sherman Inn Ogdensburg,Ogdensburg,44.69479,-75.4874
+hpc150,robustness,50.0,Otto's Abode,Wanakena,44.1334795784717,-74.9221658281743
+nevi_grade,connectivity,30.0,COLCHESTER EV DOWNSVILLEDINER,Downsville,42.079406,-74.993625
+nevi_grade,connectivity,30.0,Saxon Inn - Alfred University,Alfred,42.25218,-77.78839
+nevi_grade,connectivity,30.0,VILLAGE OF DELH VILLAGEOFDELHI,Delhi,42.276271,-74.916803
+nevi_grade,connectivity,30.0,Silver Creek Police Department,Silver Creek,42.5451540630892,-79.1697256804936
+nevi_grade,connectivity,30.0,Hampton Inn Cooperstown - Tesla Destination,Cooperstown,42.65945253,-74.95716965
+nevi_grade,connectivity,30.0,SKICENTER EVSE1,Camden,43.50487,-75.70037
+nevi_grade,connectivity,30.0,The Fern Lodge - Tesla Destination,Chestertown,43.625261,-73.849046
+nevi_grade,connectivity,30.0,Snow Ridge Ski Resort,Turin,43.64013,-75.42005
+nevi_grade,connectivity,30.0,GARNET HILL LOG HOUSE #2,North River,43.712299,-74.107122
+nevi_grade,connectivity,30.0,Ledges Apartments,Evans Mills,44.05397,-75.83803
+nevi_grade,connectivity,30.0,CON TECH CON TECH STATIO,Gouverneur,44.319026,-75.462164
+nevi_grade,connectivity,30.0,Parking Lot,Jay,44.3749342,-73.7276605
+nevi_grade,connectivity,30.0,CANTON CSD UNIT 2,Canton,44.607747,-75.167378
+nevi_grade,connectivity,30.0,Saint Regis Mohawk Tribe Administration Building and Generations Park,Hogansburg,44.9780615216302,-74.6689162081386
+nevi_grade,connectivity,30.0,NYPA - Hawkins Point Visitors Center,Massena,44.999505,-74.797209
+nevi_grade,connectivity,40.0,The Alpine Lodge - Tesla Destination,North Creek,43.700142,-73.9860757
+nevi_grade,connectivity,40.0,Sherman Inn Ogdensburg,Ogdensburg,44.69479,-75.4874
+nevi_grade,robustness,50.0,Otto's Abode,Wanakena,44.1334795784717,-74.9221658281743
+working,connectivity,30.0,VILLAGE OF DELH VILLAGEOFDELHI,Delhi,42.276271,-74.916803
+working,connectivity,30.0,GARNET HILL LOG HOUSE #2,North River,43.712299,-74.107122
+working,connectivity,30.0,Ledges Apartments,Evans Mills,44.05397,-75.83803
+working,connectivity,30.0,CON TECH CON TECH STATIO,Gouverneur,44.319026,-75.462164
+working,connectivity,30.0,CANTON CSD UNIT 2,Canton,44.607747,-75.167378
+working,connectivity,30.0,Saint Regis Mohawk Tribe Administration Building and Generations Park,Hogansburg,44.9780615216302,-74.6689162081386
+working,connectivity,40.0,Sherman Inn Ogdensburg,Ogdensburg,44.69479,-75.4874

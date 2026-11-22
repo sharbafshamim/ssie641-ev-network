@@ -1,0 +1,1 @@
+{"eps": 62.14, "objective": "connectivity", "stations": 0, "chosen": [], "lower_bound": 0, "iterations": 0, "cuts": 0, "status": "optimal", "seconds": 0.0, "network": "all", "sites": 754, "pieces": 1, "unreachable_sites": 0, "unreachable_cities": "", "where": "", "job_key": "all_connectivity_62.14"}

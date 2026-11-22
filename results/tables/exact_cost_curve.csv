@@ -1,0 +1,17 @@
+eps,objective,stations,lower_bound,iterations,cuts,status,seconds,network,sites,pieces,unreachable_sites,unreachable_cities,where,unprotectable_sites,cost_low_M,cost_central_M,cost_high_M,share_of_NEVI_central_pct
+20.0,connectivity,17,17,41,202,optimal,5.4,all,754,26,44,Afton; Alexandria Bay; Cape Vincent; Champlain; Elizabethtown; Hancock; Lake Placid; Lewis; Malone; Massena; North Hudson; Peru; Plattsburgh; Potsdam; Saranac Lake; Sidney; Watertown; West Carthage,Liberty; Mt. Tremper; Fleischmanns; Spencer; Alfred; Cattaraugus; Cooperstown; Sharon Springs; Geneseo; Richfield Springs; Sterling; North Creek; Port Henry; Clayton; Upper Jay; Willsboro; Chazy,,10.2,17.0,32.64,9.714285714285714
+25.0,connectivity,10,9,493,1178,time_limit,602.2,all,754,10,9,Hancock; Malone; Massena; Potsdam,Liberty; Shandaken; Cherry Valley; Boonville; Camden; Turin; North Creek; Lowville; Jay; Hogansburg,,6.0,10.0,19.2,5.714285714285714
+30.0,connectivity,6,6,99,210,optimal,18.6,all,754,5,0,,Delhi; North River; Evans Mills; Gouverneur; Canton; Hogansburg,,3.5999999999999996,6.0,11.52,3.4285714285714284
+35.0,connectivity,2,2,1,3,optimal,0.2,all,754,3,0,,Paul Smiths; Hogansburg,,1.2,2.0,3.84,1.1428571428571428
+37.28,connectivity,1,1,1,2,optimal,0.1,all,754,2,0,,Ogdensburg,,0.6,1.0,1.92,0.5714285714285714
+40.0,connectivity,1,1,1,2,optimal,0.1,all,754,2,0,,Ogdensburg,,0.6,1.0,1.92,0.5714285714285714
+45.0,connectivity,0,0,0,0,optimal,0.0,all,754,1,0,,,,0.0,0.0,0.0,0.0
+50.0,connectivity,0,0,0,0,optimal,0.0,all,754,1,0,,,,0.0,0.0,0.0,0.0
+55.0,connectivity,0,0,0,0,optimal,0.0,all,754,1,0,,,,0.0,0.0,0.0,0.0
+60.0,connectivity,0,0,0,0,optimal,0.0,all,754,1,0,,,,0.0,0.0,0.0,0.0
+62.14,connectivity,0,0,0,0,optimal,0.0,all,754,1,0,,,,0.0,0.0,0.0,0.0
+30.0,robustness,13,10,366,2399,time_limit,1501.4,all,754,5,0,,Downsville; Fleischmanns; North Creek; Long Lake; Evans Mills; Tupper Lake; Gouverneur; Willsboro; Canton; Canton; Massena; Akwesasne; Akwesasne,7.0,7.8,13.0,24.96,7.428571428571429
+35.0,robustness,6,5,432,2965,time_limit,1500.3,all,754,3,0,,Big Indian; Chestertown; Paul Smiths; Paul Smiths; Hogansburg; Hogansburg,0.0,3.5999999999999996,6.0,11.52,3.4285714285714284
+40.0,robustness,2,2,7,18,optimal,0.8,all,754,2,0,,Gouverneur; Ogdensburg,0.0,1.2,2.0,3.84,1.1428571428571428
+45.0,robustness,1,1,1,2,optimal,0.2,all,754,1,0,,Gouverneur,0.0,0.6,1.0,1.92,0.5714285714285714
+50.0,robustness,0,0,0,0,optimal,0.0,all,754,1,0,,,0.0,0.0,0.0,0.0,0.0

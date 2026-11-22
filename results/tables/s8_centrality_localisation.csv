@@ -1,0 +1,6 @@
+measure,share_of_score_within_60km_of_NYC,share_of_top10_within_60km_of_NYC,top5_cities
+degree,0.4159430122116689,1.0,Bronx; The Bronx; Bronx; The Bronx; Bronx
+harmonic,0.2688702258982618,1.0,Hartsdale; White Plains; Hastings on Hudson; Yonkers; White Plains
+betweenness,0.08563211204195799,0.0,Schoharie; Chittenango; Roscoe; Hamilton; Hudson
+eigenvector,0.7761834019890042,1.0,Great Neck; Roslyn Heights; North New Hyde Park; Bronx; Bronx
+pagerank,0.2510538969339537,0.0,Waterloo; Waterloo; Waterloo; Batavia; Batavia

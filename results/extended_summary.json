@@ -1,0 +1,74 @@
+{
+  "aadt_segments": 31509,
+  "routes": 1742,
+  "routes_failed": 0,
+  "trips_max_required_range": {
+    "all": 528.876953125,
+    "hpc150": 528.876953125,
+    "nevi_grade": 528.876953125,
+    "working": 528.876953125
+  },
+  "trips_unroutable": {
+    "all": 0,
+    "hpc150": 0,
+    "nevi_grade": 0,
+    "working": 0
+  },
+  "hanig_50": {
+    "all": {
+      "aadt_weighted_share": 0.9065,
+      "length_share": 0.6078
+    },
+    "hpc150": {
+      "aadt_weighted_share": 0.8118,
+      "length_share": 0.4949
+    },
+    "nevi_grade": {
+      "aadt_weighted_share": 0.7687,
+      "length_share": 0.4636
+    }
+  },
+  "working_network": {
+    "unavailable_sites": 7,
+    "unavailable_cities": [
+      "Central Square",
+      "Geneva",
+      "Herkimer",
+      "Midland Beach",
+      "Rochester",
+      "Syracuse",
+      "Wappingers Falls"
+    ],
+    "threshold": 43.5,
+    "cut_vertices_30": 5
+  },
+  "pool_sizes": {
+    "all": 5510,
+    "corridor": 3318
+  },
+  "rgg": {
+    "n": 754,
+    "area_sq_mi": 47126,
+    "connectivity_radius_straight": 11.480888038303712,
+    "connectivity_radius_road": 14.006683406730529,
+    "percolation_radius_straight": 9.474454744058162,
+    "percolation_radius_road": 11.558834787750957,
+    "observed_threshold_road": 43.5,
+    "observed_giant_component_jump_road": 26,
+    "mean_degree_at": {
+      "10": 15.286472148541113,
+      "15": 25.312997347480106,
+      "20": 36.254641909814325,
+      "24": 44.771883289124666,
+      "25": 46.83819628647215,
+      "26": 48.95225464190982,
+      "30": 57.30238726790451,
+      "43": 82.95225464190982,
+      "44": 85.15915119363395,
+      "50": 97.74535809018568
+    },
+    "density_mean_per_sq_mi": 0.01599966048465815,
+    "density_near_weakest_link": 0.003692394679731972,
+    "inhomogeneous_prediction_road": 29.156583808072554
+  }
+}

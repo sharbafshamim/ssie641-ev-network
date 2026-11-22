@@ -1,0 +1,1 @@
+{"eps": 50.0, "objective": "connectivity", "stations": 0, "chosen": [], "lower_bound": 0, "iterations": 0, "cuts": 0, "status": "optimal", "seconds": 0.0, "network": "ccs", "sites": 661, "pieces": 1, "unreachable_sites": 0, "unreachable_cities": "", "where": "", "job_key": "ccs_connectivity_50"}

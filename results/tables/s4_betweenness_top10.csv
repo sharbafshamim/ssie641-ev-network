@@ -1,0 +1,81 @@
+miles,betweenness,rank,city,name,score,cut_vertex,near_nyc
+30,hops,1,Little Falls,Iroquois Travel Plaza,71541.03259561835,False,False
+30,hops,2,Fultonville,ONVO FULTONVILLE DC1,63803.57875539561,False,False
+30,hops,3,Little Falls,Indian Castle Service Area,63199.03733447849,False,False
+30,hops,4,Ravena,Crossroads Ford,55230.38541032026,False,False
+30,hops,5,Fultonville,ONVO FULTONVILLE DC2,45746.72448996104,False,False
+30,hops,6,Yorktown heights,Curry Honda Yorktown,38266.87041018831,False,False
+30,hops,7,New Baltimore,New Baltimore SB Travel Plaza,38040.18009342322,False,False
+30,hops,8,Schenectady,Metro Ford,35965.62555483877,False,False
+30,hops,9,Ghent,Ghent Town Hall,34372.54675169974,False,False
+30,hops,10,Oneida,NYE GMC,33472.87025653536,False,False
+30,road miles,1,Ravena,Crossroads Ford,129323.0,False,False
+30,road miles,2,Fultonville,ONVO FULTONVILLE DC1,116407.94166666662,False,False
+30,road miles,3,Fishkill,"Fishkill, NY - Tesla Supercharger",106496.31687370464,False,False
+30,road miles,4,Little Falls,Indian Castle Service Area,105406.13333333332,False,False
+30,road miles,5,Pattersonville,Pattersonville Service Plaza,101363.66666666663,False,False
+30,road miles,6,Ossining,"Ossining, NY - Tesla Supercharger",99846.8,False,True
+30,road miles,7,Glenmont,"Glenmont, NY - Tesla Supercharger",96416.66666666669,False,False
+30,road miles,8,Highland,"HondoGO - Highland, NY",87796.07163126575,False,False
+30,road miles,9,Oneida,NYE GMC,73000.7449328445,False,False
+30,road miles,10,Syracuse,EVolve NY Syracuse South,70816.04999999999,False,False
+30,city pairs,1,Ravena,Crossroads Ford,0.4169892371601209,False,False
+30,city pairs,2,Fishkill,"Fishkill, NY - Tesla Supercharger",0.3866888749762164,False,False
+30,city pairs,3,Ossining,"Ossining, NY - Tesla Supercharger",0.36638500755287007,False,True
+30,city pairs,4,Fultonville,ONVO FULTONVILLE DC1,0.33805387713997986,False,False
+30,city pairs,5,Pattersonville,Pattersonville Service Plaza,0.3235382049345418,False,False
+30,city pairs,6,Glenmont,"Glenmont, NY - Tesla Supercharger",0.3183062688821752,False,False
+30,city pairs,7,Highland,"HondoGO - Highland, NY",0.3118588445057345,False,False
+30,city pairs,8,Little Falls,Indian Castle Service Area,0.29682779456193353,False,False
+30,city pairs,9,Hastings on Hudson,Ardsley Service Area,0.2829164358661854,False,True
+30,city pairs,10,Lake Katrine,Van Kleecks Tire,0.214274939912186,False,False
+30,"city pairs, population-weighted",1,Brooklyn,Revel - Bedford-Stuyvesant,0.4162130222680478,False,True
+30,"city pairs, population-weighted",2,Long Island City,General Motors Gas,0.4162130222680478,False,True
+30,"city pairs, population-weighted",3,Long Island,33rd Street,0.4162130222680478,False,True
+30,"city pairs, population-weighted",4,Ossining,"Ossining, NY - Tesla Supercharger",0.40118792293598776,False,True
+30,"city pairs, population-weighted",5,Fishkill,"Fishkill, NY - Tesla Supercharger",0.3988666012690902,False,False
+30,"city pairs, population-weighted",6,Ravena,Crossroads Ford,0.39363193009819186,False,False
+30,"city pairs, population-weighted",7,Highland,"HondoGO - Highland, NY",0.33258598141535706,False,False
+30,"city pairs, population-weighted",8,Fultonville,ONVO FULTONVILLE DC1,0.3210538690227095,False,False
+30,"city pairs, population-weighted",9,Pattersonville,Pattersonville Service Plaza,0.3164551362125516,False,False
+30,"city pairs, population-weighted",10,Glenmont,"Glenmont, NY - Tesla Supercharger",0.31248049979732634,False,False
+50,hops,1,Schoharie,ChargeSmart EV - Schoharie,48367.26147220951,False,False
+50,hops,2,Chittenango,Chittenango Travel Plaza,26321.532315486842,False,False
+50,hops,3,Roscoe,"Roscoe, NY - Tesla Supercharger",25906.305819358775,False,False
+50,hops,4,Hamilton,EVolve NY Hamilton,25433.858426900115,False,False
+50,hops,5,Hudson,"Hudson, NY - Tesla Supercharger",24877.353025699023,False,False
+50,hops,6,Arkville,NYC FLEET DEP_ARKVLE_1_L3,24022.207980511044,False,False
+50,hops,7,Herkimer,"Denny's Red Roof Inn (Herkimer, NY)",22973.62224913323,False,False
+50,hops,8,Herkimer,Steet Ponte Chevrolet Herkimer,20874.312093841952,False,False
+50,hops,9,Catskill,RC Lacy Ford,18254.6266340396,False,False
+50,hops,10,Catskill,HondoGO - Catskill,18254.6266340396,False,False
+50,road miles,1,Roscoe,"Roscoe, NY - Tesla Supercharger",72478.11515151514,False,False
+50,road miles,2,Monticello,"Monticello, NY - Tesla Supercharger",63957.781818181815,False,False
+50,road miles,3,Castle Creek,EVolve NY Castle Creek,50077.0904761905,False,False
+50,road miles,4,Ossining,"Ossining, NY - Tesla Supercharger",46675.54418063877,False,True
+50,road miles,5,Trumansburg,Parking Lot DCFC,37835.1471861472,False,False
+50,road miles,6,Hancock,EVolve NY Hancock,37774.915151515146,False,False
+50,road miles,7,Trumansburg,Chevy of Trumansburg L3's,37771.00533910538,False,False
+50,road miles,8,Hyde Park,HondoGO - Hyde Park,35098.75151515162,False,False
+50,road miles,9,Ravena,Crossroads Ford,35034.05555555556,False,False
+50,road miles,10,Hancock,"Hancock, NY - Tesla Supercharger",34387.200000000004,False,False
+50,city pairs,1,Roscoe,"Roscoe, NY - Tesla Supercharger",0.2694132831351423,False,False
+50,city pairs,2,Monticello,"Monticello, NY - Tesla Supercharger",0.25121643888727346,False,False
+50,city pairs,3,Castle Creek,EVolve NY Castle Creek,0.1933023165648929,False,False
+50,city pairs,4,Orangeburg,"Orangeburg, NY - Tesla Supercharger",0.1803187155814147,False,True
+50,city pairs,5,Ossining,"Ossining, NY - Tesla Supercharger",0.17138932676267585,False,True
+50,city pairs,6,Goshen,SURESKY HYUNDAI SHOWROOM,0.14762786499808445,False,False
+50,city pairs,7,Trumansburg,Chevy of Trumansburg L3's,0.14422848339225494,False,False
+50,city pairs,8,Trumansburg,Parking Lot DCFC,0.14182111282859666,False,False
+50,city pairs,9,Hancock,EVolve NY Hancock,0.14076843023522748,False,False
+50,city pairs,10,Goshen,SURESKY HYUNDAI CDJR FRONT RIGH,0.13510224184532807,False,False
+50,"city pairs, population-weighted",1,Brooklyn,Revel - Bedford-Stuyvesant,0.41749878125209366,False,True
+50,"city pairs, population-weighted",2,Long Island,33rd Street,0.41749878125209366,False,True
+50,"city pairs, population-weighted",3,Long Island City,General Motors Gas,0.41749878125209366,False,True
+50,"city pairs, population-weighted",4,Roscoe,"Roscoe, NY - Tesla Supercharger",0.2798191015523685,False,False
+50,"city pairs, population-weighted",5,Monticello,"Monticello, NY - Tesla Supercharger",0.2760680636207101,False,False
+50,"city pairs, population-weighted",6,Castle Creek,EVolve NY Castle Creek,0.23606123492418749,False,False
+50,"city pairs, population-weighted",7,Queens,Revel - Long Island City,0.20874939062604683,False,True
+50,"city pairs, population-weighted",8,Trumansburg,Chevy of Trumansburg L3's,0.18505469081058573,False,False
+50,"city pairs, population-weighted",9,Trumansburg,Parking Lot DCFC,0.18395727584169033,False,False
+50,"city pairs, population-weighted",10,Hancock,EVolve NY Hancock,0.14322582350135193,False,False

@@ -1,0 +1,755 @@
+city,core
+New York City,40
+Staten Island,46
+Midland Beach,74
+Midland Beach,74
+Rockaway Park,96
+Brooklyn,89
+Brooklyn,89
+South Beach,77
+Staten Island,68
+Brooklyn,86
+Brooklyn,86
+Staten Island,77
+Brooklyn,88
+Staten Island,74
+Staten Island,74
+Island Park,96
+Brooklyn,96
+Brooklyn,96
+Inwood,96
+Hewlett,96
+Brooklyn,96
+Queens,96
+Queens,96
+Valley Stream,96
+Queens,96
+Valley Stream,96
+Valley Stream,96
+Valley Stream,96
+Rosedale,96
+Brooklyn,96
+Wantagh,86
+Queens,96
+Brooklyn,96
+Amityville,61
+Copiague,61
+Copiague,61
+Queens,96
+Brooklyn,96
+Massapequa,61
+Massapequa,61
+Hempstead,96
+Glendale,96
+Brooklyn,96
+New York,96
+Middle Village,96
+Queens,96
+Middle Village,96
+Brooklyn,96
+New York City,96
+Kew Gardens,96
+Hempstead,96
+Hempstead,96
+Hempstead,96
+New York,96
+New York,96
+New York,96
+Queens,96
+Brooklyn,96
+Bay Shore,52
+Garden City,96
+Bay Shore,52
+Elmhurst,96
+Queens,96
+Bay Shore,52
+Long Island City,96
+West Babylon,52
+Bayshore,52
+Bay Shore,52
+North Babylon,52
+New Hyde Park,96
+Garden City,96
+Garden City Park,96
+Westbury,96
+Sunnyside,96
+Carle Place,96
+Westbury,96
+Queens,96
+Queens,96
+LIC,96
+New York,96
+New York,96
+New York,96
+Carle Place,96
+Carle Place,96
+North New Hyde Park,96
+Bethpage,85
+New York,96
+Queens,96
+Long Island City,96
+Queens,96
+Queens,96
+Jackson Heights,96
+Long Island,96
+Flushing,96
+New York,96
+Flushing,96
+Queens,96
+Queens,96
+Queens,96
+Queens,96
+Flushing,96
+Queens,96
+Bayside,96
+Hicksville,94
+Queens,96
+Roslyn Heights,96
+Plainview,77
+New York,96
+Great Neck,96
+Melville,69
+Jericho,96
+New York,96
+New York,96
+New York,96
+Melville,62
+Shirley,40
+Dix Hills,52
+Islandia,51
+Shirley,40
+Commack,52
+Hauppauge,51
+Hauppauge,51
+Commack,52
+Syosset,94
+Medford,49
+Hauppauge,51
+Hauppauge,51
+Quogue,21
+Manorville,35
+Medford,49
+Smithtown,51
+Huntington,52
+Huntington,52
+Huntington Station,53
+Huntington,53
+Huntington Station,61
+Smithtown,51
+Bronx,96
+The Bronx,96
+Bronx,96
+Smithtown,51
+St James,51
+Centereach,49
+St. James,51
+Saint James,51
+Saint James,51
+Saint James,51
+Saint James,51
+Saint James,51
+Saint James,51
+Lake Grove,51
+Lake Grove,51
+Bronx,96
+Bronx,96
+Selden,49
+Glen Cove,96
+Manorville,35
+Bronx,96
+Glen Cove,96
+The Bronx,96
+The Bronx,96
+Hampton Bays,21
+South Setauket,49
+Southampton,21
+Northport,52
+Southampton,21
+Southampton,21
+Southampton,21
+Southampton,21
+Water Mill,21
+New Rochelle,96
+New Rochelle,96
+Riverhead,30
+New Rochelle,96
+New Rochelle,96
+Riverhead,32
+Riverhead,32
+Port Jefferson Station,48
+Riverhead,32
+Riverhead,32
+Riverhead,32
+Riverhead,32
+Riverhead,32
+Riverhead,32
+Riverhead,30
+Bridgehampton,20
+New Rochelle,96
+Eastchester,96
+Yonkers,94
+Yonkers,93
+East Hampton,12
+Yonkers,93
+Hastings on Hudson,88
+Rye,75
+White Plains,80
+Dobbs Ferry,80
+Harrison,72
+White Plains,77
+White Plains,78
+Hartsdale,77
+Montauk,9
+Montauk,9
+Orangeburg,72
+Orangeburg,72
+Tarrytown,72
+Southold,16
+Southold,16
+Montauk,8
+West Nyack,56
+West Nyack,56
+Nanuet,49
+West Nyack,51
+Nanuet,50
+Nanuet,50
+Thornwood,40
+Ossining,40
+Ossining,40
+Monsey,30
+Haverstraw,34
+Garnerville,30
+Mt. Kisco,37
+Mt. Kisco,37
+Bedford Hills,37
+Bedford Hills,37
+Bedford Hills,37
+Bedford Hills,37
+Stony Point,30
+Warwick,19
+Katonah,35
+Yorktown Heights,34
+Yorktown heights,34
+Goldens Bridge,32
+Central Valley,28
+Central Valley,28
+Central Valley,28
+Woodbury,28
+Mahopac,28
+Brewster,24
+Goshen,19
+Goshen,19
+Brewster,24
+Goshen,19
+Middletown,19
+New Hampton,19
+Middletown,19
+Middletown,19
+Middletown,19
+Middletown,19
+Newburgh,28
+Newburgh,28
+Newburgh,28
+Newburgh,28
+Fishkill,28
+Fishkill,28
+Montgomery,27
+Fishkill,28
+Fishkill,28
+Wappingers Falls,28
+Wappingers Falls,28
+Plattekill,28
+Wappingers Falls,28
+Crown Heights,28
+Poughkeepsie,28
+Poughkeepsie,28
+Poughkeepsie,28
+Poughkeepsie,28
+Milton,28
+Monticello,8
+Lagrangeville,28
+Arlington,28
+Highland,28
+Ellenville,15
+Ellenville,16
+Highland,28
+New Paltz,28
+Pleasant Valley,28
+Hyde Park,28
+Clinton Corners,28
+Stone Ridge,28
+Roscoe,2
+Kingston,28
+Kingston,28
+Kingston,28
+Kingston,28
+Hancock,2
+Hancock,2
+Kingston,28
+Rhinebeck,28
+Kingston,28
+Kingston,28
+Rhinebeck,28
+Kingston,28
+Red Hook,28
+Lake Katrine,28
+Lake Katrine,28
+Red Hook,28
+Red Hook,28
+Lake Katrine,28
+West Hurley,27
+Ruby,27
+Olean,4
+Saugerties,27
+Saugerties,27
+Olean,4
+Binghamton,12
+Elmira,12
+Kirkwood,12
+Jamestown,10
+Jamestown,10
+Vestal,12
+Vestal,12
+Vestal,12
+Owego,12
+Jamestown,10
+Jamestown,10
+Lakewood,10
+Lakewood,10
+Vestal,12
+Binghamton,12
+Owego,12
+Binghamton,12
+Malden-on-Hudson,27
+Jamestown,10
+Jamestown,10
+Findley Lake,10
+Johnson City,12
+Painted Post,12
+Binghamton,12
+Elmira,12
+Elmira,12
+Elmira,12
+Salamanca,3
+Elmira,12
+Painted Post,12
+Painted Post,12
+Arkville,0
+Elmira,12
+Horseheads,12
+Elmira,12
+Sherman,10
+Painted Post,12
+TANNERSVILLE,21
+Friendship,4
+Catskill,25
+Catskill,25
+Hudson,25
+Belmont,4
+Afton,7
+Castle Creek,12
+Belmont,4
+Belmont,4
+Ripley,6
+Ripley,6
+Angelica,4
+Sidney,5
+Ghent,19
+Whitney Point,12
+Westfield,10
+Bath,8
+South Dayton,10
+Hornell,5
+Watkins Glen,12
+Hammondsport,8
+Hammondsport,8
+Ithaca,13
+Ithaca,13
+Ithaca,13
+New Baltimore,52
+Ithaca,13
+Ithaca,13
+Oneonta,7
+Oneonta,7
+Oneonta,7
+Fredonia,10
+Fredonia,10
+Oneonta,7
+Ravena,53
+Ithaca,13
+Ithaca,13
+Castleton-On-Hudson,55
+Springville,15
+Trumansburg,11
+Trumansburg,11
+Trumansburg,11
+Trumansburg,11
+Dansville,5
+Dansville,5
+North Collins,20
+Cortland,13
+East Greenbush,62
+Cortland,13
+East Greenbush,62
+Cortland,13
+Cortland,13
+Cortland,13
+Cortland,13
+Cortland,13
+Penn Yan,9
+Glenmont,62
+East Greenbush,62
+Angola,23
+Angola,23
+Albany,62
+Albany,62
+Richmondville,2
+Rensselaer,62
+Voorheesville,62
+Albany,62
+Albany,62
+Albany,62
+Albany,62
+Albany,62
+Albany,62
+Troy,62
+Albany,62
+Albany,62
+Guilderland,62
+Albany,62
+Albany,62
+Wynantskill,62
+Guilderland,62
+Albany,62
+Cooperstown,7
+Cooperstown,7
+Cooperstown,7
+Cooperstown,7
+Schoharie,22
+Albany,62
+Altamont,62
+Albany,62
+Albany,62
+Albany,62
+Albany,62
+Colonie,62
+Watervliet,62
+Schenectady,62
+Hamburg,46
+Troy,62
+Troy,62
+Tully,26
+Hamburg,47
+Albany,62
+Hamburg,47
+Latham,62
+Hamburg,47
+Schenectady,62
+Latham,62
+Latham,62
+Latham,62
+Latham,62
+Latham,62
+Latham,62
+Latham,62
+Latham,62
+Latham,62
+Latham,62
+Latham,62
+Schenectady,62
+Schenectady,62
+Rotterdam,62
+Schenectady,62
+Orchard Park,46
+Orchard Park,46
+Orchard Park,46
+Orchard Park,46
+Troy,62
+Tully,29
+Orchard Park,46
+Buffalo,47
+Rotterdam,62
+Geneseo,25
+Tully,29
+Schenectady,62
+Buffalo,47
+Buffalo,47
+Hamilton,15
+Schenectady,62
+Geneva,20
+Erie County,46
+Glenville,62
+Geneva,20
+Geneva,20
+Clifton Park,62
+Clifton Park,62
+Clifton Park,62
+Avon,40
+Avon,40
+West Seneca,47
+Avon,40
+Clifton Park,62
+Schenectady,60
+Canandaigua,40
+Canandaigua,40
+Canandaigua,40
+Canandaigua,40
+Mechanicville,62
+Buffalo,47
+Pattersonville,59
+Lancaster,47
+Cheektowaga,47
+Cheektowaga,47
+Avon,43
+Cheektowaga,47
+Amsterdam,46
+Depew,47
+CANANDAIGUA,40
+Ballston,62
+Amsterdam,44
+Depew,47
+Auburn,22
+Fultonville,17
+Skaneatles,36
+Fultonville,17
+Phelps,20
+Honeoye Falls,43
+Clarence,47
+Buffalo,47
+Buffalo,47
+Buffalo,47
+Buffalo,47
+Buffalo,47
+Waterloo,20
+Williamsville,47
+Williamsville,47
+Auburn,29
+Phelps,20
+Waterloo,20
+Waterloo,20
+Williamsville,47
+Williamsville,47
+Buffalo,47
+Waterloo,20
+Farmington,40
+Clifton Springs,40
+Farmington,40
+Ballston Spa,60
+Amherst,47
+Tonawanda,47
+Buffalo,47
+Syracuse,37
+Amherst,47
+Victor,43
+Pembroke,29
+Grand Island,47
+Ballston Spa,59
+Grand Island,47
+Grand Island,47
+Corfu,27
+Johnstown,17
+Batavia,24
+Batavia,25
+Batavia,25
+Little Falls,17
+Getzville,47
+Syracuse,37
+Little Falls,17
+Grand Island,47
+Ballston Spa,59
+Johnstown,17
+Getzville,47
+Victor,43
+Herkimer,17
+Batavia,23
+Ballston Spa,59
+Ballston Spa,59
+Victor,43
+Batavia,18
+Leroy,40
+Camillus,36
+Fayetteville,37
+Fayetteville,37
+Fayetteville,37
+Scottsville,43
+Syracuse,37
+Syracuse,37
+Herkimer,17
+Henrietta,43
+Syracuse,37
+Grand Island,47
+Camillus,37
+Syracuse,37
+Syracuse,37
+Syracuse,37
+North Tonawanda,47
+Saratoga Springs,58
+Rochester,43
+Rochester,43
+Rochester,43
+Rochester,43
+Syracuse,37
+Syracuse,37
+Syracuse,37
+Syracuse,37
+East Syracuse,37
+Macedon,43
+Syracuse,37
+Frankfort,17
+Oneida,27
+Oneida,27
+Oneida,27
+Rochester,43
+Rochester,43
+Rochester,43
+Rochester,43
+Syracuse,37
+Niagara Falls,47
+Niagara Falls,47
+Niagara Falls,47
+Niagara Falls,47
+Niagara Falls,47
+Niagara Falls,47
+Syracuse,37
+Syracuse,37
+East Syracuse,37
+New Hartford,18
+Oneida,19
+Chittenango,37
+Niagara Falls,47
+Saratoga Springs,38
+East Rochester,43
+Churchville,40
+East Rochester,43
+Rochester,43
+Liverpool,37
+Rochester,43
+Churchville,41
+Yorkville,18
+Yorkville,18
+Niagara Falls,47
+Niagara Falls,47
+Niagara Falls,47
+Niagara Falls,47
+Yorkville,18
+Yorkville,18
+Yorkville,18
+Yorkville,18
+Verona,18
+Rochester,43
+Utica,18
+Yorkville,18
+Yorkville,18
+Rochester,43
+Westmoreland,18
+Rochester,43
+Rochester,43
+Rochester,43
+Fairport,43
+Rochester,43
+Lockport,46
+UTICA,18
+Utica,18
+Rochester,43
+Rochester,43
+Baldwinsville,37
+Baldwinsville,37
+Cicero,37
+Cicero,37
+Gansevoort,20
+Rochester,43
+Onondaga County,37
+Clay,37
+Liverpool,37
+Liverpool,37
+Liverpool,37
+Liverpool,37
+Liverpool,37
+Liverpool,37
+Spencerport,43
+Rochester,43
+Webster,43
+Webster,43
+Webster,43
+Webster,43
+Webster,43
+Webster,43
+Rochester,43
+Rochester,43
+Rochester,43
+Rochester,43
+Rochester,43
+Spencerport,41
+Wolcott,13
+Brewerton,37
+Williamson,39
+Rome,18
+Ransomville,38
+Fort Edward,20
+Fort Edward,20
+Fort Edward,20
+Fort Edward,20
+Rochester,43
+Central Square,37
+Fulton,31
+Queensbury,20
+Queensbury,20
+Queensbury,20
+Queensbury,20
+Queensbury,20
+Queensbury,20
+Queensbury,20
+Queensbury,20
+Queensbury,20
+Queensbury,20
+Parish,33
+Parish,34
+Oswego,15
+Oswego,15
+Warrensburg,16
+Pulaski,12
+Pulaski,12
+Pulaski,12
+Pulaski,12
+Chestertown,6
+Indian Lake,0
+Watertown,7
+Watertown,7
+North Hudson,4
+North Hudson,4
+West Carthage,6
+Watertown,7
+Watertown,7
+Watertown,7
+Watertown,7
+Cape Vincent,7
+Elizabethtown,6
+Lewis,4
+Lake Placid,7
+Lake Placid,7
+Lake Placid,7
+Lake Placid,7
+Lake Placid,7
+Alexandria Bay,7
+Saranac Lake,7
+Saranac Lake,7
+Saranac Lake,7
+Peru,10
+Potsdam,4
+Potsdam,4
+Potsdam,4
+Plattsburgh,10
+Potsdam,4
+Plattsburgh,10
+Plattsburgh,10
+Plattsburgh,10
+Plattsburgh,10
+Plattsburgh,10
+Plattsburgh,10
+Plattsburgh,10
+Plattsburgh,10
+Plattsburgh,10
+Malone,1
+Malone,1
+Massena,4
+Champlain,10
